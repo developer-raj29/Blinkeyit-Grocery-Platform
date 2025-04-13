@@ -16,12 +16,16 @@ const {
 const auth = require("../middlewares/admin.middleware.js");
 const upload = require("../middlewares/multer.js");
 
+/*========================================Authentication================================*/
 router.post("/register", registerUserController);
 router.post("/verify-email", verifyEmailController);
 router.post("/login", loginController);
 router.get("/logout", auth, logoutController);
+
+/*========================================After Registration Details Update================================*/
 router.put("/upload-avatar", auth, upload.single("avatar"), uploadAvatar);
 router.put("/update-user", auth, updateUserDetails);
+
 router.put("/forgot-password", forgotPasswordController);
 router.put("/verify-forgot-password-otp", verifyForgotPasswordOtp);
 router.put("/reset-password", resetpassword);
