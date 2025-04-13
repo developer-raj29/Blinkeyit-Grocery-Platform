@@ -1,7 +1,7 @@
 const AddressModel = require("../models/address.model");
 const UserModel = require("../models/user.model");
 
-export const addAddressController = async (request, response) => {
+const addAddressController = async (request, response) => {
   try {
     const userId = request.userId; // middleware
     const { address_line, city, state, pincode, country, mobile } =
@@ -39,7 +39,7 @@ export const addAddressController = async (request, response) => {
   }
 };
 
-export const getAddressController = async (request, response) => {
+const getAddressController = async (request, response) => {
   try {
     const userId = request.userId; // middleware auth
 
@@ -62,7 +62,7 @@ export const getAddressController = async (request, response) => {
   }
 };
 
-export const updateAddressController = async (request, response) => {
+const updateAddressController = async (request, response) => {
   try {
     const userId = request.userId; // middleware auth
     const { _id, address_line, city, state, country, pincode, mobile } =
@@ -95,7 +95,7 @@ export const updateAddressController = async (request, response) => {
   }
 };
 
-export const deleteAddresscontroller = async (request, response) => {
+const deleteAddresscontroller = async (request, response) => {
   try {
     const userId = request.userId; // auth middleware
     const { _id } = request.body;
@@ -120,4 +120,11 @@ export const deleteAddresscontroller = async (request, response) => {
       success: false,
     });
   }
+};
+
+module.exports = {
+  addAddressController,
+  getAddressController,
+  updateAddressController,
+  deleteAddresscontroller,
 };

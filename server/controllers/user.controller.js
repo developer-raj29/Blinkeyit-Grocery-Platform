@@ -4,7 +4,7 @@ const bcryptjs = require("bcryptjs");
 const verifyEmailTemplate = require("../utils/verifyEmailTemplate.js");
 const generatedAccessToken = require("../utils/generatedAccessToken.js");
 const genertedRefreshToken = require("../utils/generatedRefreshToken.js");
-const uploadImageClodinary = require("../utils/uploadImageClodinary.js");
+const uploadImageCloudinary = require("../utils/uploadImageCloudinary.js");
 const generatedOtp = require("../utils/generatedOtp.js");
 const forgotPasswordTemplate = require("../utils/forgotPasswordTemplate.js");
 const jwt = require("jsonwebtoken");
@@ -216,7 +216,7 @@ const uploadAvatar = async (request, response) => {
     const userId = request.userId; // auth middlware
     const image = request.file; // multer middleware
 
-    const upload = await uploadImageClodinary(image);
+    const upload = await uploadImageCloudinary(image);
 
     const updateUser = await UserModel.findByIdAndUpdate(userId, {
       avatar: upload.url,

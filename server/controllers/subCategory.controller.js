@@ -1,6 +1,6 @@
 const SubCategoryModel = require("../models/subCategory.model");
 
-export const AddSubCategoryController = async (request, response) => {
+const AddSubCategoryController = async (request, response) => {
   try {
     const { name, image, category } = request.body;
 
@@ -36,7 +36,7 @@ export const AddSubCategoryController = async (request, response) => {
   }
 };
 
-export const getSubCategoryController = async (request, response) => {
+const getSubCategoryController = async (request, response) => {
   try {
     const data = await SubCategoryModel.find()
       .sort({ createdAt: -1 })
@@ -56,7 +56,7 @@ export const getSubCategoryController = async (request, response) => {
   }
 };
 
-export const updateSubCategoryController = async (request, response) => {
+const updateSubCategoryController = async (request, response) => {
   try {
     const { _id, name, image, category } = request.body;
 
@@ -91,7 +91,7 @@ export const updateSubCategoryController = async (request, response) => {
   }
 };
 
-export const deleteSubCategoryController = async (request, response) => {
+const deleteSubCategoryController = async (request, response) => {
   try {
     const { _id } = request.body;
     console.log("Id", _id);
@@ -110,4 +110,11 @@ export const deleteSubCategoryController = async (request, response) => {
       success: false,
     });
   }
+};
+
+module.exports = {
+  AddSubCategoryController,
+  getSubCategoryController,
+  updateSubCategoryController,
+  deleteSubCategoryController,
 };

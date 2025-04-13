@@ -4,7 +4,7 @@ const CartProductModel = require("../models/cartProduct.model.js");
 const OrderModel = require("../models/order.model.js");
 const UserModel = require("../models/user.model.js");
 
-export async function CashOnDeliveryOrderController(request, response) {
+const CashOnDeliveryOrderController = async (request, response) => {
   try {
     const userId = request.userId; // auth middleware
     const { list_items, totalAmt, addressId, subTotalAmt } = request.body;
@@ -50,15 +50,15 @@ export async function CashOnDeliveryOrderController(request, response) {
       success: false,
     });
   }
-}
+};
 
-export const pricewithDiscount = (price, dis = 1) => {
+const pricewithDiscount = (price, dis = 1) => {
   const discountAmout = Math.ceil((Number(price) * Number(dis)) / 100);
   const actualPrice = Number(price) - Number(discountAmout);
   return actualPrice;
 };
 
-export async function paymentController(request, response) {
+const paymentController = async (request, response) => {
   try {
     const userId = request.userId; // auth middleware
     const { list_items, totalAmt, addressId, subTotalAmt } = request.body;
@@ -112,7 +112,7 @@ export async function paymentController(request, response) {
       success: false,
     });
   }
-}
+};
 
 const getOrderProductItems = async ({
   lineItems,
@@ -150,7 +150,7 @@ const getOrderProductItems = async ({
 };
 
 //http://localhost:8080/api/order/webhook
-export async function webhookStripe(request, response) {
+const webhookStripe = async (request, response) => {
   const event = request.body;
   const endPointSecret = process.env.STRIPE_ENPOINT_WEBHOOK_SECRET_KEY;
 
@@ -190,9 +190,9 @@ export async function webhookStripe(request, response) {
 
   // Return a response to acknowledge receipt of the event
   response.json({ received: true });
-}
+};
 
-export async function getOrderDetailsController(request, response) {
+const getOrderDetailsController = async (request, response) => {
   try {
     const userId = request.userId; // order id
 
@@ -213,4 +213,11 @@ export async function getOrderDetailsController(request, response) {
       success: false,
     });
   }
-}
+};
+
+module.exports = {
+  CashOnDeliveryOrderController,
+  paymentController,
+  webhookStripe,
+  getOrderDetailsController,
+};

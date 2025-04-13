@@ -28,4 +28,4 @@ router.put("/reset-password", resetpassword);
 router.post("/refresh-token", refreshToken);
 router.get("/user-details", auth, userDetails);
 
-module.exports = { router };
+module.exports = router;

@@ -1,6 +1,6 @@
-import ProductModel from "../models/product.model.js";
+const ProductModel = require("../models/product.model.js");
 
-export const createProductController = async (request, response) => {
+const createProductController = async (request, response) => {
   try {
     const {
       name,
@@ -60,7 +60,7 @@ export const createProductController = async (request, response) => {
   }
 };
 
-export const getProductController = async (request, response) => {
+const getProductController = async (request, response) => {
   try {
     let { page, limit, search } = request.body;
 
@@ -108,7 +108,7 @@ export const getProductController = async (request, response) => {
   }
 };
 
-export const getProductByCategory = async (request, response) => {
+const getProductByCategory = async (request, response) => {
   try {
     const { id } = request.body;
 
@@ -139,7 +139,7 @@ export const getProductByCategory = async (request, response) => {
   }
 };
 
-export const getProductByCategoryAndSubCategory = async (request, response) => {
+const getProductByCategoryAndSubCategory = async (request, response) => {
   try {
     const { categoryId, subCategoryId, page, limit } = request.body;
 
@@ -189,7 +189,7 @@ export const getProductByCategoryAndSubCategory = async (request, response) => {
   }
 };
 
-export const getProductDetails = async (request, response) => {
+const getProductDetails = async (request, response) => {
   try {
     const { productId } = request.body;
 
@@ -211,7 +211,7 @@ export const getProductDetails = async (request, response) => {
 };
 
 //update product
-export const updateProductDetails = async (request, response) => {
+const updateProductDetails = async (request, response) => {
   try {
     const { _id } = request.body;
 
@@ -246,7 +246,7 @@ export const updateProductDetails = async (request, response) => {
 };
 
 //delete product
-export const deleteProductDetails = async (request, response) => {
+const deleteProductDetails = async (request, response) => {
   try {
     const { _id } = request.body;
 
@@ -276,7 +276,7 @@ export const deleteProductDetails = async (request, response) => {
 };
 
 //search product
-export const searchProduct = async (request, response) => {
+const searchProduct = async (request, response) => {
   try {
     let { search, page, limit } = request.body;
 
@@ -323,4 +323,15 @@ export const searchProduct = async (request, response) => {
       success: false,
     });
   }
+};
+
+module.exports = {
+  createProductController,
+  getProductController,
+  getProductByCategory,
+  getProductByCategoryAndSubCategory,
+  getProductDetails,
+  updateProductDetails,
+  deleteProductDetails,
+  searchProduct,
 };

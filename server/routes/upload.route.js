@@ -7,4 +7,4 @@ const upload = require("../middlewares/multer.js");
 
 router.post("/upload", auth, upload.single("image"), uploadImageController);
 
-export default uploadRouter;
+module.exports = router;

@@ -1,6 +1,6 @@
-import UserModel from "../models/user.model.js";
+const UserModel = require("../models/user.model");
 
-export const admin = async (request, response, next) => {
+const admin = async (request, response, next) => {
   try {
     const userId = request.userId;
 
@@ -23,3 +23,4 @@ export const admin = async (request, response, next) => {
     });
   }
 };
+module.exports = admin;

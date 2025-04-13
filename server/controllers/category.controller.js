@@ -2,7 +2,7 @@ const CategoryModel = require("../models/category.model");
 const SubCategoryModel = require("../models/subCategory.model");
 const ProductModel = require("../models/product.model");
 
-export const AddCategoryController = async (request, response) => {
+const AddCategoryController = async (request, response) => {
   try {
     const { name, image } = request.body;
 
@@ -44,7 +44,7 @@ export const AddCategoryController = async (request, response) => {
   }
 };
 
-export const getCategoryController = async (request, response) => {
+const getCategoryController = async (request, response) => {
   try {
     const data = await CategoryModel.find().sort({ createdAt: -1 });
 
@@ -62,7 +62,7 @@ export const getCategoryController = async (request, response) => {
   }
 };
 
-export const updateCategoryController = async (request, response) => {
+const updateCategoryController = async (request, response) => {
   try {
     const { _id, name, image } = request.body;
 
@@ -91,7 +91,7 @@ export const updateCategoryController = async (request, response) => {
   }
 };
 
-export const deleteCategoryController = async (request, response) => {
+const deleteCategoryController = async (request, response) => {
   try {
     const { _id } = request.body;
 
@@ -130,4 +130,11 @@ export const deleteCategoryController = async (request, response) => {
       error: true,
     });
   }
+};
+
+module.exports = {
+  AddCategoryController,
+  getCategoryController,
+  updateCategoryController,
+  deleteCategoryController,
 };

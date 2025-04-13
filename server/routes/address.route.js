@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const auth = require("../middleware/auth.js");
+const auth = require("../middlewares/auth.middleware.js");
 const {
   addAddressController,
   deleteAddresscontroller,
@@ -14,4 +14,4 @@ router.get("/get", auth, getAddressController);
 router.put("/update", auth, updateAddressController);
 router.delete("/disable", auth, deleteAddresscontroller);
 
-export default router;
+module.exports = router;

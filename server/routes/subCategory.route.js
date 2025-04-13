@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const auth = require("../middlewares/auth.js");
+const auth = require("../middlewares/auth.middleware.js");
 const {
   AddSubCategoryController,
   deleteSubCategoryController,
@@ -14,4 +14,4 @@ router.post("/get", getSubCategoryController);
 router.put("/update", auth, updateSubCategoryController);
 router.delete("/delete", auth, deleteSubCategoryController);
 
-export default router;
+module.exports = router;

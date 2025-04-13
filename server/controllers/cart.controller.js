@@ -1,7 +1,7 @@
 const CartProductModel = require("../models/cartProduct.model.js");
 const UserModel = require("../models/user.model.js");
 
-export const addToCartItemController = async (request, response) => {
+const addToCartItemController = async (request, response) => {
   try {
     const userId = request.userId;
     const { productId } = request.body;
@@ -56,7 +56,7 @@ export const addToCartItemController = async (request, response) => {
   }
 };
 
-export const getCartItemController = async (request, response) => {
+const getCartItemController = async (request, response) => {
   try {
     const userId = request.userId;
 
@@ -78,7 +78,7 @@ export const getCartItemController = async (request, response) => {
   }
 };
 
-export const updateCartItemQtyController = async (request, response) => {
+const updateCartItemQtyController = async (request, response) => {
   try {
     const userId = request.userId;
     const { _id, qty } = request.body;
@@ -114,7 +114,7 @@ export const updateCartItemQtyController = async (request, response) => {
   }
 };
 
-export const deleteCartItemQtyController = async (request, response) => {
+const deleteCartItemQtyController = async (request, response) => {
   try {
     const userId = request.userId; // middleware
     const { _id } = request.body;
@@ -145,4 +145,11 @@ export const deleteCartItemQtyController = async (request, response) => {
       success: false,
     });
   }
+};
+
+module.exports = {
+  addToCartItemController,
+  getCartItemController,
+  updateCartItemQtyController,
+  deleteCartItemQtyController,
 };

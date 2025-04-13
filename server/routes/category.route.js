@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const auth = require("../middleware/auth.js");
+const auth = require("../middlewares/auth.middleware.js");
+
 const {
   AddCategoryController,
   deleteCategoryController,
@@ -14,4 +15,4 @@ router.get("/get", getCategoryController);
 router.put("/update", auth, updateCategoryController);
 router.delete("/delete", auth, deleteCategoryController);
 
-export default router;
+module.exports = router;
