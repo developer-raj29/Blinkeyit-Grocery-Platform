@@ -8,6 +8,8 @@ const uploadImageCloudinary = require("../utils/uploadImageCloudinary.js");
 const generatedOtp = require("../utils/generatedOtp.js");
 const forgotPasswordTemplate = require("../utils/forgotPasswordTemplate.js");
 const jwt = require("jsonwebtoken");
+const mailSender = require("../config/sendEmail.js");
+const generatedRefreshToken = require("../utils/generatedRefreshToken.js");
 
 const registerUserController = async (request, response) => {
   try {
@@ -44,15 +46,25 @@ const registerUserController = async (request, response) => {
     const save = await newUser.save();
 
     const VerifyEmailUrl = `${process.env.FRONTEND_URL}/verify-email?code=${save?._id}`;
+    // const OTP = generatedOtp;
 
-    const verifyEmail = await sendEmail({
-      sendTo: email,
-      subject: "Verify email from binkeyit",
-      html: verifyEmailTemplate({
+    // await sendEmail({
+    //   sendTo: email,
+    //   subject: "Verify email from binkeyit",
+    //   html: verifyEmailTemplate({
+    //     name,
+    //     url: VerifyEmailUrl,
+    //   }),
+    // });
+
+    await mailSender(
+      email,
+      "Verify email from Blinkeyit",
+      verifyEmailTemplate({
         name,
         url: VerifyEmailUrl,
-      }),
-    });
+      })
+    );
 
     return response.json({
       message: "User register successfully",
@@ -105,13 +117,86 @@ const verifyEmailController = async (request, response) => {
 };
 
 //login controller
+// const loginController = async (request, response) => {
+//   try {
+//     const { email, password } = request.body;
+
+//     if (!email || !password) {
+//       return response.status(400).json({
+//         message: "provide email, password",
+//         error: true,
+//         success: false,
+//       });
+//     }
+
+//     const user = await UserModel.findOne({ email });
+
+//     if (!user) {
+//       return response.status(400).json({
+//         message: "User not register",
+//         error: true,
+//         success: false,
+//       });
+//     }
+
+//     if (user.status !== "Active") {
+//       return response.status(400).json({
+//         message: "Contact to Admin",
+//         error: true,
+//         success: false,
+//       });
+//     }
+
+//     const checkPassword = await bcryptjs.compare(password, user.password);
+
+//     if (!checkPassword) {
+//       return response.status(400).json({
+//         message: "Check your password",
+//         error: true,
+//         success: false,
+//       });
+//     }
+
+//     const accesstoken = await generatedAccessToken(user._id);
+//     const refreshToken = await genertedRefreshToken(user._id);
+
+//     const updateUser = await UserModel.findByIdAndUpdate(user?._id, {
+//       last_login_date: new Date(),
+//     });
+
+//     const cookiesOption = {
+//       httpOnly: true,
+//       secure: true,
+//       sameSite: "None",
+//     };
+//     response.cookie("accessToken", accesstoken, cookiesOption);
+//     response.cookie("refreshToken", refreshToken, cookiesOption);
+
+//     return response.json({
+//       message: "Login successfully",
+//       error: false,
+//       success: true,
+//       data: {
+//         accesstoken,
+//         refreshToken,
+//       },
+//     });
+//   } catch (error) {
+//     return response.status(500).json({
+//       message: error.message || error,
+//       error: true,
+//       success: false,
+//     });
+//   }
+// };
+
 const loginController = async (request, response) => {
   try {
     const { email, password } = request.body;
 
     if (!email || !password) {
       return response.status(400).json({
-        message: "provide email, password",
+        message: "Provide email and password",
         error: true,
         success: false,
       });
@@ -121,7 +206,7 @@ const loginController = async (request, response) => {
 
     if (!user) {
       return response.status(400).json({
-        message: "User not register",
+        message: "User not registered",
         error: true,
         success: false,
       });
@@ -129,7 +214,7 @@ const loginController = async (request, response) => {
 
     if (user.status !== "Active") {
       return response.status(400).json({
-        message: "Contact to Admin",
+        message: "Account not active. Please contact Admin.",
         error: true,
         success: false,
       });
@@ -139,16 +224,16 @@ const loginController = async (request, response) => {
 
     if (!checkPassword) {
       return response.status(400).json({
-        message: "Check your password",
+        message: "Incorrect password",
         error: true,
         success: false,
       });
     }
 
     const accesstoken = await generatedAccessToken(user._id);
-    const refreshToken = await genertedRefreshToken(user._id);
+    const refreshToken = await generatedRefreshToken(user._id);
 
-    const updateUser = await UserModel.findByIdAndUpdate(user?._id, {
+    await UserModel.findByIdAndUpdate(user._id, {
       last_login_date: new Date(),
     });
 
@@ -156,7 +241,9 @@ const loginController = async (request, response) => {
       httpOnly: true,
       secure: true,
       sameSite: "None",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     };
+
     response.cookie("accessToken", accesstoken, cookiesOption);
     response.cookie("refreshToken", refreshToken, cookiesOption);
 
@@ -167,6 +254,12 @@ const loginController = async (request, response) => {
       data: {
         accesstoken,
         refreshToken,
+        user: {
+          id: user._id,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+        },
       },
     });
   } catch (error) {

@@ -1,0 +1,3614 @@
+[
+  {
+    "_id": "66e2b571cd76006eff5dbde2",
+    "name": "Tea",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133613/binkeyit/hhsxfibzibf4gvkhzivf.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:33:37.991Z",
+    "updatedAt": "2024-09-12T09:33:37.991Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b567cd76006eff5dbdde",
+    "name": "Imported Tea & Coffee",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133605/binkeyit/ziaz6alxbmrweb2ulmgj.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:33:27.992Z",
+    "updatedAt": "2024-09-12T09:33:27.992Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b55fcd76006eff5dbdda",
+    "name": "Hot Chocolate",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133597/binkeyit/nby4ttjaqsdxtndtmmtf.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:33:19.214Z",
+    "updatedAt": "2024-09-12T09:33:19.214Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b557cd76006eff5dbdd6",
+    "name": "Herbal Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133588/binkeyit/alyr0z0fthccfu9jkmes.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:33:11.374Z",
+    "updatedAt": "2024-09-12T09:33:11.374Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b54fcd76006eff5dbdd2",
+    "name": "Green & Flavoured Tea",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133581/binkeyit/xrcmjphrpduclvpzappz.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:33:03.447Z",
+    "updatedAt": "2024-09-12T09:33:03.447Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b547cd76006eff5dbdce",
+    "name": "Fruit Juices",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133573/binkeyit/mplwphvsgfxtjmaijvbt.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:32:55.515Z",
+    "updatedAt": "2024-09-12T09:32:55.515Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b53fcd76006eff5dbdca",
+    "name": "Energy Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133559/binkeyit/gtym5ffw5pygtwgnk2vc.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:32:47.171Z",
+    "updatedAt": "2024-09-12T09:32:47.171Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b531cd76006eff5dbdc6",
+    "name": "Cold Coffee & Ice Tea",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133551/binkeyit/bzqpfddapyzlesqgp5fx.webp",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:32:33.638Z",
+    "updatedAt": "2024-09-12T09:32:33.638Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b529cd76006eff5dbdc2",
+    "name": "Coffee",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133544/binkeyit/nflpjqxz4fkcxgjbtz3d.png",
+    "category": [
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:32:25.822Z",
+    "updatedAt": "2024-09-12T09:32:25.822Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b51dcd76006eff5dbdbe",
+    "name": "Ice Cream & Frozen Dessert",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133531/binkeyit/bjp6cuvkwpgifzdtohxj.webp",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:32:13.621Z",
+    "updatedAt": "2024-09-12T09:32:13.621Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b514cd76006eff5dbdba",
+    "name": "Mouth Fresheners",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133521/binkeyit/xsuncp8k8qppg1i9cixv.webp",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:32:04.322Z",
+    "updatedAt": "2024-09-12T09:32:04.322Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b50ccd76006eff5dbdb6",
+    "name": "Indian Sweets",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133514/binkeyit/jnghk1vu2u4xwkcxips7.webp",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:31:56.568Z",
+    "updatedAt": "2024-09-12T09:31:56.568Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b504cd76006eff5dbdb2",
+    "name": "Flavoured Yougurts",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133505/binkeyit/e1syjsasmnzopt5x2tla.webp",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:31:48.741Z",
+    "updatedAt": "2024-09-12T09:31:48.741Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4fccd76006eff5dbdae",
+    "name": "Energy Bars",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133497/binkeyit/jjqv532jfubfj0076vk1.png",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:31:40.134Z",
+    "updatedAt": "2024-09-12T09:31:40.134Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4f3cd76006eff5dbdaa",
+    "name": "Chocolates",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133486/binkeyit/lrbcspqtklthaqvmvbwx.png",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:31:31.225Z",
+    "updatedAt": "2024-09-12T09:31:31.225Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4e8cd76006eff5dbda6",
+    "name": "Candies & Gum",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133474/binkeyit/qcpbpidwio3avtetbh9a.webp",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:31:20.621Z",
+    "updatedAt": "2024-09-12T09:31:20.621Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4dccd76006eff5dbda2",
+    "name": "Cakes & Rolls",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133465/binkeyit/evoxwor0rpchjtqkxbhc.webp",
+    "category": [
+      {
+        "_id": "66dffd911e92f6b41280b7c2",
+        "name": "Sweet Tooth",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955471/binkeyit/gcoussznta0gjo0xjyiw.png",
+        "createdAt": "2024-09-10T08:04:33.504Z",
+        "updatedAt": "2024-09-10T08:04:33.504Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:31:08.613Z",
+    "updatedAt": "2024-09-12T09:31:08.613Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4cacd76006eff5dbd9e",
+    "name": "Popcorn",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133445/binkeyit/p34pr5pshbajxgq4tacg.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:30:50.253Z",
+    "updatedAt": "2024-09-12T09:30:50.253Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4bfcd76006eff5dbd9a",
+    "name": "Papad & Fryums",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133434/binkeyit/jiekdua3iixkig8i3gkd.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:30:39.737Z",
+    "updatedAt": "2024-09-12T09:30:39.737Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4accd76006eff5dbd92",
+    "name": "Namkeen Snacks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133417/binkeyit/k44svdd3jx9qz8ud4mco.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:30:20.383Z",
+    "updatedAt": "2024-09-12T09:30:27.888Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b4a2cd76006eff5dbd8e",
+    "name": "Nachos",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133408/binkeyit/vgiq1ohmwrwyip0stod5.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:30:10.549Z",
+    "updatedAt": "2024-09-12T09:30:10.549Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b49acd76006eff5dbd8a",
+    "name": "Munchies Gift Packs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133398/binkeyit/pnexjjif9rrxlvewtazy.png",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:30:02.175Z",
+    "updatedAt": "2024-09-12T09:30:02.175Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b48fcd76006eff5dbd86",
+    "name": "Makhana & More",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133383/binkeyit/iyc7xgevydj8hfiondkz.png",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:29:51.318Z",
+    "updatedAt": "2024-09-12T09:29:51.318Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b483cd76006eff5dbd82",
+    "name": "Imported Snacks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133376/binkeyit/d35g11xpiaqhhykuffcu.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:29:39.190Z",
+    "updatedAt": "2024-09-12T09:29:39.190Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b472cd76006eff5dbd7e",
+    "name": "Chips & Crisps",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133359/binkeyit/qyd18xc4rubjl1jzybpx.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:29:22.982Z",
+    "updatedAt": "2024-09-12T09:29:22.982Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b468cd76006eff5dbd7a",
+    "name": "Bhujia & Mixtures",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133347/binkeyit/khypekuiojvyhaxiohvq.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:29:13.000Z",
+    "updatedAt": "2024-09-12T09:29:13.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b459cd76006eff5dbd76",
+    "name": "Tomato & Chilli Ketchup",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133335/binkeyit/v0iouhxc9wrlf9gh2c7b.webp",
+    "category": [
+      {
+        "_id": "66dffd791e92f6b41280b7bc",
+        "name": "Sauces & Spreads",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955446/binkeyit/nvs1gwzo5tlptcu4ghet.png",
+        "createdAt": "2024-09-10T08:04:09.957Z",
+        "updatedAt": "2024-09-10T08:04:09.957Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:28:57.278Z",
+    "updatedAt": "2024-09-12T09:28:57.278Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b450cd76006eff5dbd72",
+    "name": "Jam & Spreads",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133325/binkeyit/fb8mkemislxzhx9la6hc.webp",
+    "category": [
+      {
+        "_id": "66dffd791e92f6b41280b7bc",
+        "name": "Sauces & Spreads",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955446/binkeyit/nvs1gwzo5tlptcu4ghet.png",
+        "createdAt": "2024-09-10T08:04:09.957Z",
+        "updatedAt": "2024-09-10T08:04:09.957Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:28:48.184Z",
+    "updatedAt": "2024-09-12T09:28:48.184Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b447cd76006eff5dbd6e",
+    "name": "Indian Chutney & Pickle",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133316/binkeyit/bmvyxrvjdh6jd3yjl6qo.webp",
+    "category": [
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:28:39.655Z",
+    "updatedAt": "2024-09-12T09:28:39.655Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b43dcd76006eff5dbd6a",
+    "name": "Cooking Sauces & Vinegar",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133305/binkeyit/fjye8tzufqevj9keulvj.webp",
+    "category": [
+      {
+        "_id": "66dffd791e92f6b41280b7bc",
+        "name": "Sauces & Spreads",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955446/binkeyit/nvs1gwzo5tlptcu4ghet.png",
+        "createdAt": "2024-09-10T08:04:09.957Z",
+        "updatedAt": "2024-09-10T08:04:09.957Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:28:29.397Z",
+    "updatedAt": "2024-09-12T09:28:29.397Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b433cd76006eff5dbd66",
+    "name": "Asian Sauces",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133296/binkeyit/xxjqwjhcsc6ebudfjrdw.webp",
+    "category": [
+      {
+        "_id": "66dffd791e92f6b41280b7bc",
+        "name": "Sauces & Spreads",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955446/binkeyit/nvs1gwzo5tlptcu4ghet.png",
+        "createdAt": "2024-09-10T08:04:09.957Z",
+        "updatedAt": "2024-09-10T08:04:09.957Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:28:19.914Z",
+    "updatedAt": "2024-09-12T09:28:19.914Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b426cd76006eff5dbd62",
+    "name": "Wound Care And Pain Relief",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133284/binkeyit/kc4jqdnihyh885hukkfw.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:28:06.766Z",
+    "updatedAt": "2024-09-12T09:28:06.766Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b41bcd76006eff5dbd5e",
+    "name": "Skin Treatment",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133273/binkeyit/epe96043cdft0v8wm2se.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:27:55.743Z",
+    "updatedAt": "2024-09-12T09:27:55.743Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b413cd76006eff5dbd5a",
+    "name": "Proten & Sports supplements",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133265/binkeyit/m3gjn8nstfirfwmh0hk4.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:27:47.454Z",
+    "updatedAt": "2024-09-12T09:27:47.454Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b40acd76006eff5dbd56",
+    "name": "Pre & Post Workout",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133256/binkeyit/ot0fn9kf7z2zniotjc7j.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:27:38.817Z",
+    "updatedAt": "2024-09-12T09:27:38.817Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b400cd76006eff5dbd52",
+    "name": "Oral Health & Eye Care",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133245/binkeyit/sjcsijk7xgvpmg41wm2l.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:27:28.573Z",
+    "updatedAt": "2024-09-12T09:27:28.573Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b3f0cd76006eff5dbd4e",
+    "name": "Marks & Sanitizers",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133230/binkeyit/gcc7zn9mejdzjtjjmjz0.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:27:12.997Z",
+    "updatedAt": "2024-09-12T09:27:12.997Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b3e5cd76006eff5dbd4a",
+    "name": "Herbal Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133213/binkeyit/qhlc4bq3ziroqm9oyhpi.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:27:01.727Z",
+    "updatedAt": "2024-09-12T09:27:01.727Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b379cd76006eff5dbd3d",
+    "name": "Healthcare Devices",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133109/binkeyit/pgf21vb55rmavfoiesj7.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:25:13.118Z",
+    "updatedAt": "2024-09-12T09:25:13.118Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b367cd76006eff5dbd35",
+    "name": "Everyday Medicines",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133093/binkeyit/m7gl24vwtkdq7honmbhv.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:24:55.203Z",
+    "updatedAt": "2024-09-12T09:24:55.203Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b35fcd76006eff5dbd31",
+    "name": "Digestive Care",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133086/binkeyit/r5iwvwpjiu0uddzu3ufw.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:24:47.976Z",
+    "updatedAt": "2024-09-12T09:24:47.976Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b358cd76006eff5dbd2d",
+    "name": "Cough & Cold",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133078/binkeyit/kzcuy149rvi895tcbil2.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:24:40.102Z",
+    "updatedAt": "2024-09-12T09:24:40.102Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b34fcd76006eff5dbd29",
+    "name": "Chyawanprash",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133066/binkeyit/ncwfeejqltqtbocfnqka.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:24:31.770Z",
+    "updatedAt": "2024-09-12T09:24:31.770Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b344cd76006eff5dbd25",
+    "name": "Beauty Supplements",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133057/binkeyit/yirz1v11ghkeaujgzwyz.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:24:20.983Z",
+    "updatedAt": "2024-09-12T09:24:20.983Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b33bcd76006eff5dbd21",
+    "name": "Antiseptic Liquid",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133049/binkeyit/veuvmbu3lmm6dmlhvirf.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:24:11.624Z",
+    "updatedAt": "2024-09-12T09:24:11.624Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b333cd76006eff5dbd1d",
+    "name": "Adult Diapers",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133040/binkeyit/vzcfyqt3oxqk03jkviso.webp",
+    "category": [
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:24:03.725Z",
+    "updatedAt": "2024-09-12T09:24:03.725Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b324cd76006eff5dbd19",
+    "name": "Pet Grooming",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133025/binkeyit/ortd7kbizrnryswvshdu.png",
+    "category": [
+      {
+        "_id": "66dffd601e92f6b41280b7b6",
+        "name": "Pet Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955422/binkeyit/uw0sexbgyjyttv5gmm0l.png",
+        "createdAt": "2024-09-10T08:03:44.974Z",
+        "updatedAt": "2024-09-10T08:03:44.974Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:23:48.200Z",
+    "updatedAt": "2024-09-12T09:23:48.200Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b31bcd76006eff5dbd15",
+    "name": "Dog Needs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133016/binkeyit/dprtlnl8hr6hw1tmyzfa.png",
+    "category": [
+      {
+        "_id": "66dffd601e92f6b41280b7b6",
+        "name": "Pet Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955422/binkeyit/uw0sexbgyjyttv5gmm0l.png",
+        "createdAt": "2024-09-10T08:03:44.974Z",
+        "updatedAt": "2024-09-10T08:03:44.974Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:23:39.474Z",
+    "updatedAt": "2024-09-12T09:23:39.474Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b312cd76006eff5dbd11",
+    "name": "Diverse Pet Food",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726133007/binkeyit/ls1p4ndxzx8ov7nuei4w.png",
+    "category": [
+      {
+        "_id": "66dffd601e92f6b41280b7b6",
+        "name": "Pet Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955422/binkeyit/uw0sexbgyjyttv5gmm0l.png",
+        "createdAt": "2024-09-10T08:03:44.974Z",
+        "updatedAt": "2024-09-10T08:03:44.974Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:23:30.111Z",
+    "updatedAt": "2024-09-12T09:23:30.111Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b30acd76006eff5dbd0d",
+    "name": "Cat Needs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132997/binkeyit/wougsfgq5dyvnin47xmt.png",
+    "category": [
+      {
+        "_id": "66dffd601e92f6b41280b7b6",
+        "name": "Pet Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955422/binkeyit/uw0sexbgyjyttv5gmm0l.png",
+        "createdAt": "2024-09-10T08:03:44.974Z",
+        "updatedAt": "2024-09-10T08:03:44.974Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:23:22.776Z",
+    "updatedAt": "2024-09-12T09:23:22.776Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b300cd76006eff5dbd09",
+    "name": "Accessories & Other Supplies",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132989/binkeyit/egrcmmqebqaaevxdc2rw.png",
+    "category": [
+      {
+        "_id": "66dffd601e92f6b41280b7b6",
+        "name": "Pet Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955422/binkeyit/uw0sexbgyjyttv5gmm0l.png",
+        "createdAt": "2024-09-10T08:03:44.974Z",
+        "updatedAt": "2024-09-10T08:03:44.974Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:23:12.182Z",
+    "updatedAt": "2024-09-12T09:23:12.182Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2f3cd76006eff5dbd05",
+    "name": "Women's Grooming",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132977/binkeyit/cclb6d3p6gghtn6n5fsr.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:22:59.269Z",
+    "updatedAt": "2024-09-12T09:22:59.269Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2eacd76006eff5dbd01",
+    "name": "Sunscreen",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132968/binkeyit/pn2vc85s3ovthgk8ynz9.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:22:50.974Z",
+    "updatedAt": "2024-09-12T09:22:50.974Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2e2cd76006eff5dbcfd",
+    "name": "Skin & Hair Care",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132956/binkeyit/injoiwjpl86s83iuxrs4.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:22:42.047Z",
+    "updatedAt": "2024-09-12T09:22:42.047Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2d4cd76006eff5dbcf9",
+    "name": "Shower Gels & Scrubs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132944/binkeyit/gcklgbhanh3h73zclrdt.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:22:28.735Z",
+    "updatedAt": "2024-09-12T09:22:28.735Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2c8cd76006eff5dbcf5",
+    "name": "shampoo & Conditioner",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132933/binkeyit/qgjrtek3ibnqo9m8vleb.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:22:16.142Z",
+    "updatedAt": "2024-09-12T09:22:16.142Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2becd76006eff5dbcf1",
+    "name": "Men's Grooming",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132921/binkeyit/fzsr3uqihzluede1irmt.png",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:22:06.023Z",
+    "updatedAt": "2024-09-12T09:22:06.023Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2b2cd76006eff5dbced",
+    "name": "Makeup",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132909/binkeyit/sstyklkmc30zpt0adqlo.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:21:54.196Z",
+    "updatedAt": "2024-09-12T09:21:54.196Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b2a5cd76006eff5dbce9",
+    "name": "Handwash",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132899/binkeyit/uhzph8cewxrhk0tevndl.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:21:41.638Z",
+    "updatedAt": "2024-09-12T09:21:41.638Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b29ccd76006eff5dbce5",
+    "name": "Hand & FootCare",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132889/binkeyit/onstsflnda7ecuzo7esa.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:21:32.047Z",
+    "updatedAt": "2024-09-12T09:21:32.047Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b292cd76006eff5dbce1",
+    "name": "Hair Styling",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132880/binkeyit/odozyqud1sb7cmc0ddhg.png",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:21:22.151Z",
+    "updatedAt": "2024-09-12T09:21:22.151Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b288cd76006eff5dbcdd",
+    "name": "Hair Oil & Serum",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132868/binkeyit/gus1fqn6oxrek7ulgqgq.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:21:12.054Z",
+    "updatedAt": "2024-09-12T09:21:12.054Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b27dcd76006eff5dbcd9",
+    "name": "Fragrance & Talc",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132855/binkeyit/safgfi0hrcjdvi2f2man.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:21:01.023Z",
+    "updatedAt": "2024-09-12T09:21:01.023Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b270cd76006eff5dbcd5",
+    "name": "Feminine Care",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132845/binkeyit/nrzgfzqqx1uy007oyket.png",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:20:48.078Z",
+    "updatedAt": "2024-09-12T09:20:48.078Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b266cd76006eff5dbcd1",
+    "name": "Face Wash & Scrub",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132835/binkeyit/ohtud4gzxb2qmxbh5zw1.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:20:38.462Z",
+    "updatedAt": "2024-09-12T09:20:38.462Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b25dcd76006eff5dbccd",
+    "name": "Face Cream & Lotion",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132826/binkeyit/swxuos4b1pamx3zl28vj.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:20:29.312Z",
+    "updatedAt": "2024-09-12T09:20:29.312Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b252cd76006eff5dbcc9",
+    "name": "Face Care",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132813/binkeyit/ep8dgskrzzpeoklhjrji.png",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:20:18.143Z",
+    "updatedAt": "2024-09-12T09:20:18.143Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b247cd76006eff5dbcc5",
+    "name": "Body Moisturizers & More",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132800/binkeyit/plptarwg4lgdtn8bgb8g.png",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:20:07.220Z",
+    "updatedAt": "2024-09-12T09:20:07.220Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b239cd76006eff5dbcc1",
+    "name": "Bathing Soaps",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132789/binkeyit/ybfmh590v0v19j5rxkvx.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:19:53.352Z",
+    "updatedAt": "2024-09-12T09:19:53.352Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b22fcd76006eff5dbcbd",
+    "name": "Bath & Beauty Gifts",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132781/binkeyit/ceozydwuxqwonr1rli47.webp",
+    "category": [
+      {
+        "_id": "66dffd4b1e92f6b41280b7b3",
+        "name": "Personal Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955401/binkeyit/fce1p10lpskkvqduvn44.png",
+        "createdAt": "2024-09-10T08:03:23.703Z",
+        "updatedAt": "2024-09-10T08:03:23.703Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:19:43.694Z",
+    "updatedAt": "2024-09-12T09:19:43.694Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b223cd76006eff5dbcb9",
+    "name": "Smoking Cessation",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132767/binkeyit/qze0xzc83kjqqmlky7tk.webp",
+    "category": [
+      {
+        "_id": "66dffd311e92f6b41280b7ae",
+        "name": "paan corner",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955387/binkeyit/smkbswgvrws6jwjx2gbu.png",
+        "createdAt": "2024-09-10T08:02:57.002Z",
+        "updatedAt": "2024-09-10T08:03:09.982Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:19:31.441Z",
+    "updatedAt": "2024-09-12T09:19:31.441Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b21acd76006eff5dbcb5",
+    "name": "Paan",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132757/binkeyit/ddkeei50wazmhxeanoto.webp",
+    "category": [
+      {
+        "_id": "66dffd311e92f6b41280b7ae",
+        "name": "paan corner",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955387/binkeyit/smkbswgvrws6jwjx2gbu.png",
+        "createdAt": "2024-09-10T08:02:57.002Z",
+        "updatedAt": "2024-09-10T08:03:09.982Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:19:22.167Z",
+    "updatedAt": "2024-09-12T09:19:22.167Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b210cd76006eff5dbcb1",
+    "name": "Mouth Fresheners",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132748/binkeyit/zzbxphapmjphazqabri5.webp",
+    "category": [
+      {
+        "_id": "66dffd311e92f6b41280b7ae",
+        "name": "paan corner",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955387/binkeyit/smkbswgvrws6jwjx2gbu.png",
+        "createdAt": "2024-09-10T08:02:57.002Z",
+        "updatedAt": "2024-09-10T08:03:09.982Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:19:12.098Z",
+    "updatedAt": "2024-09-12T09:19:12.098Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b206cd76006eff5dbcad",
+    "name": "Lighters & Accessories",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132740/binkeyit/ccarvbrop0kz5kbgc2b4.webp",
+    "category": [
+      {
+        "_id": "66dffd311e92f6b41280b7ae",
+        "name": "paan corner",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955387/binkeyit/smkbswgvrws6jwjx2gbu.png",
+        "createdAt": "2024-09-10T08:02:57.002Z",
+        "updatedAt": "2024-09-10T08:03:09.982Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:19:02.743Z",
+    "updatedAt": "2024-09-12T09:19:02.743Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b1fbcd76006eff5dbca9",
+    "name": "Healthy Proteins",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132728/binkeyit/c1v4cnpc0jkefsmfndsh.webp",
+    "category": [
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:18:51.038Z",
+    "updatedAt": "2024-09-12T09:18:51.038Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b1f1cd76006eff5dbca5",
+    "name": "Dry Fruits, Nuts & Seeds",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132719/binkeyit/tgxjpu6yact00vzsiol5.png",
+    "category": [
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:18:41.473Z",
+    "updatedAt": "2024-09-12T09:18:41.473Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b1decd76006eff5dbca1",
+    "name": "Cooking Essentials",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132696/binkeyit/ihq9myhdaauddvdwfmvj.png",
+    "category": [
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:18:22.983Z",
+    "updatedAt": "2024-09-12T09:18:22.983Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b1d2cd76006eff5dbc9d",
+    "name": "Cookies & Wafers",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132687/binkeyit/jia7i8mitgm5zxmt0r6j.webp",
+    "category": [
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:18:10.616Z",
+    "updatedAt": "2024-09-12T09:18:10.616Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b1cacd76006eff5dbc99",
+    "name": "Breakfast & More",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132671/binkeyit/enrxl3v4frivmymcygyr.webp",
+    "category": [
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:18:02.375Z",
+    "updatedAt": "2024-09-12T09:18:02.375Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b1bacd76006eff5dbc95",
+    "name": "Baby Food",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132660/binkeyit/a27tgf8qgipuw0rehsgd.webp",
+    "category": [
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:17:46.396Z",
+    "updatedAt": "2024-09-12T09:17:46.396Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b1aacd76006eff5dbc91",
+    "name": "Whole Spices",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132643/binkeyit/nuado3mrb8qresnl2uqt.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:17:30.340Z",
+    "updatedAt": "2024-09-12T09:17:30.340Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b19ccd76006eff5dbc8d",
+    "name": "Salt, Sugar & Jaggery",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132633/binkeyit/ejzuxcgrmjaydhpp50ql.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:17:16.614Z",
+    "updatedAt": "2024-09-12T09:17:16.614Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b18fcd76006eff5dbc89",
+    "name": "Powdered Spices",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132618/binkeyit/egvtcsqxkyljr8z0gony.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:17:03.319Z",
+    "updatedAt": "2024-09-12T09:17:03.319Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b185cd76006eff5dbc85",
+    "name": "Papad & Fryums",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132610/binkeyit/ub0xqgvbf2iym6ajbsuz.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:16:53.071Z",
+    "updatedAt": "2024-09-12T09:16:53.071Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b17bcd76006eff5dbc81",
+    "name": "Ghee & Vanaspati",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132599/binkeyit/nfus7izzsl8ihu3amemt.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:16:43.871Z",
+    "updatedAt": "2024-09-12T09:16:43.871Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b171cd76006eff5dbc7d",
+    "name": "Dry Fruits",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132591/binkeyit/s2b4btwkrhqijx3t1mqr.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:16:33.444Z",
+    "updatedAt": "2024-09-12T09:16:33.444Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b169cd76006eff5dbc79",
+    "name": "Dry Fruits Gift Packs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132582/binkeyit/j6bio53vyk3ic9strbik.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:16:25.282Z",
+    "updatedAt": "2024-09-12T09:16:25.282Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b160cd76006eff5dbc75",
+    "name": "Dates & Seeds",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132572/binkeyit/v1zumuaimopfv1h54yw3.webp",
+    "category": [
+      {
+        "_id": "66dffd141e92f6b41280b7a8",
+        "name": "Masala, Oil & More",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955345/binkeyit/zbuwc8rsfpsynbuxhjww.png",
+        "createdAt": "2024-09-10T08:02:28.171Z",
+        "updatedAt": "2024-09-10T08:02:28.171Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:16:16.255Z",
+    "updatedAt": "2024-09-12T09:16:16.255Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b14ccd76006eff5dbc71",
+    "name": "Plants",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132544/binkeyit/gvazbrncveynghcgpoqp.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:15:56.176Z",
+    "updatedAt": "2024-09-12T09:15:56.176Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b12bcd76006eff5dbc6d",
+    "name": "Festive & Occasion Needs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132520/binkeyit/b9c2sdjniae7exh6iadi.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:15:23.287Z",
+    "updatedAt": "2024-09-12T09:15:23.287Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b118cd76006eff5dbc69",
+    "name": "Electronic Gifting",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132501/binkeyit/w8nkvvt6h54x8dli5ebs.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:15:04.303Z",
+    "updatedAt": "2024-09-12T09:15:04.303Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b10dcd76006eff5dbc65",
+    "name": "Electronic Accessories",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132490/binkeyit/ytpsjp3cj1qtkxcdqtfg.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:14:53.225Z",
+    "updatedAt": "2024-09-12T09:14:53.225Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0fbcd76006eff5dbc61",
+    "name": "Electrical Accessories",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132473/binkeyit/x4kpttzej79hmhrcgfux.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:14:35.976Z",
+    "updatedAt": "2024-09-12T09:14:35.976Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0edcd76006eff5dbc5d",
+    "name": "Decorative Lights",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132459/binkeyit/u2boe9m4bsetzf7ptn0w.png",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:14:21.935Z",
+    "updatedAt": "2024-09-12T09:14:21.935Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0e4cd76006eff5dbc59",
+    "name": "Clothing, Footwear & Accessories",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132448/binkeyit/wsi6un9blvhdsqmlkrmp.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:14:12.310Z",
+    "updatedAt": "2024-09-12T09:14:12.310Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0d8cd76006eff5dbc55",
+    "name": "Cleaning Tools",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132436/binkeyit/d59ckfziv5bjbcb3yujv.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:14:00.102Z",
+    "updatedAt": "2024-09-12T09:14:00.102Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0cecd76006eff5dbc51",
+    "name": "Candles & Diyas",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132427/binkeyit/n64vrgjhsg6cxxlw9mib.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:13:50.729Z",
+    "updatedAt": "2024-09-12T09:13:50.729Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0c5cd76006eff5dbc4d",
+    "name": "Bouquets",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132418/binkeyit/akfelisynnjxsxka0kyy.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:13:41.407Z",
+    "updatedAt": "2024-09-12T09:13:41.407Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0bbcd76006eff5dbc49",
+    "name": "Bags",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132409/binkeyit/rgzpm46qmesvvt9azhou.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:13:31.962Z",
+    "updatedAt": "2024-09-12T09:13:31.962Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b0b2cd76006eff5dbc45",
+    "name": "Audio & Accessories",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132398/binkeyit/rmrna6lqqcxvfr5sswas.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:13:22.766Z",
+    "updatedAt": "2024-09-12T09:13:22.766Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b065cd76006eff5dbc41",
+    "name": "Appliances",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132315/binkeyit/czwnyvbeu1qk8ioz15ub.webp",
+    "category": [
+      {
+        "_id": "66dffd071e92f6b41280b7a5",
+        "name": "Home & Office",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955332/binkeyit/cu8vuutqxqecw9zzq16c.png",
+        "createdAt": "2024-09-10T08:02:15.183Z",
+        "updatedAt": "2024-09-10T08:02:15.183Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:12:05.602Z",
+    "updatedAt": "2024-09-12T09:12:05.602Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b050cd76006eff5dbc3d",
+    "name": "Leafies & Herbs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132297/binkeyit/j7zz3ws7fjvvgzmdit23.png",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:11:44.207Z",
+    "updatedAt": "2024-09-12T09:11:44.207Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b042cd76006eff5dbc39",
+    "name": "Hydroponic",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132285/binkeyit/oxekcqqvue34ebhrworg.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd211e92f6b41280b7ab",
+        "name": "Organic & Healthy Living",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955359/binkeyit/ffe08r08hzochuxguaoo.png",
+        "createdAt": "2024-09-10T08:02:41.895Z",
+        "updatedAt": "2024-09-10T08:02:41.895Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:11:30.506Z",
+    "updatedAt": "2024-09-12T09:11:30.506Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b036cd76006eff5dbc35",
+    "name": "Frozen Veg",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132273/binkeyit/vqadqyifd5nflmk8njlr.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:11:18.151Z",
+    "updatedAt": "2024-09-12T09:11:18.151Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b02ccd76006eff5dbc31",
+    "name": "Freshly Cut Sprouts",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132266/binkeyit/q8gol8zbqtfcj6nctw0e.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:11:08.032Z",
+    "updatedAt": "2024-09-12T09:11:08.032Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b024cd76006eff5dbc2d",
+    "name": "Fresh Vegetables",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132257/binkeyit/c8qqzon5fxdu6ikm9foi.png",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:11:00.154Z",
+    "updatedAt": "2024-09-12T09:11:00.154Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b01bcd76006eff5dbc29",
+    "name": "Fresh Juice & Dips",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132249/binkeyit/x4lk50gs93j0zyeidp6n.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:10:51.711Z",
+    "updatedAt": "2024-09-12T09:10:51.711Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b012cd76006eff5dbc25",
+    "name": "Fresh Fruits",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132238/binkeyit/makknqbswfdvlkyipqsy.png",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:10:42.663Z",
+    "updatedAt": "2024-09-12T09:10:42.663Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b008cd76006eff5dbc21",
+    "name": "Flowers & Leaves",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132229/binkeyit/ooejery7hweuqorn1kpq.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:10:32.724Z",
+    "updatedAt": "2024-09-12T09:10:32.724Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2b000cd76006eff5dbc1d",
+    "name": "Combo & Recipes",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132221/binkeyit/malmsyvu71d3tovl9jwe.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:10:24.391Z",
+    "updatedAt": "2024-09-12T09:10:24.391Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aff6cd76006eff5dbc19",
+    "name": "Certified Organic",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132205/binkeyit/od66ydyfqbq5tshqhxv3.webp",
+    "category": [
+      {
+        "_id": "66dffcf71e92f6b41280b7a2",
+        "name": "Fruits & Vegetables",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955316/binkeyit/lmvmyyjdm6vdgwhqazve.png",
+        "createdAt": "2024-09-10T08:01:59.206Z",
+        "updatedAt": "2024-09-10T08:01:59.206Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:10:14.263Z",
+    "updatedAt": "2024-09-12T09:10:14.263Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2afddcd76006eff5dbc15",
+    "name": "Vermicelli",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132178/binkeyit/pg2dibccdpw5nnvle8ti.png",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:09:49.894Z",
+    "updatedAt": "2024-09-12T09:09:49.894Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2afcbcd76006eff5dbc11",
+    "name": "Poha, Daliya & Other Grains",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132157/binkeyit/pfk3yrec4z1sgvhqfmfz.png",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd9c1e92f6b41280b7c5",
+        "name": "Tea, Coffe & Health Drink",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955482/binkeyit/jclivpy8oq8sdsjjk07p.png",
+        "createdAt": "2024-09-10T08:04:44.246Z",
+        "updatedAt": "2024-09-10T08:04:44.246Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:09:31.216Z",
+    "updatedAt": "2024-09-12T09:09:31.216Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2afb6cd76006eff5dbc0d",
+    "name": "Peanut Butter",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132129/binkeyit/eehyl06wc0kpnhd9bhid.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:09:10.071Z",
+    "updatedAt": "2024-09-12T09:09:10.071Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2af93cd76006eff5dbc09",
+    "name": "Paneer & Tofu",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132108/binkeyit/gfhhquniiqudgznxwex5.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:08:35.326Z",
+    "updatedAt": "2024-09-12T09:08:35.326Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2af82cd76006eff5dbc05",
+    "name": "Oats",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132090/binkeyit/ckqenhf0azm48aggbvmk.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:08:18.628Z",
+    "updatedAt": "2024-09-12T09:08:18.628Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2af65cd76006eff5dbbfd",
+    "name": "Muesli & Granola",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132066/binkeyit/nte4okgfasvkiz7alpk9.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:07:49.159Z",
+    "updatedAt": "2024-09-12T09:07:59.708Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2af59cd76006eff5dbbf9",
+    "name": "Milk",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132050/binkeyit/icbcgngeajdjjhbj30ta.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:07:37.464Z",
+    "updatedAt": "2024-09-12T09:07:37.464Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2af3fcd76006eff5dbbf5",
+    "name": "Honey & Chyawnprash",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726132009/binkeyit/zji2zcixkdt9i7agg5or.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd791e92f6b41280b7bc",
+        "name": "Sauces & Spreads",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955446/binkeyit/nvs1gwzo5tlptcu4ghet.png",
+        "createdAt": "2024-09-10T08:04:09.957Z",
+        "updatedAt": "2024-09-10T08:04:09.957Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd6c1e92f6b41280b7b9",
+        "name": "Pharma & Wellness",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955434/binkeyit/o9lsnshrzq5pfgtmnaay.png",
+        "createdAt": "2024-09-10T08:03:56.168Z",
+        "updatedAt": "2024-09-10T08:03:56.168Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:07:11.432Z",
+    "updatedAt": "2024-09-12T09:07:11.432Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2af21cd76006eff5dbbf1",
+    "name": "Flakes & Kids Cereals",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131987/binkeyit/nvmnsqta2k1cpedcnodz.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dffd851e92f6b41280b7bf",
+        "name": "Snacks & Munchies",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955459/binkeyit/lx9a2ktgjscrhapdd8sy.png",
+        "createdAt": "2024-09-10T08:04:21.854Z",
+        "updatedAt": "2024-09-10T08:04:21.854Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:06:41.205Z",
+    "updatedAt": "2024-09-12T09:06:41.205Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2af08cd76006eff5dbbed",
+    "name": "Energy Bars",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131952/binkeyit/arlij8bj2y3q0fbc7pnq.png",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:06:16.975Z",
+    "updatedAt": "2024-09-12T09:06:16.975Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aeb5cd76006eff5dbbe5",
+    "name": "Curd & Yogurt",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131890/binkeyit/ns8m575jbsqv6tl9umsh.png",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:04:53.315Z",
+    "updatedAt": "2024-09-12T09:04:53.315Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aeabcd76006eff5dbbe1",
+    "name": "Cream & Whitener",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131880/binkeyit/c1xftb11mfpneifz3tmp.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:04:43.697Z",
+    "updatedAt": "2024-09-12T09:04:43.697Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aea2cd76006eff5dbbdd",
+    "name": "Condensed Milk",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131867/binkeyit/kmtepxkvddaiwdxywoag.png",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:04:34.215Z",
+    "updatedAt": "2024-09-12T09:04:34.215Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ae93cd76006eff5dbbd9",
+    "name": "Cheese",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131856/binkeyit/gl7ctkngxzfsnxdpsmu1.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:04:19.936Z",
+    "updatedAt": "2024-09-12T09:04:19.936Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ae89cd76006eff5dbbd5",
+    "name": "Butter & More",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131845/binkeyit/zwqzwi9ffenmcq7l22m4.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:04:09.841Z",
+    "updatedAt": "2024-09-12T09:04:09.841Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ae7ecd76006eff5dbbd1",
+    "name": "Breakfast Mixes",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131833/binkeyit/xzkk2ecqgtbgif8j2h0d.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:03:58.383Z",
+    "updatedAt": "2024-09-12T09:03:58.383Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ae6ecd76006eff5dbbcd",
+    "name": "Bread & Pav",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131818/binkeyit/bncfrqsictnaizawqv6w.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T09:03:42.207Z",
+    "updatedAt": "2024-09-12T09:03:42.207Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ad07cd76006eff5dbbc9",
+    "name": "Batter",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131457/binkeyit/b39ljeezy0pzkc3kxg3x.png",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:57:43.240Z",
+    "updatedAt": "2024-09-12T08:57:43.240Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2acf0cd76006eff5dbbc5",
+    "name": "Water & Ice Cubes",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131433/binkeyit/w5veppw5fohe5fof4iwr.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:57:20.581Z",
+    "updatedAt": "2024-09-12T08:57:20.581Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ace5cd76006eff5dbbc1",
+    "name": "Soft Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131424/binkeyit/lgvdetxlxp354jaivmfv.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:57:09.957Z",
+    "updatedAt": "2024-09-12T08:57:09.957Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2acdccd76006eff5dbbbd",
+    "name": "Soda & Mixers",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131414/binkeyit/e5clulyahag1t772kz7u.png",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:57:00.749Z",
+    "updatedAt": "2024-09-12T08:57:00.749Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2acd3cd76006eff5dbbb9",
+    "name": "Pure Juices",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131395/binkeyit/sr4pwkmsc8jidds4iurq.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:56:51.064Z",
+    "updatedAt": "2024-09-12T08:56:51.064Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2acbfcd76006eff5dbbb5",
+    "name": "Mongo Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131384/binkeyit/dgtpaoecmagrvagrezxq.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:56:31.545Z",
+    "updatedAt": "2024-09-12T08:56:31.545Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2acb4cd76006eff5dbbb1",
+    "name": "Milk Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131363/binkeyit/zzy4hl7r7pyemjxwf354.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:56:20.486Z",
+    "updatedAt": "2024-09-12T08:56:20.486Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac9dcd76006eff5dbbad",
+    "name": "Imported Beverages",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131352/binkeyit/m14x5vg2tuacs9n4cro0.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:55:57.358Z",
+    "updatedAt": "2024-09-12T08:55:57.358Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac8fcd76006eff5dbba9",
+    "name": "Herbal Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131336/binkeyit/scgiqgqvbpvhfbw7lgdk.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:55:43.493Z",
+    "updatedAt": "2024-09-12T08:55:43.493Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac82cd76006eff5dbba5",
+    "name": "Fruit Juices",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131323/binkeyit/e0nfpiztfjd5mla0prmi.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:55:30.693Z",
+    "updatedAt": "2024-09-12T08:55:30.693Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac78cd76006eff5dbba1",
+    "name": "Energy Drinks",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131315/binkeyit/snxd5fnyeen01qldd7md.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:55:20.934Z",
+    "updatedAt": "2024-09-12T08:55:20.934Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac6ecd76006eff5dbb9d",
+    "name": "Concentrates & Syrups",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131304/binkeyit/rro1c47vw1nrlcdyjku1.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:55:10.967Z",
+    "updatedAt": "2024-09-12T08:55:10.967Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac64cd76006eff5dbb99",
+    "name": "Cold Coffe & Ice Tea",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131295/binkeyit/evb47fop17lchpziqccw.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:55:00.975Z",
+    "updatedAt": "2024-09-12T08:55:00.975Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac5bcd76006eff5dbb95",
+    "name": "Coconut Water",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131284/binkeyit/jmtuk2ymftsuxs1g4blm.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:54:51.606Z",
+    "updatedAt": "2024-09-12T08:54:51.606Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac50cd76006eff5dbb91",
+    "name": "Beverages Gift Packs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131274/binkeyit/ukdiut4qedphvorjmyi3.webp",
+    "category": [
+      {
+        "_id": "66dffcd91e92f6b41280b79c",
+        "name": "Cold Drinks & Juices",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955285/binkeyit/arbeviqib8aq8zhfhn1e.png",
+        "createdAt": "2024-09-10T08:01:29.390Z",
+        "updatedAt": "2024-09-10T08:01:29.390Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:54:40.822Z",
+    "updatedAt": "2024-09-12T08:54:40.822Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac40cd76006eff5dbb8d",
+    "name": "LIquid Detergents",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131258/binkeyit/drq3dnjlrkmqxrty2nm3.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:54:24.758Z",
+    "updatedAt": "2024-09-12T08:54:24.758Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac36cd76006eff5dbb89",
+    "name": "Laundry Additives",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131248/binkeyit/s7iadmbwwywpaxedvpmq.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:54:14.981Z",
+    "updatedAt": "2024-09-12T08:54:14.981Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac2ccd76006eff5dbb85",
+    "name": "Garbage Bags",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131239/binkeyit/sv95prdfsbc0wlzkbsur.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:54:04.975Z",
+    "updatedAt": "2024-09-12T08:54:04.975Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac21cd76006eff5dbb81",
+    "name": "Fresheners",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131228/binkeyit/zuzgon8utjebcgkhggjm.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:53:53.426Z",
+    "updatedAt": "2024-09-12T08:53:53.426Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac19cd76006eff5dbb7d",
+    "name": "Floor Cleaners & More",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131219/binkeyit/gmvzjo66zaymsm5st4kb.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:53:45.682Z",
+    "updatedAt": "2024-09-12T08:53:45.682Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac11cd76006eff5dbb79",
+    "name": "Disinfectant & More",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131212/binkeyit/cux1matofnwhal5z6v9h.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:53:37.285Z",
+    "updatedAt": "2024-09-12T08:53:37.285Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ac07cd76006eff5dbb75",
+    "name": "Dishwashing Gels & Powder",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131201/binkeyit/tzmgch64kdflm8q1vndo.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:53:27.533Z",
+    "updatedAt": "2024-09-12T08:53:27.533Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2abfdcd76006eff5dbb71",
+    "name": "Dishwashing Accessories",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131189/binkeyit/fggcqomp52ro28sdz3by.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:53:17.332Z",
+    "updatedAt": "2024-09-12T08:53:17.332Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2abefcd76006eff5dbb6d",
+    "name": "Detergent Powder & Bars",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131173/binkeyit/kpatedmgdp65695hkvzd.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:53:03.766Z",
+    "updatedAt": "2024-09-12T08:53:03.766Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2abe3cd76006eff5dbb69",
+    "name": "Cleaning Tools",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131164/binkeyit/pmetxs6ghp9qcqjvkryn.webp",
+    "category": [
+      {
+        "_id": "66def6a29f228d00a8227626",
+        "name": "Cleaning Essentials",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955270/binkeyit/omc8nnhamvbccqeu7pdk.png",
+        "createdAt": "2024-09-09T13:22:43.003Z",
+        "updatedAt": "2024-09-10T08:01:13.985Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:52:51.022Z",
+    "updatedAt": "2024-09-12T08:52:51.022Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2abd3cd76006eff5dbb65",
+    "name": "Sausage, Salami & Ham",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131149/binkeyit/xy2wyavubcchbb2ynawo.webp",
+    "category": [
+      {
+        "_id": "66dee64e18e742f42e59cae0",
+        "name": "Chicken, Meat & Fish",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883978/binkeyit/rtsb0kkfafhhycspb4d4.png",
+        "createdAt": "2024-09-09T12:13:02.816Z",
+        "updatedAt": "2024-09-09T12:13:02.816Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:52:35.766Z",
+    "updatedAt": "2024-09-12T08:52:35.766Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2abcacd76006eff5dbb61",
+    "name": "Fish & Seafood",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131140/binkeyit/lwqucspmd2l1bshddbj1.png",
+    "category": [
+      {
+        "_id": "66dee64e18e742f42e59cae0",
+        "name": "Chicken, Meat & Fish",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883978/binkeyit/rtsb0kkfafhhycspb4d4.png",
+        "createdAt": "2024-09-09T12:13:02.816Z",
+        "updatedAt": "2024-09-09T12:13:02.816Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:52:26.525Z",
+    "updatedAt": "2024-09-12T08:52:26.525Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2abc1cd76006eff5dbb5d",
+    "name": "Eggs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131131/binkeyit/xemib8mchthnkpxcko87.webp",
+    "category": [
+      {
+        "_id": "66dffce51e92f6b41280b79f",
+        "name": "Dairy, Bread & Eggs",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725955298/binkeyit/qac2jr23yg1ci4ayuxp2.png",
+        "createdAt": "2024-09-10T08:01:41.110Z",
+        "updatedAt": "2024-09-10T08:01:41.110Z",
+        "__v": 0
+      },
+      {
+        "_id": "66dee64e18e742f42e59cae0",
+        "name": "Chicken, Meat & Fish",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883978/binkeyit/rtsb0kkfafhhycspb4d4.png",
+        "createdAt": "2024-09-09T12:13:02.816Z",
+        "updatedAt": "2024-09-09T12:13:02.816Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:52:17.841Z",
+    "updatedAt": "2024-09-13T10:39:54.251Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2abb7cd76006eff5dbb59",
+    "name": "Chicken",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131118/binkeyit/sqvutlruvuh0cercuxyi.png",
+    "category": [
+      {
+        "_id": "66dee64e18e742f42e59cae0",
+        "name": "Chicken, Meat & Fish",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883978/binkeyit/rtsb0kkfafhhycspb4d4.png",
+        "createdAt": "2024-09-09T12:13:02.816Z",
+        "updatedAt": "2024-09-09T12:13:02.816Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:52:07.311Z",
+    "updatedAt": "2024-09-12T08:52:07.311Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aba5cd76006eff5dbb55",
+    "name": "Soup",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131098/binkeyit/bkxeecd4mkfowhp8mrdi.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:51:49.582Z",
+    "updatedAt": "2024-09-12T08:51:49.582Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab97cd76006eff5dbb51",
+    "name": "Ready to Cook & Eat",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131090/binkeyit/ff8bu3ugkphktgggke6n.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:51:35.717Z",
+    "updatedAt": "2024-09-12T08:51:35.717Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab8fcd76006eff5dbb4d",
+    "name": "Pasta",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131082/binkeyit/ivygo9zmvqs08dyre8j7.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:51:27.549Z",
+    "updatedAt": "2024-09-12T08:51:27.549Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab86cd76006eff5dbb49",
+    "name": "Noodles",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131072/binkeyit/a8p5yjdeefbgkj3y9nvi.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:51:18.102Z",
+    "updatedAt": "2024-09-12T08:51:18.102Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab7ccd76006eff5dbb45",
+    "name": "Instant Mixes",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131062/binkeyit/bi1nx3eslhc0l6eywais.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:51:08.574Z",
+    "updatedAt": "2024-09-12T08:51:08.574Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab71cd76006eff5dbb41",
+    "name": "Imported Noodles & Pasta",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131052/binkeyit/seibwhxzzrarmhpmaagg.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:50:57.998Z",
+    "updatedAt": "2024-09-12T08:50:57.998Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab67cd76006eff5dbb3d",
+    "name": "Herbs & Seasoning",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131040/binkeyit/pyxyuk8d4xxemvscj85d.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:50:47.375Z",
+    "updatedAt": "2024-09-12T08:50:47.375Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab5ccd76006eff5dbb39",
+    "name": "Dessert & Cake Mixes",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131029/binkeyit/lmwvpd3pzw5rulxi6ikl.webp",
+    "category": [
+      {
+        "_id": "66dee63f18e742f42e59cadd",
+        "name": "Breakfast & Instant Food",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725883962/binkeyit/npxpsdy0ratuttkvx18g.png",
+        "createdAt": "2024-09-09T12:12:47.177Z",
+        "updatedAt": "2024-09-09T12:12:47.177Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:50:36.103Z",
+    "updatedAt": "2024-09-12T08:50:36.103Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab4bcd76006eff5dbb35",
+    "name": "Sweet & Salty",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131010/binkeyit/dsmvzdsw6ryovoinelrf.webp",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:50:19.831Z",
+    "updatedAt": "2024-09-12T08:50:19.831Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab3fcd76006eff5dbb31",
+    "name": "Rusks & Wafers",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726131001/binkeyit/wpwwa0vypzsakbihxpng.png",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:50:07.506Z",
+    "updatedAt": "2024-09-12T08:50:07.506Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab35cd76006eff5dbb2d",
+    "name": "Healthy & Digestive",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130992/binkeyit/wtkq7jyf8kehfxexfloz.webp",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:49:57.942Z",
+    "updatedAt": "2024-09-12T08:49:57.942Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab2ccd76006eff5dbb29",
+    "name": "Glucose & Marie",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130979/binkeyit/rxp5nbrnjm3uj9v3ybwk.webp",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:49:48.424Z",
+    "updatedAt": "2024-09-12T08:49:48.424Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab1fcd76006eff5dbb25",
+    "name": "Cream Biscuits",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130970/binkeyit/ixjjnxj9p2ipt42e0xaw.webp",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:49:35.977Z",
+    "updatedAt": "2024-09-12T08:49:35.977Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab16cd76006eff5dbb21",
+    "name": "Cookies",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130960/binkeyit/zveqqhgxm52138sjaomh.webp",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:49:26.207Z",
+    "updatedAt": "2024-09-12T08:49:26.207Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2ab0ccd76006eff5dbb1d",
+    "name": "Cakes & Rolls",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130946/binkeyit/pmiwovk02dq3g8jig933.webp",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:49:16.902Z",
+    "updatedAt": "2024-09-12T08:49:16.902Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aafecd76006eff5dbb19",
+    "name": "Bread & Pav",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130928/binkeyit/klk3pzdgvduoav5qv7zh.webp",
+    "category": [
+      {
+        "_id": "66dee0f818e742f42e59caae",
+        "name": "Bakery & Biscuits",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882610/binkeyit/uz3opyestu20xwosazao.png",
+        "createdAt": "2024-09-09T11:50:16.713Z",
+        "updatedAt": "2024-09-09T11:50:16.713Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:49:02.327Z",
+    "updatedAt": "2024-09-12T08:49:02.327Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aadecd76006eff5dbb15",
+    "name": "Skin & Hair Care",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130902/binkeyit/qew48ty28qy6vqz2znto.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:48:30.782Z",
+    "updatedAt": "2024-09-12T08:48:30.782Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aad0cd76006eff5dbb11",
+    "name": "Oral & Nasal Care",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130891/binkeyit/xrq8rxsb5tp9mpmmfayt.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:48:16.990Z",
+    "updatedAt": "2024-09-12T08:48:16.990Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aac6cd76006eff5dbb0d",
+    "name": "Nursing",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130880/binkeyit/ltrfzhjjhoqvhnnafluq.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:48:06.477Z",
+    "updatedAt": "2024-09-12T08:48:06.477Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aabacd76006eff5dbb09",
+    "name": "Mom Care Needs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130867/binkeyit/eeetteeioved4jclpfce.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:47:54.024Z",
+    "updatedAt": "2024-09-12T08:47:54.024Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aaabcd76006eff5dbb05",
+    "name": "Hygiene",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130843/binkeyit/n8ypax80nou0tyubyfms.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:47:39.535Z",
+    "updatedAt": "2024-09-12T08:47:39.535Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa95cd76006eff5dbb01",
+    "name": "Health & Safety",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130829/binkeyit/pcfi0njnniwitwjnjg1o.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:47:17.482Z",
+    "updatedAt": "2024-09-12T08:47:17.482Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa86cd76006eff5dbafd",
+    "name": "Feeding",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130815/binkeyit/vk59lsopyuytjnw9pwxe.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:47:02.544Z",
+    "updatedAt": "2024-09-12T08:47:02.544Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa7acd76006eff5dbaf9",
+    "name": "Dispers & More",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130803/binkeyit/g8uticu1pdmeqdhfkvak.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:46:50.150Z",
+    "updatedAt": "2024-09-12T08:46:50.150Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa6fcd76006eff5dbaf5",
+    "name": "Bathing Needs",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130791/binkeyit/k2mcb0vpo1rfjlht9cyk.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:46:39.758Z",
+    "updatedAt": "2024-09-12T08:46:39.758Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa62cd76006eff5dbaf1",
+    "name": "Baby Wipes",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130780/binkeyit/ziaegjdx5ayivkfpbgao.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:46:26.714Z",
+    "updatedAt": "2024-09-12T08:46:26.714Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa58cd76006eff5dbaed",
+    "name": "Baby Gifting & Toys",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130768/binkeyit/holiqj8abs5iabku7jxt.png",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:46:16.527Z",
+    "updatedAt": "2024-09-12T08:46:16.527Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa4ccd76006eff5dbae9",
+    "name": "Baby Food",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130757/binkeyit/idrbfhphtyvsnxtigk5e.webp",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:46:04.278Z",
+    "updatedAt": "2024-09-12T08:46:04.278Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa42cd76006eff5dbae5",
+    "name": "Baby Accessories & Apparel",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130745/binkeyit/ovsjxkwmluiypju0en3f.png",
+    "category": [
+      {
+        "_id": "66dee0b018e742f42e59caa7",
+        "name": "Baby Care",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725882539/binkeyit/xgw4tbydzhakirfzm8fo.png",
+        "createdAt": "2024-09-09T11:49:04.462Z",
+        "updatedAt": "2024-09-09T11:49:04.462Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:45:54.262Z",
+    "updatedAt": "2024-09-12T08:45:54.262Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa2ccd76006eff5dbae1",
+    "name": "Toor, Urad & Chana",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130725/binkeyit/muo4xcz3vbxe6zm1sdqd.webp",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:45:32.286Z",
+    "updatedAt": "2024-09-12T08:45:32.286Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa22cd76006eff5dbadd",
+    "name": "Rice",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130715/binkeyit/n4wjm6q0wcrvyzqty17b.webp",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:45:22.350Z",
+    "updatedAt": "2024-09-12T08:45:22.350Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2aa18cd76006eff5dbad9",
+    "name": "Rajma, Chhole & Others",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130702/binkeyit/mqncbdxkzuabzra9fzwy.webp",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:45:12.362Z",
+    "updatedAt": "2024-09-12T08:45:12.362Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2a9b9cd76006eff5dbad5",
+    "name": "Poha, Daliya & Other Grains",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130609/binkeyit/esl2tqxskrbajo9apz49.png",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:43:37.824Z",
+    "updatedAt": "2024-09-12T08:43:37.824Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e2a7b0cd76006eff5dbabf",
+    "name": "Moong & Masoor",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726130083/binkeyit/flsgtnosbqvv4wddh03d.webp",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-12T08:34:56.882Z",
+    "updatedAt": "2024-09-12T08:34:56.882Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e19000333b819fdc70c8e4",
+    "name": "Millet & Other Flours",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726058490/binkeyit/nmfjmsio5y5uadr8gro5.webp",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-11T12:41:36.051Z",
+    "updatedAt": "2024-09-11T12:41:36.051Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e1530d8ca0eb7951d999d3",
+    "name": "Besan, Sooji & Maida",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726042883/binkeyit/rvxsfnui7xelhjodqozb.webp",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-11T08:21:33.362Z",
+    "updatedAt": "2024-09-11T08:21:33.362Z",
+    "__v": 0
+  },
+  {
+    "_id": "66e1529b8ca0eb7951d999cd",
+    "name": "Atta",
+    "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1726042768/binkeyit/gil8jdnyxkfscef8wrt0.png",
+    "category": [
+      {
+        "_id": "66def65a5ce7688442dcbfc8",
+        "name": "Atta, Rice & Dal",
+        "image": "http://res.cloudinary.com/dljwfy0pe/image/upload/v1725888087/binkeyit/rqs2ac9wwpdkcbzd7om6.png",
+        "createdAt": "2024-09-09T13:21:30.039Z",
+        "updatedAt": "2024-09-09T13:21:30.039Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2024-09-11T08:19:39.064Z",
+    "updatedAt": "2024-09-11T08:19:39.064Z",
+    "__v": 0
+  }
+]

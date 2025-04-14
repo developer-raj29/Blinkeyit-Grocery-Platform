@@ -1,7 +1,7 @@
 const UserModel = require("../models/user.model.js");
 const jwt = require("jsonwebtoken");
 
-const genertedRefreshToken = async (userId) => {
+const generatedRefreshToken = async (userId) => {
   const token = await jwt.sign(
     { id: userId },
     process.env.SECRET_KEY_REFRESH_TOKEN,
@@ -18,4 +18,4 @@ const genertedRefreshToken = async (userId) => {
   return token;
 };
 
-module.exports = genertedRefreshToken;
+module.exports = generatedRefreshToken;

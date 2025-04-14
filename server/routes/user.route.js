@@ -13,7 +13,7 @@ const {
   verifyEmailController,
   verifyForgotPasswordOtp,
 } = require("../controllers/user.controller.js");
-const auth = require("../middlewares/admin.middleware.js");
+const auth = require("../middlewares/auth.middleware.js");
 const upload = require("../middlewares/multer.js");
 
 /*========================================Authentication================================*/
