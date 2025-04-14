@@ -1,21 +1,62 @@
 const SubCategoryModel = require("../models/subCategory.model");
 
+// const AddSubCategoryController = async (request, response) => {
+//   try {
+//     const { name, image, category } = request.body;
+
+//     if (!name && !image && !category[0]) {
+//       return response.status(400).json({
+//         message: "Provide name, image, category",
+//         error: true,
+//         success: false,
+//       });
+//     }
+
+//     const payload = {
+//       name,
+//       image,
+//       category,
+//     };
+
+//     const createSubCategory = new SubCategoryModel(payload);
+//     const save = await createSubCategory.save();
+
+//     return response.json({
+//       message: "Sub Category Created",
+//       data: save,
+//       error: false,
+//       success: true,
+//     });
+//   } catch (error) {
+//     return response.status(500).json({
+//       message: error.message || error,
+//       error: true,
+//       success: false,
+//     });
+//   }
+// };
+
 const AddSubCategoryController = async (request, response) => {
   try {
     const { name, image, category } = request.body;
 
-    if (!name && !image && !category[0]) {
+    if (!name || !image || !category) {
       return response.status(400).json({
-        message: "Provide name, image, category",
+        message: "Provide name, image, and category ID",
         error: true,
         success: false,
       });
     }
 
+    // If category is sent as an array, extract _id
+    const categoryId = Array.isArray(category)
+      ? category[0]?._id || category[0]
+      : category;
+
     const payload = {
       name,
       image,
-      category,
+      category: categoryId,
     };
 
     const createSubCategory = new SubCategoryModel(payload);

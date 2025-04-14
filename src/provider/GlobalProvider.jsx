@@ -59,6 +59,7 @@ const GlobalProvider = ({children}) => {
         return error
       }
     }
+    
     const deleteCartItem = async(cartId)=>{
       try {
           const response = await Axios({
@@ -116,6 +117,7 @@ const GlobalProvider = ({children}) => {
           // AxiosToastError(error)
       }
     }
+    
     const fetchOrder = async()=>{
       try {
         const response = await Axios({
