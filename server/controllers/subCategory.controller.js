@@ -49,14 +49,14 @@ const AddSubCategoryController = async (request, response) => {
     }
 
     // If category is sent as an array, extract _id
-    const categoryId = Array.isArray(category)
-      ? category[0]?._id || category[0]
-      : category;
+    // const categoryId = Array.isArray(category)
+    //   ? category[0]?._id || category[0]
+    //   : category;
 
     const payload = {
       name,
       image,
-      category: categoryId,
+      category,
     };
 
     const createSubCategory = new SubCategoryModel(payload);
@@ -77,19 +77,58 @@ const AddSubCategoryController = async (request, response) => {
   }
 };
 
-const getSubCategoryController = async (request, response) => {
+// const getSubCategoryController = async (request, response) => {
+//   try {
+//     const data = await SubCategoryModel.find()
+//       .sort({ createdAt: -1 })
+//       .populate("category");
+//     return response.json({
+//       message: "Sub Category data",
+//       data: data,
+//       error: false,
+//       success: true,
+//     });
+//   } catch (error) {
+//     return response.status(500).json({
+//       message: error.message || error,
+//       error: true,
+//       success: false,
+//     });
+//   }
+// };
+
+const getSubCategoryController = async (req, res) => {
   try {
-    const data = await SubCategoryModel.find()
-      .sort({ createdAt: -1 })
-      .populate("category");
-    return response.json({
-      message: "Sub Category data",
+    const data = await SubCategoryModel.aggregate([
+      // Step 1: Lookup from the categories collection
+      {
+        $lookup: {
+          from: "categories", // the collection name, not model name
+          localField: "category",
+          foreignField: "_id",
+          as: "category",
+        },
+      },
+      // Step 2: Unwind the category array (since lookup returns an array)
+      {
+        $unwind: "$category",
+      },
+      // Step 3: Sort by category.name (alphabetical)
+      {
+        $sort: {
+          "category.name": 1, // 1 for ascending, -1 for descending
+        },
+      },
+    ]);
+
+    return res.json({
+      message: "Sorted Sub Category Data",
       data: data,
       error: false,
       success: true,
     });
   } catch (error) {
-    return response.status(500).json({
+    return res.status(500).json({
       message: error.message || error,
       error: true,
       success: false,

@@ -1,5 +1,11 @@
 const mongoose = require("mongoose");
 
+const PaymentStatus = {
+  PAID: "PAID",
+  PENDING: "PENDING",
+  COD: "CASH ON DELIVERY",
+};
+
 const orderSchema = new mongoose.Schema(
   {
     userId: {
@@ -34,8 +40,8 @@ const orderSchema = new mongoose.Schema(
     },
     payment_status: {
       type: String,
-      enum: ["Pending", "Completed", "Failed"],
-      default: "Pending",
+      enum: Object.values(PaymentStatus),
+      default: PaymentStatus.PENDING,
     },
     delivery_address: {
       type: mongoose.Schema.Types.ObjectId,

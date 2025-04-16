@@ -12,11 +12,13 @@ const subCategorySchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    category: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-      required: [true, "Parent category is required"],
-    },
+    category: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Category",
+        required: [true, "Parent category is required"],
+      },
+    ],
   },
   {
     timestamps: true,

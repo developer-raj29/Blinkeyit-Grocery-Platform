@@ -148,6 +148,8 @@ const SubCategoryPage = () => {
       AxiosToastError(error);
     }
   };
+
+  console.log("data: ", data);
   return (
     <section className="">
       <div className="p-2   bg-white shadow-md flex items-center justify-between">
