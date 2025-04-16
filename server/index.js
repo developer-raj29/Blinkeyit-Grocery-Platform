@@ -20,12 +20,14 @@ const PORT = process.env.PORT || 5000;
 const connectDB = require("./config/mongoDB");
 connectDB();
 
-app.use(
-  cors({
-    credentials: true,
-    origin: process.env.FRONTEND_URL,
-  })
-);
+app.use(cors());
+
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: process.env.FRONTEND_URL,
+//   })
+// );
 
 // const allowedOrigins = [
 //   "http://localhost:5173",
@@ -59,7 +61,9 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Blinkit Backend is running at PORT : " + PORT);
+  res.json({
+    message: "Blinkit Backend is running at PORT : " + PORT,
+  });
 });
 
 app.use("/api/user", userRouter);
