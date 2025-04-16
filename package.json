@@ -6,17 +6,10 @@
   "scripts": {
     "server": "cd server && npm run dev",
     "dev": "concurrently --kill-others-on-fail -n \"client,server\" -c \"bgGreen.bold,bgMagenta.bold\" \"vite\" \"cd server && npm run dev\"",
-    "build": "cd client && npm run build",
-    "start": "node server/index.js",
-    // "build": "vite build",
-    "lint": "eslint .",
+    "build": "vite build",
+    "lint": "eslint",
     "preview": "vite preview"
   },
-//   "scripts": {
-//   "dev": "concurrently --kill-others-on-fail -n \"client,server\" -c \"bgGreen.bold,bgMagenta.bold\" \"vite\" \"cd server && npm run dev\"",
-//   "build": "cd client && npm run build", // customize as needed
-//   "start": "node server/index.js" // or wherever your main entry is
-// }
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "@stripe/stripe-js": "^7.0.0",
