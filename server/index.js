@@ -61,13 +61,13 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Blinkeyit Grocery Backend is running ✅", PORT);
+  // res.send("Blinkeyit Grocery Backend is running ✅", PORT);
+  res.json({
+    message: "Blinkeyit Grocery Backend is running ✅ : " + PORT,
+  });
 });
 
 // app.get("/", (req, res) => {
-// res.json({
-//   message: "Blinkit Backend is running at PORT : " + PORT,
-// });
 // });
 
 app.use("/api/user", userRouter);
