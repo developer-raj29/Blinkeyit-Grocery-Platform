@@ -108,31 +108,66 @@ const getProductController = async (request, response) => {
   }
 };
 
+// const getProductByCategory = async (request, response) => {
+//   try {
+//     const { id } = request.body;
+
+//     if (!id) {
+//       return response.status(400).json({
+//         message: "provide category id",
+//         error: true,
+//         success: false,
+//       });
+//     }
+
+//     const product = await ProductModel.find({
+//       category: { $in: id },
+//     }).limit(15);
+
+//     return response.json({
+//       message: "category product list",
+//       data: product,
+//       error: false,
+//       success: true,
+//     });
+//   } catch (error) {
+//     return response.status(500).json({
+//       message: error.message || error,
+//       error: true,
+//       success: false,
+//     });
+//   }
+// };
+
 const getProductByCategory = async (request, response) => {
   try {
     const { id } = request.body;
 
     if (!id) {
       return response.status(400).json({
-        message: "provide category id",
+        message: "Please provide a category ID.",
         error: true,
         success: false,
       });
     }
 
-    const product = await ProductModel.find({
-      category: { $in: id },
+    // Ensure `id` is used with $in properly if it's not an array
+    const query = Array.isArray(id) ? { $in: id } : id;
+
+    const products = await ProductModel.find({
+      category: query,
     }).limit(15);
 
-    return response.json({
-      message: "category product list",
-      data: product,
+    return response.status(200).json({
+      message: "Category product list fetched successfully.",
+      data: products,
       error: false,
       success: true,
     });
   } catch (error) {
+    console.error("getProductByCategory Error:", error);
     return response.status(500).json({
-      message: error.message || error,
+      message: error.message || "Something went wrong.",
       error: true,
       success: false,
     });

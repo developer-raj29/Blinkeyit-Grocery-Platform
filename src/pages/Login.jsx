@@ -41,14 +41,22 @@ const Login = () => {
         data: data,
       });
 
+      console.log("login response: ", response);
+
       if (response.data.error) {
         toast.error(response.data.message);
       }
 
       if (response.data.success) {
         toast.success(response.data.message);
-        localStorage.setItem("accesstoken", response.data.data.accesstoken);
-        localStorage.setItem("refreshToken", response.data.data.refreshToken);
+        console.log("accesstoken: ", response.data.data.accesstoken);
+        console.log("accesstoken: ", response.data.data.refreshToken);
+
+        // localStorage.setItem("accesstoken", response.data.data.accesstoken);
+        // localStorage.setItem("refreshToken", response.data.data.refreshToken);
+
+        sessionStorage.setItem("accesstoken", response.data.data.accesstoken);
+        sessionStorage.setItem("refreshToken", response.data.data.refreshToken);
 
         const userDetails = await fetchUserDetails();
         dispatch(setUserDetails(userDetails.data));
