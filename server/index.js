@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 5000;
 const connectDB = require("./config/mongoDB");
 connectDB();
 
-app.use(cors());
+// app.use(cors());
 
 app.use(
   cors({
