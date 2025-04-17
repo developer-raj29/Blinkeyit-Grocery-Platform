@@ -26,13 +26,16 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
         },
       });
 
+      console.log("response: ", response);
+
       const { data: responseData } = response;
 
       if (responseData.success) {
         setData(responseData.data);
       }
     } catch (error) {
-      AxiosToastError(error);
+      // AxiosToastError(error);
+      console.log("error: ", error);
     } finally {
       setLoading(false);
     }
@@ -52,7 +55,9 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
 
   const handleRedirectProductListpage = () => {
     const subcategory = subCategoryData.find((sub) => {
-      const categories = Array.isArray(sub.category) ? sub.category : [sub.category]; // Ensure it's always an array
+      const categories = Array.isArray(sub.category)
+        ? sub.category
+        : [sub.category]; // Ensure it's always an array
 
       return categories.some((c) => c._id == id || c == id);
     });
