@@ -25,8 +25,7 @@ connectDB();
 app.use(
   cors({
     credentials: true,
-    origin:
-      process.env.FRONTEND_URL || "https://blinkeyit-groceries.vercel.app",
+    origin: ["http://localhost:5173" || process.env.FRONTEND_URL],
   })
 );
 
