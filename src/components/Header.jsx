@@ -25,6 +25,7 @@ const Header = () => {
   const { totalPrice, totalQty } = useGlobalContext();
   const [openCartSection, setOpenCartSection] = useState(false);
 
+  console.log("user: ", user);
   const redirectToLoginPage = () => {
     navigate("/login");
   };
@@ -103,11 +104,20 @@ const Header = () => {
                     onClick={() => setOpenUserMenu((preve) => !preve)}
                     className="flex select-none items-center gap-1 cursor-pointer"
                   >
-                    <p>Account</p>
-                    {openUserMenu ? (
-                      <GoTriangleUp size={25} />
+                    {user?.avatar ? (
+                      <img
+                        src={user.avatar}
+                        alt="Profile"
+                        className="w-10 h-10 rounded-full object-cover"
+                      />
                     ) : (
-                      <GoTriangleDown size={25} />
+                      <FaRegCircleUser size={26} />
+                    )}
+                    <span className="text-sm font-medium">Account</span>
+                    {openUserMenu ? (
+                      <GoTriangleUp size={20} />
+                    ) : (
+                      <GoTriangleDown size={20} />
                     )}
                   </div>
                   {openUserMenu && (
