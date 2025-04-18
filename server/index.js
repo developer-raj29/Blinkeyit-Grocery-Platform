@@ -25,9 +25,16 @@ connectDB();
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173" || process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL,
   })
 );
+
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: "http://localhost:5173" || process.env.FRONTEND_URL,
+//   })
+// );
 
 app.use(express.json());
 app.use(cookieParser());
