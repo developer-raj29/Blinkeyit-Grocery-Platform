@@ -26,16 +26,13 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
         },
       });
 
-      console.log("response: ", response);
-
       const { data: responseData } = response;
 
       if (responseData.success) {
         setData(responseData.data);
       }
     } catch (error) {
-      // AxiosToastError(error);
-      console.log("error: ", error);
+      AxiosToastError(error);
     } finally {
       setLoading(false);
     }
@@ -55,14 +52,15 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
 
   const handleRedirectProductListpage = () => {
     const subcategory = subCategoryData.find((sub) => {
-      const categories = Array.isArray(sub.category)
-        ? sub.category
-        : [sub.category]; // Ensure it's always an array
+      if (!Array.isArray(sub.category)) return false;
 
-      return categories.some((c) => c._id == id || c == id);
+      return sub.category.some((c) => {
+        const cid = typeof c === "string" ? c : c?._id;
+        return String(cid) === String(id);
+      });
     });
 
-    if (!subcategory) return "#"; // Or some fallback
+    if (!subcategory) return "#";
 
     const url = `/${valideURLConvert(name)}-${id}/${valideURLConvert(
       subcategory.name
@@ -70,6 +68,21 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
 
     return url;
   };
+
+  // const handleRedirectProductListpage = () => {
+  //   const subcategory = subCategoryData.find((sub) => {
+  //     const filterData = sub.category.some((c) => {
+  //       return c._id == id;
+  //     });
+
+  //     return filterData ? true : null;
+  //   });
+  //   const url = `/${valideURLConvert(name)}-${id}/${valideURLConvert(
+  //     subcategory?.name
+  //   )}-${subcategory?._id}`;
+
+  //   return url;
+  // };
 
   const redirectURL = handleRedirectProductListpage();
   return (

@@ -12,21 +12,51 @@ const Home = () => {
   const subCategoryData = useSelector((state) => state.product.allSubCategory);
   const navigate = useNavigate();
 
+  // const handleRedirectProductListpage = (id, cat) => {
+  //   console.log(id, cat);
+  //   const subcategory = subCategoryData.find((sub) => {
+  //     const filterData = sub.category.some((c) => {
+  //       return c._id == id;
+  //     });
+
+  //     return filterData ? true : null;
+  //   });
+  //   const url = `/${valideURLConvert(cat)}-${id}/${valideURLConvert(
+  //     subcategory.name
+  //   )}-${subcategory._id}`;
+
+  //   navigate(url);
+  //   console.log(url);
+  // };
   const handleRedirectProductListpage = (id, cat) => {
     console.log(id, cat);
-    const subcategory = subCategoryData.find((sub) => {
-      const filterData = sub.category.some((c) => {
-        return c._id == id;
-      });
+    console.log("subCategoryData: ", subCategoryData);
 
-      return filterData ? true : null;
+    const subcategory = subCategoryData.find((sub) => {
+      const subCat = sub.category;
+
+      if (Array.isArray(subCat)) {
+        // If it's an array of categories
+        return subCat.some((c) => String(c?._id || c) === String(id));
+      } else if (typeof subCat === "object" && subCat !== null) {
+        // If it's a single category object
+        return String(subCat._id) === String(id);
+      }
+
+      return false;
     });
+
+    if (!subcategory) {
+      console.warn("No subcategory found for category:", id);
+      return;
+    }
+
     const url = `/${valideURLConvert(cat)}-${id}/${valideURLConvert(
       subcategory.name
     )}-${subcategory._id}`;
 
     navigate(url);
-    console.log(url);
+    console.log("Redirecting to:", url);
   };
 
   return (

@@ -176,7 +176,7 @@ const getProductByCategory = async (request, response) => {
 
 const getProductByCategoryAndSubCategory = async (request, response) => {
   try {
-    const { categoryId, subCategoryId, page, limit } = request.body;
+    let { categoryId, subCategoryId, page, limit } = request.body;
 
     if (!categoryId || !subCategoryId) {
       return response.status(400).json({
@@ -186,13 +186,12 @@ const getProductByCategoryAndSubCategory = async (request, response) => {
       });
     }
 
-    if (!page) {
-      page = 1;
-    }
+    // Ensure both are arrays
+    if (!Array.isArray(categoryId)) categoryId = [categoryId];
+    if (!Array.isArray(subCategoryId)) subCategoryId = [subCategoryId];
 
-    if (!limit) {
-      limit = 10;
-    }
+    page = Number(page) || 1;
+    limit = Number(limit) || 10;
 
     const query = {
       category: { $in: categoryId },
