@@ -25,7 +25,7 @@ connectDB();
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:5173" || process.env.FRONTEND_URL],
+    origin: "http://localhost:5173" || process.env.FRONTEND_URL,
   })
 );
 
