@@ -90,10 +90,28 @@ const Header = () => {
           <div className="">
             {/**user icons display in only mobile version**/}
             <button
-              className="text-neutral-600 lg:hidden"
+              className="text-neutral-600 lg:hidden flex items-center"
               onClick={handleMobileUser}
             >
-              <FaRegCircleUser size={26} />
+              {/* <FaRegCircleUser size={26} /> */}
+              {user?._id ? (
+                <div
+                  onClick={() => setOpenUserMenu((preve) => !preve)}
+                  className="flex select-none items-center gap-1 cursor-pointer"
+                >
+                  {user?.avatar ? (
+                    <img
+                      src={user.avatar}
+                      alt="Profile"
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                  ) : (
+                    <FaRegCircleUser size={26} />
+                  )}
+                </div>
+              ) : (
+                <FaRegCircleUser size={26} />
+              )}
             </button>
 
             {/**Desktop**/}
