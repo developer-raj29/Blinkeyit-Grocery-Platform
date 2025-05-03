@@ -14,9 +14,7 @@ import {
 import { useDispatch } from "react-redux";
 import Axios from "./utils/Axios";
 import SummaryApi from "./common/SummaryApi";
-import { handleAddItemCart } from "./store/cartProduct";
 import GlobalProvider from "./provider/GlobalProvider";
-import { FaCartShopping } from "react-icons/fa6";
 import CartMobileLink from "./components/CartMobile";
 
 function App() {
@@ -25,7 +23,12 @@ function App() {
 
   const fetchUser = async () => {
     const userData = await fetchUserDetails();
-    dispatch(setUserDetails(userData.data));
+    // dispatch(setUserDetails(userData.data));
+    if (userData?.data) {
+      dispatch(setUserDetails(userData.data));
+    } else {
+      console.warn("No user data returned");
+    }
     console.log("userData: ", userData);
   };
 
@@ -45,6 +48,8 @@ function App() {
         );
       }
     } catch (error) {
+      console.error("Failed to fetch categories:", error);
+      toast.error("Failed to load categories.");
     } finally {
       dispatch(setLoadingCategory(false));
     }
@@ -65,7 +70,10 @@ function App() {
         );
       }
     } catch (error) {
+      console.error("Failed to fetch subcategories:", error);
+      toast.error("Failed to load subcategories.");
     } finally {
+      dispatch(setLoadingCategory(false));
     }
   };
 
@@ -73,7 +81,7 @@ function App() {
     fetchUser();
     fetchCategory();
     fetchSubCategory();
-    // fetchCartItem()
+    // fetchCartItem();
   }, []);
 
   return (

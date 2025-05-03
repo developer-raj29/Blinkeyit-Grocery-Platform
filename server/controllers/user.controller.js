@@ -46,6 +46,7 @@ const registerUserController = async (request, response) => {
     const save = await newUser.save();
 
     const VerifyEmailUrl = `${process.env.FRONTEND_URL}/verify-email?code=${save?._id}`;
+
     // const OTP = generatedOtp;
 
     // await sendEmail({
