@@ -84,35 +84,40 @@ const registerUserController = async (request, response) => {
 
 const verifyEmailController = async (request, response) => {
   try {
-    const { code } = request.body;
+    const { code } = request.query; // ⬅️ use query instead of params
 
-    const user = await UserModel.findOne({ _id: code });
+    const user = await UserModel.findById(code);
 
     if (!user) {
       return response.status(400).json({
-        message: "Invalid code",
+        message: "Invalid verification link or user does not exist.",
         error: true,
         success: false,
       });
     }
 
-    const updateUser = await UserModel.updateOne(
-      { _id: code },
-      {
-        verify_email: true,
-      }
-    );
+    // Check if already verified
+    if (user.verify_email) {
+      return response.status(200).json({
+        message: "Email already verified.",
+        error: false,
+        success: true,
+      });
+    }
 
-    return response.json({
-      message: "Verify email done",
-      success: true,
+    user.verify_email = true;
+    await user.save();
+
+    return response.status(200).json({
+      message: "Email verification successful.",
       error: false,
+      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
+      message: error.message || "Internal Server Error",
       error: true,
-      success: true,
+      success: false,
     });
   }
 };

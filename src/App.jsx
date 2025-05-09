@@ -17,7 +17,7 @@ import SummaryApi from "./common/SummaryApi";
 import GlobalProvider from "./provider/GlobalProvider";
 import CartMobileLink from "./components/CartMobile";
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -95,6 +95,6 @@ function App() {
       {location.pathname !== "/checkout" && <CartMobileLink />}
     </GlobalProvider>
   );
-}
+};
 
 export default App;
