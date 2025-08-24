@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-toastify";
 import { useEffect } from "react";
 import fetchUserDetails from "./utils/fetchUserDetails";
 import { setUserDetails } from "./store/userSlice";
@@ -105,7 +105,6 @@ const App = () => {
         <Outlet />
       </main>
       <Footer />
-      <Toaster />
       {location.pathname !== "/checkout" && <CartMobileLink />}
     </GlobalProvider>
   );

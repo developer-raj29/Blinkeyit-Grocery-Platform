@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import AxiosToastError from '../utils/AxiosToastError'
 import Axios from '../utils/Axios'
 import SummaryApi from '../common/SummaryApi'
-import toast from 'react-hot-toast'
+import toast from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { loadStripe } from '@stripe/stripe-js'
 

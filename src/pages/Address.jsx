@@ -6,7 +6,7 @@ import { MdEdit } from "react-icons/md";
 import EditAddressDetails from '../components/EditAddressDetails';
 import Axios from '../utils/Axios';
 import SummaryApi from '../common/SummaryApi';
-import toast from 'react-hot-toast';
+import toast from 'react-toastify';
 import AxiosToastError from '../utils/AxiosToastError';
 import { useGlobalContext } from '../provider/GlobalProvider';
 

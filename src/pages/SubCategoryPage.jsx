@@ -11,7 +11,7 @@ import { MdDelete } from "react-icons/md";
 import { HiPencil } from "react-icons/hi";
 import EditSubCategory from "../components/EditSubCategory";
 import CofirmBox from "../components/CofirmBox";
-import toast from "react-hot-toast";
+import toast from "react-toastify";
 
 const SubCategoryPage = () => {
   const [openAddSubCategory, setOpenAddSubCategory] = useState(false);
