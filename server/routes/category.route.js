@@ -11,7 +11,7 @@ const {
 } = require("../controllers/category.controller.js");
 
 router.post("/add-category", auth, AddCategoryController);
-router.post("/get", getCategoryController);
+router.get("/get", getCategoryController);
 router.put("/update", auth, updateCategoryController);
 router.delete("/delete", auth, deleteCategoryController);
 
