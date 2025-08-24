@@ -172,7 +172,7 @@ const loginController = async (request, response) => {
     if (user.status !== "Active") {
       return response.status(400).json({
         message:
-          "Account not active. May contact ❤️ Raj.Dev – The Binkeyit Team.",
+          "Account not active. Please contact ❤️Raj.Dev - The Binkeyit Team.",
         error: true,
         success: false,
       });
