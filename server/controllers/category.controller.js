@@ -46,7 +46,7 @@ const AddCategoryController = async (request, response) => {
 
 const getCategoryController = async (request, response) => {
   try {
-    const data = await CategoryModel.find().sort({ createdAt: -1 });
+    const data = await CategoryModel.find().sort({ createdAt: -1 }).lean();
 
     return response.json({
       data: data,

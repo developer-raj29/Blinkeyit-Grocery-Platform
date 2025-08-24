@@ -77,11 +77,25 @@ const App = () => {
     }
   };
 
+  // useEffect(() => {
+  //   fetchUser();
+  //   fetchCategory();
+  //   fetchSubCategory();
+  //   // fetchCartItem();
+  // }, []);
+
   useEffect(() => {
-    fetchUser();
-    fetchCategory();
-    fetchSubCategory();
-    // fetchCartItem();
+    const fetchAllData = async () => {
+      try {
+        await Promise.all([fetchUser(), fetchCategory(), fetchSubCategory()]);
+        console.log("fetching initial data:");
+        // await fetchCartItem(); // if needed
+      } catch (error) {
+        console.error("Error fetching initial data:", error);
+      }
+    };
+
+    fetchAllData();
   }, []);
 
   return (
