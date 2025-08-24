@@ -20,15 +20,15 @@ const VerifyEmail = () => {
 
         if (response.data.success) {
           setTimeout(() => {
-            toast.success("✅ Email Verified Successfully!");
+            toast.success("Email Verified Successfully!");
             navigate("/login");
           }, 2000); // wait 3s before redirect
         } else {
-          toast.error(response.data.message || "Verification failed ❌");
+          toast.error(response.data.message || "Verification failed.");
         }
         setLoading(true);
       } catch (error) {
-        toast.error(error.response?.data?.message || "Verification failed ❌");
+        toast.error(error.response?.data?.message || "Verification failed.");
       } finally {
         setLoading(false);
       }

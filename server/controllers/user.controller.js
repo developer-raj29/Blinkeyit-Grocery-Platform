@@ -102,7 +102,7 @@ const verifyEmailController = async (request, response) => {
 
     if (!user) {
       return response.status(400).json({
-        message: "Invalid verification link or user does not exist.",
+        message: "Invalid verification link or user does'nt exist.",
         error: true,
         success: false,
       });
@@ -171,7 +171,8 @@ const loginController = async (request, response) => {
 
     if (user.status !== "Active") {
       return response.status(400).json({
-        message: "Account not active. Please contact Admin.",
+        message:
+          "Account not active. May contact ❤️ Raj.Dev – The Binkeyit Team.",
         error: true,
         success: false,
       });
