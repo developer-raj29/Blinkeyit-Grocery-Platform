@@ -5,7 +5,7 @@ import Divider from "./Divider";
 import Axios from "../utils/Axios";
 import SummaryApi from "../common/SummaryApi";
 import { logout } from "../store/userSlice";
-import toast from "react-toastify";
+import { toast} from "react-toastify";
 import AxiosToastError from "../utils/AxiosToastError";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import isAdmin from "../utils/isAdmin";

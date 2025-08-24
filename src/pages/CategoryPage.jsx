@@ -6,7 +6,7 @@ import Axios from "../utils/Axios";
 import SummaryApi from "../common/SummaryApi";
 import EditCategory from "../components/EditCategory";
 import CofirmBox from "../components/CofirmBox";
-import toast from "react-toastify";
+import { toast} from "react-toastify";
 import AxiosToastError from "../utils/AxiosToastError";
 import { useSelector } from "react-redux";
 import { FiEdit } from "react-icons/fi";
