@@ -1,4 +1,4 @@
-import { toast} from "react-toastify"
+import { toast } from "react-toastify"
 import SummaryApi from "../common/SummaryApi"
 import Axios from "./Axios"
 import AxiosToastError from "./AxiosToastError"

@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 import AddToCartButton from './AddToCartButton'
 import { pricewithDiscount } from '../utils/PriceWithDiscount'
 import imageEmpty from '../assets/empty_cart.webp'
-import toast from 'react-toastify'
+import { toast } from "react-toastify"
 
 const DisplayCartItem = ({close}) => {
     const { notDiscountTotalPrice, totalPrice ,totalQty} = useGlobalContext()

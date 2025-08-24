@@ -5,7 +5,7 @@
 // import SummaryApi from "../common/SummaryApi";
 // import Axios from "../utils/Axios";
 // import AxiosToastError from "../utils/AxiosToastError";
-// import { toast} from "react-toastify";
+// import { toast } from "react-toastify";
 
 // const ProductCardAdmin = ({ data, fetchProductData }) => {
 //   const [editOpen, setEditOpen] = useState(false);
@@ -110,7 +110,7 @@ import { IoClose } from "react-icons/io5";
 import SummaryApi from "../common/SummaryApi";
 import Axios from "../utils/Axios";
 import AxiosToastError from "../utils/AxiosToastError";
-import { toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 const ProductCardAdmin = ({ data, fetchProductData }) => {
   const [editOpen, setEditOpen] = useState(false);
