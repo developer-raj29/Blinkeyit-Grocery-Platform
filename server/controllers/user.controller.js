@@ -15,24 +15,36 @@ const registerUserController = async (request, response) => {
   try {
     const { name, email, password } = request.body;
 
+    // Check if all fields are provided
     if (!name || !email || !password) {
       return response.status(400).json({
-        message: "provide email, name, password",
+        message: "Provide name, email, and password",
         error: true,
         success: false,
       });
     }
 
-    const user = await UserModel.findOne({ email });
+    // Email regex expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return response.status(400).json({
+        message: "Invalid email format",
+        error: true,
+        success: false,
+      });
+    }
 
+    // Check if user already exists
+    const user = await UserModel.findOne({ email });
     if (user) {
       return response.json({
-        message: "Already register email",
+        message: "Email is already registered",
         error: true,
         success: false,
       });
     }
 
+    // Hash password
     const salt = await bcryptjs.genSalt(10);
     const hashPassword = await bcryptjs.hash(password, salt);
 
@@ -42,22 +54,14 @@ const registerUserController = async (request, response) => {
       password: hashPassword,
     };
 
+    // Save new user
     const newUser = new UserModel(payload);
     const save = await newUser.save();
 
+    // Email verification link
     const VerifyEmailUrl = `${process.env.FRONTEND_URL}/verify-email?code=${save?._id}`;
 
-    // const OTP = generatedOtp;
-
-    // await sendEmail({
-    //   sendTo: email,
-    //   subject: "Verify email from binkeyit",
-    //   html: verifyEmailTemplate({
-    //     name,
-    //     url: VerifyEmailUrl,
-    //   }),
-    // });
-
+    // Send verification mail
     await mailSender(
       email,
       "Verify email from Blinkeyit",
@@ -68,7 +72,7 @@ const registerUserController = async (request, response) => {
     );
 
     return response.json({
-      message: "User register successfully",
+      message: "User registered successfully. Please verify your email.",
       error: false,
       success: true,
       data: save,
@@ -84,7 +88,15 @@ const registerUserController = async (request, response) => {
 
 const verifyEmailController = async (request, response) => {
   try {
-    const { code } = request.query; // ⬅️ use query instead of params
+    const { code } = request.query; // frontend sends /verify-email?code=123
+
+    if (!code) {
+      return response.status(400).json({
+        message: "Verification code is required.",
+        error: true,
+        success: false,
+      });
+    }
 
     const user = await UserModel.findById(code);
 
@@ -96,22 +108,24 @@ const verifyEmailController = async (request, response) => {
       });
     }
 
-    // Check if already verified
     if (user.verify_email) {
       return response.status(200).json({
         message: "Email already verified.",
         error: false,
         success: true,
+        data: { id: user._id },
       });
     }
 
     user.verify_email = true;
+    user.status = "Active";
     await user.save();
 
     return response.status(200).json({
       message: "Email verification successful.",
       error: false,
       success: true,
+      data: { id: user._id },
     });
   } catch (error) {
     return response.status(500).json({
@@ -123,79 +137,6 @@ const verifyEmailController = async (request, response) => {
 };
 
 //login controller
-// const loginController = async (request, response) => {
-//   try {
-//     const { email, password } = request.body;
-
-//     if (!email || !password) {
-//       return response.status(400).json({
-//         message: "provide email, password",
-//         error: true,
-//         success: false,
-//       });
-//     }
-
-//     const user = await UserModel.findOne({ email });
-
-//     if (!user) {
-//       return response.status(400).json({
-//         message: "User not register",
-//         error: true,
-//         success: false,
-//       });
-//     }
-
-//     if (user.status !== "Active") {
-//       return response.status(400).json({
-//         message: "Contact to Admin",
-//         error: true,
-//         success: false,
-//       });
-//     }
-
-//     const checkPassword = await bcryptjs.compare(password, user.password);
-
-//     if (!checkPassword) {
-//       return response.status(400).json({
-//         message: "Check your password",
-//         error: true,
-//         success: false,
-//       });
-//     }
-
-//     const accesstoken = await generatedAccessToken(user._id);
-//     const refreshToken = await genertedRefreshToken(user._id);
-
-//     const updateUser = await UserModel.findByIdAndUpdate(user?._id, {
-//       last_login_date: new Date(),
-//     });
-
-//     const cookiesOption = {
-//       httpOnly: true,
-//       secure: true,
-//       sameSite: "None",
-//     };
-//     response.cookie("accessToken", accesstoken, cookiesOption);
-//     response.cookie("refreshToken", refreshToken, cookiesOption);
-
-//     return response.json({
-//       message: "Login successfully",
-//       error: false,
-//       success: true,
-//       data: {
-//         accesstoken,
-//         refreshToken,
-//       },
-//     });
-//   } catch (error) {
-//     return response.status(500).json({
-//       message: error.message || error,
-//       error: true,
-//       success: false,
-//     });
-//   }
-// };
-
 const loginController = async (request, response) => {
   try {
     const { email, password } = request.body;
@@ -203,6 +144,16 @@ const loginController = async (request, response) => {
     if (!email || !password) {
       return response.status(400).json({
         message: "Provide email and password",
+        error: true,
+        success: false,
+      });
+    }
+
+    // Email regex expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return response.status(400).json({
+        message: "Invalid email format",
         error: true,
         success: false,
       });

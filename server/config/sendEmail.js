@@ -4,7 +4,7 @@ require("dotenv").config();
 const mailSender = async (sendTo, subject, html) => {
   try {
     const transporter = nodemailer.createTransport({
-      host: process.env.MAIL_HOST, // e.g., smtp.gmail.com
+      host: process.env.MAIL_HOST,
       port: 465,
       secure: true,
       auth: {
@@ -14,16 +14,17 @@ const mailSender = async (sendTo, subject, html) => {
     });
 
     const info = await transporter.sendMail({
-      from: `"Blinkit Grocery App" <${process.env.MAIL_USER}>`,
+      from: `"Blinkyit Grocery Platform App" <${process.env.MAIL_USER}>`,
       to: sendTo,
-      subject: subject,
-      html: html,
+      subject,
+      html,
     });
 
-    console.log("Email sent:", info);
+    console.log("✅ Email sent:", info.messageId);
     return info;
   } catch (error) {
-    console.error("❌ Email error:", error.message);
+    console.error("❌ Send Email error:", error.message);
+    return { success: false, error: error.message };
   }
 };
 
