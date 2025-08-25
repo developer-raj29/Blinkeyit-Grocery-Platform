@@ -15,4 +15,3 @@ router.post("/webhook", webhookStripe);
 router.get("/order-list", auth, getOrderDetailsController);
 
 module.exports = router;
-

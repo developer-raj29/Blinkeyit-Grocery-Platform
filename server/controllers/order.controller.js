@@ -4,48 +4,110 @@ const CartProductModel = require("../models/cartProduct.model.js");
 const OrderModel = require("../models/order.model.js");
 const UserModel = require("../models/user.model.js");
 
+// const CashOnDeliveryOrderController = async (request, response) => {
+//   try {
+//     const userId = request.userId; // auth middleware
+//     const { list_items, totalAmt, addressId, subTotalAmt } = request.body;
+
+//     const payload = list_items.map((el) => {
+//       return {
+//         userId: userId,
+//         orderId: `ORD-${new mongoose.Types.ObjectId()}`,
+//         productId: el.productId._id,
+//         product_details: {
+//           name: el.productId.name,
+//           image: el.productId.image,
+//         },
+//         paymentId: "",
+//         payment_status: "CASH ON DELIVERY",
+//         delivery_address: addressId,
+//         subTotalAmt: subTotalAmt,
+//         totalAmt: totalAmt,
+//       };
+//     });
+
+//     const generatedOrder = await OrderModel.insertMany(payload);
+
+//     ///remove from the cart
+//     const removeCartItems = await CartProductModel.deleteMany({
+//       userId: userId,
+//     });
+//     const updateInUser = await UserModel.updateOne(
+//       { _id: userId },
+//       { shopping_cart: [] }
+//     );
+
+//     return response.json({
+//       message: "Order successfully",
+//       error: false,
+//       success: true,
+//       data: generatedOrder,
+//     });
+//   } catch (error) {
+//     return response.status(500).json({
+//       message: error.message || error,
+//       error: true,
+//       success: false,
+//     });
+//   }
+// };
+
 const CashOnDeliveryOrderController = async (request, response) => {
   try {
-    const userId = request.userId; // auth middleware
+    const userId = request.userId; // From auth middleware
     const { list_items, totalAmt, addressId, subTotalAmt } = request.body;
 
-    const payload = list_items.map((el) => {
-      return {
-        userId: userId,
-        orderId: `ORD-${new mongoose.Types.ObjectId()}`,
-        productId: el.productId._id,
-        product_details: {
-          name: el.productId.name,
-          image: el.productId.image,
-        },
-        paymentId: "",
-        payment_status: "CASH ON DELIVERY",
-        delivery_address: addressId,
-        subTotalAmt: subTotalAmt,
-        totalAmt: totalAmt,
-      };
-    });
+    if (!list_items?.length) {
+      return response.status(400).json({
+        message: "No items found in order request",
+        error: true,
+        success: false,
+      });
+    }
 
-    const generatedOrder = await OrderModel.insertMany(payload);
+    if (!addressId) {
+      return response.status(400).json({
+        message: "Delivery address is required",
+        error: true,
+        success: false,
+      });
+    }
 
-    ///remove from the cart
-    const removeCartItems = await CartProductModel.deleteMany({
-      userId: userId,
-    });
-    const updateInUser = await UserModel.updateOne(
-      { _id: userId },
-      { shopping_cart: [] }
-    );
+    // Build order payload
+    const payload = list_items.map((el) => ({
+      userId,
+      orderId: `ORD-${new mongoose.Types.ObjectId().toString().slice(-6)}`, // shorter readable ID
+      productId: el.productId._id,
+      product_details: {
+        name: el.productId.name,
+        image: el.productId.image,
+        price: el.productId.price,
+      },
+      paymentId: "",
+      payment_status: "CASH ON DELIVERY",
+      delivery_address: addressId,
+      subTotalAmt,
+      totalAmt,
+      status: "Processing", // ✅ track order status
+      createdAt: new Date(),
+    }));
 
-    return response.json({
-      message: "Order successfully",
+    // Save orders in bulk
+    const generatedOrders = await OrderModel.insertMany(payload);
+
+    // Remove ordered items from cart
+    await CartProductModel.deleteMany({ userId });
+    await UserModel.updateOne({ _id: userId }, { shopping_cart: [] });
+
+    return response.status(201).json({
+      message: "Order placed successfully with Cash on Delivery",
       error: false,
       success: true,
-      data: generatedOrder,
+      data: generatedOrders,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
+      message: error.message || "Internal Server Error",
       error: true,
       success: false,
     });
@@ -103,8 +165,9 @@ const paymentController = async (request, response) => {
     };
 
     const session = await Stripe.checkout.sessions.create(params);
+    console.log("session: ", session);
 
-    return response.status(200).json(session);
+    return response.status(202).json(session);
   } catch (error) {
     return response.status(500).json({
       message: error.message || error,
@@ -163,6 +226,9 @@ const webhookStripe = async (request, response) => {
       const lineItems = await Stripe.checkout.sessions.listLineItems(
         session.id
       );
+
+      console.log("lineItems: ", lineItems);
+
       const userId = session.metadata.userId;
       const orderProduct = await getOrderProductItems({
         lineItems: lineItems,
@@ -172,9 +238,11 @@ const webhookStripe = async (request, response) => {
         payment_status: session.payment_status,
       });
 
+      console.log("orderProduct: ", orderProduct);
+
       const order = await OrderModel.insertMany(orderProduct);
 
-      console.log(order);
+      console.log("order: ", order);
       if (Boolean(order[0])) {
         const removeCartItems = await UserModel.findByIdAndUpdate(userId, {
           shopping_cart: [],
