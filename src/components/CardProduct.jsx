@@ -10,7 +10,7 @@ const CardProduct = ({ data }) => {
   return (
     <Link
       to={url}
-      className="border py-2 lg:p-4 grid gap-1 lg:gap-3 min-w-36 lg:min-w-52 rounded cursor-pointer bg-white"
+      className="border py-2 lg:p-4 grid gap-1 lg:gap-3 min-w-36 lg:min-w-min rounded cursor-pointer bg-white"
     >
       <div className="min-h-20 w-full max-h-24 lg:max-h-32 rounded overflow-hidden">
         <img
@@ -25,7 +25,7 @@ const CardProduct = ({ data }) => {
         <div>
           {Boolean(data.discount) && (
             <p className="text-green-600 bg-green-100 px-2 w-fit text-xs rounded-full">
-              {data.discount}% discount
+              {data.discount}% Discount
             </p>
           )}
         </div>
@@ -34,14 +34,15 @@ const CardProduct = ({ data }) => {
         {data.name}
       </div>
       <div className="w-fit gap-1 px-2 lg:px-0 text-sm lg:text-base">
-        {data.unit}
+        Qty: {data.unit}/- only
       </div>
 
       <div className="px-2 lg:px-0 flex items-center justify-between gap-1 lg:gap-3 text-sm lg:text-base">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           <div className="font-semibold">
             {DisplayPriceInRupees(pricewithDiscount(data.price, data.discount))}
           </div>
+          <div className="line-through">{DisplayPriceInRupees(data.price)}</div>
         </div>
         <div className="">
           {data.stock == 0 ? (
