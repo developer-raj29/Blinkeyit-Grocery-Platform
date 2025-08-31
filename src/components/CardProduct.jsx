@@ -10,7 +10,7 @@ const CardProduct = ({ data }) => {
   return (
     <Link
       to={url}
-      className="border py-2 lg:p-4 grid gap-1 lg:gap-3 min-w-36 lg:min-w-min rounded cursor-pointer bg-white"
+      className="border py-2 lg:p-4 grid gap-1 lg:gap-3 min-w-min md:min-w-36 lg:min-w-min rounded cursor-pointer bg-white"
     >
       <div className="min-h-20 w-full max-h-24 lg:max-h-32 rounded overflow-hidden">
         <img
@@ -37,8 +37,8 @@ const CardProduct = ({ data }) => {
         Qty: {data.unit}/- only
       </div>
 
-      <div className="px-2 lg:px-0 flex items-center justify-between gap-1 lg:gap-3 text-sm lg:text-base">
-        <div className="flex items-center gap-2">
+      <div className="px-2 lg:px-0 flex items-center justify-between gap-3 lg:gap-4 text-sm lg:text-base">
+        <div className="flex items-center gap-1">
           <div className="font-semibold">
             {DisplayPriceInRupees(pricewithDiscount(data.price, data.discount))}
           </div>
