@@ -16,13 +16,14 @@ const productController = require("../controllers/product.controller.js");
 const admin = require("../middlewares/admin.middleware.js");
 
 router.post("/create", auth, admin, productController.createProductController);
-router.post("/get", productController.getProductController);
-router.post("/get-product-by-category", productController.getProductByCategory);
-router.post(
+router.get("/get", productController.getProductController);
+router.get("/get-product-by-category", productController.getProductByCategory);
+
+router.get(
   "/get-product-by-category-and-subcategory",
   productController.getProductByCategoryAndSubCategory
 );
-router.post("/get-product-details", productController.getProductDetails);
+router.get("/get-product-details", productController.getProductDetails);
 
 //update product
 router.put(

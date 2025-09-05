@@ -27,7 +27,7 @@ const ProductDisplayPage = () => {
     try {
       const response = await Axios({
         ...SummaryApi.getProductDetails,
-        data: {
+        params: {
           productId: productId,
         },
       });

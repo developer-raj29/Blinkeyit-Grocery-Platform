@@ -20,7 +20,7 @@ const ProductAdmin = () => {
       setLoading(true);
       const response = await Axios({
         ...SummaryApi.getProduct,
-        data: {
+        params: {
           page: page,
           limit: 12,
           search: search,
@@ -96,7 +96,7 @@ const ProductAdmin = () => {
         <div className="min-h-[55vh]">
           {loading ? (
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 gap-4">
-              {Array.from({ length: 8 }).map((_, i) => (
+              {Array.from({ length: 12 }).map((_, i) => (
                 <ProductCardSkeleton key={i} />
               ))}
             </div>
@@ -105,6 +105,7 @@ const ProductAdmin = () => {
               {productData.map((p, index) => {
                 return (
                   <ProductCardAdmin
+                    key={index}
                     data={p}
                     fetchProductData={fetchProductData}
                   />

@@ -10,7 +10,7 @@ const {
 } = require("../controllers/subCategory.controller.js");
 
 router.post("/create", auth, AddSubCategoryController);
-router.post("/get", getSubCategoryController);
+router.get("/get", getSubCategoryController);
 router.put("/update", auth, updateSubCategoryController);
 router.delete("/delete", auth, deleteSubCategoryController);
 

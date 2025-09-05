@@ -60,23 +60,70 @@ const createProductController = async (request, response) => {
   }
 };
 
+// const getProductController = async (request, response) => {
+//   try {
+//     let { page = 1, limit = 12, search = "" } = request.query;
+
+//     if (!page) {
+//       page = 1;
+//     }
+
+//     if (!limit) {
+//       limit = 10;
+//     }
+
+//     const query = search
+//       ? {
+//           $text: {
+//             $search: search,
+//           },
+//         }
+//       : {};
+
+//     const skip = (page - 1) * limit;
+
+//     const [data, totalCount] = await Promise.all([
+//       ProductModel.find(query)
+//         .sort({ createdAt: -1 })
+//         .skip(skip)
+//         .limit(limit)
+//         .populate("category subCategory"),
+//       ProductModel.countDocuments(query),
+//     ]);
+
+//     return response.json({
+//       message: "Product data",
+//       error: false,
+//       success: true,
+//       totalCount: totalCount,
+//       totalNoPage: Math.ceil(totalCount / limit),
+//       data: data,
+//     });
+//   } catch (error) {
+//     return response.status(500).json({
+//       message: error.message || error,
+//       error: true,
+//       success: false,
+//     });
+//   }
+// };
+
 const getProductController = async (request, response) => {
   try {
-    let { page, limit, search } = request.body;
+    let { page = 1, limit = 12, search = "" } = request.query;
 
-    if (!page) {
-      page = 1;
-    }
+    page = parseInt(page);
+    limit = parseInt(limit);
 
-    if (!limit) {
-      limit = 10;
-    }
+    if (isNaN(page) || page < 1) page = 1;
+    if (isNaN(limit) || limit < 1) limit = 12;
 
     const query = search
       ? {
-          $text: {
-            $search: search,
-          },
+          $or: [
+            { name: { $regex: search, $options: "i" } },
+            { description: { $regex: search, $options: "i" } },
+          ],
         }
       : {};
 
@@ -91,13 +138,14 @@ const getProductController = async (request, response) => {
       ProductModel.countDocuments(query),
     ]);
 
-    return response.json({
+    return response.status(200).json({
       message: "Product data",
       error: false,
       success: true,
-      totalCount: totalCount,
+      totalCount,
       totalNoPage: Math.ceil(totalCount / limit),
-      data: data,
+      currentPage: page,
+      data,
     });
   } catch (error) {
     return response.status(500).json({
@@ -110,7 +158,7 @@ const getProductController = async (request, response) => {
 
 const getProductByCategory = async (request, response) => {
   try {
-    const { id } = request.body;
+    const { id } = request.query;
 
     if (!id) {
       return response.status(400).json({
@@ -145,7 +193,7 @@ const getProductByCategory = async (request, response) => {
 
 const getProductByCategoryAndSubCategory = async (request, response) => {
   try {
-    let { categoryId, subCategoryId, page, limit } = request.body;
+    let { categoryId, subCategoryId, page, limit } = request.query;
 
     if (!categoryId || !subCategoryId) {
       return response.status(400).json({
@@ -174,7 +222,7 @@ const getProductByCategoryAndSubCategory = async (request, response) => {
       ProductModel.countDocuments(query),
     ]);
 
-    return response.json({
+    return response.status(200).json({
       message: "Product list",
       data: data,
       totalCount: dataCount,
@@ -194,11 +242,11 @@ const getProductByCategoryAndSubCategory = async (request, response) => {
 
 const getProductDetails = async (request, response) => {
   try {
-    const { productId } = request.body;
+    const { productId } = request.query;
 
     const product = await ProductModel.findOne({ _id: productId });
 
-    return response.json({
+    return response.status(200).json({
       message: "product details",
       data: product,
       error: false,

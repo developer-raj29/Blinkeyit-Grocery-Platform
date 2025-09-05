@@ -116,7 +116,7 @@ const ProductCardAdmin = ({ data, fetchProductData }) => {
   const [editOpen, setEditOpen] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
 
-  console.log("data: ", data);
+  // console.log("data: ", data);
 
   const handleDelete = async () => {
     try {
