@@ -41,7 +41,7 @@ const addToCartItemController = async (request, response) => {
       }
     );
 
-    return response.json({
+    return response.status(201).json({
       data: save,
       message: "Item add successfully",
       error: false,

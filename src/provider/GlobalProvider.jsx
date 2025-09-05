@@ -135,12 +135,16 @@ const GlobalProvider = ({ children }) => {
     }
   };
 
+  const token = sessionStorage.getItem("accesstoken");
+  // console.log("token: ", token);
+
   useEffect(() => {
-    fetchCartItem();
-    // handleLogoutOut();
-    fetchAddress();
-    fetchOrder();
-  }, [user]);
+    if (token) {
+      fetchCartItem();
+      fetchAddress();
+      fetchOrder();
+    }
+  }, [token]);
 
   return (
     <GlobalContext.Provider

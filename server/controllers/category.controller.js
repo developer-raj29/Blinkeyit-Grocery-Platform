@@ -29,8 +29,8 @@ const AddCategoryController = async (request, response) => {
       });
     }
 
-    return response.json({
-      message: "Add Category",
+    return response.status(201).json({
+      message: "Add Category successfully",
       data: saveCategory,
       success: true,
       error: false,

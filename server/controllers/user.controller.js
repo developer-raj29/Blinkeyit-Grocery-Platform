@@ -71,7 +71,7 @@ const registerUserController = async (request, response) => {
       })
     );
 
-    return response.json({
+    return response.status(201).json({
       message: "User registered successfully. Please verify your email.",
       error: false,
       success: true,

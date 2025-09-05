@@ -45,7 +45,7 @@ const createProductController = async (request, response) => {
     });
     const saveProduct = await product.save();
 
-    return response.json({
+    return response.status(201).json({
       message: "Product Created Successfully",
       data: saveProduct,
       error: false,

@@ -6,7 +6,7 @@ const uploadImageController = async (request, response) => {
 
     const uploadImage = await uploadImageCloudinary(file);
 
-    return response.json({
+    return response.status(201).json({
       message: "Upload Successfully",
       data: uploadImage,
       success: true,

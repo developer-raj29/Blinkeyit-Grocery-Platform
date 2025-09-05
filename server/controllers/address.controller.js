@@ -24,7 +24,7 @@ const addAddressController = async (request, response) => {
       },
     });
 
-    return response.json({
+    return response.status(201).json({
       message: "Address Created Successfully",
       error: false,
       success: true,
@@ -47,7 +47,7 @@ const getAddressController = async (request, response) => {
       createdAt: -1,
     });
 
-    return response.json({
+    return response.status(200).json({
       data: data,
       message: "List of address",
       error: false,
