@@ -54,7 +54,9 @@ const ProductDisplayPage = () => {
   const handleScrollLeft = () => {
     imageContainer.current.scrollLeft -= 100;
   };
+
   console.log("product data", data);
+
   return (
     <section className="container mx-auto p-4 grid lg:grid-cols-2 ">
       <div className="">
@@ -64,6 +66,7 @@ const ProductDisplayPage = () => {
             className="w-full h-full object-scale-down"
           />
         </div>
+
         <div className="flex items-center justify-center gap-3 my-2">
           {data.image.map((img, index) => {
             return (
@@ -76,6 +79,7 @@ const ProductDisplayPage = () => {
             );
           })}
         </div>
+
         <div className="grid relative">
           <div
             ref={imageContainer}
@@ -84,7 +88,7 @@ const ProductDisplayPage = () => {
             {data.image.map((img, index) => {
               return (
                 <div
-                  className="w-20 h-20 min-h-20 min-w-20 scr cursor-pointer shadow-md"
+                  className="w-20 h-20 min-h-20 min-w-20 cursor-pointer shadow-md"
                   key={img + index}
                 >
                   <img
@@ -97,6 +101,7 @@ const ProductDisplayPage = () => {
               );
             })}
           </div>
+
           <div className="w-full -ml-3 h-full hidden lg:flex justify-between absolute  items-center">
             <button
               onClick={handleScrollLeft}
@@ -104,6 +109,7 @@ const ProductDisplayPage = () => {
             >
               <FaAngleLeft />
             </button>
+
             <button
               onClick={handleScrollRight}
               className="z-10 bg-white relative p-1 rounded-full shadow-lg"

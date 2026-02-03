@@ -1,10 +1,8 @@
-import React from 'react'
-import DisplayCartItem from '../components/DisplayCartItem'
+import React from "react";
+import DisplayCartItem from "../components/DisplayCartItem";
 
 const CartMobile = () => {
-  return (
-    <DisplayCartItem/>
-  )
-}
+  return <DisplayCartItem />;
+};
 
-export default CartMobile
+export default CartMobile;
