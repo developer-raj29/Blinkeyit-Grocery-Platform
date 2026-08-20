@@ -25,14 +25,14 @@
     "mongoose": "^8.13.2",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.2",
-    "nodemailer": "^6.10.1",
+    "nodemailer": "^9.0.5",
     "nodemon": "^3.1.9",
     "rate-limit-redis": "^6.0.1",
     "redis": "^6.2.1",
     "resend": "^4.2.0",
     "stripe": "^18.0.0",
     "uuid": "^11.1.0",
-    "vercel": "^41.6.1"
+    "vercel": "^59.3.0"
   },
   "jest": {
     "testEnvironment": "node",
