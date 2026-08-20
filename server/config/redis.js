@@ -1,9 +1,12 @@
 const redis = require("redis");
 
 const redisClient = redis.createClient({
-  url: process.env.REDIS_URL || "redis://localhost:6379",
+  url: process.env.UPSTASH_REDIS_URL || process.env.REDIS_URL || "redis://localhost:6379",
   socket: {
-    reconnectStrategy: false // Fails immediately if Redis is unavailable
+    reconnectStrategy: false, // Fails immediately if Redis is unavailable
+    tls: (process.env.UPSTASH_REDIS_URL || process.env.REDIS_URL)?.startsWith("rediss://") 
+      ? true 
+      : undefined
   }
 });
 
