@@ -31,8 +31,7 @@
     "redis": "^6.2.1",
     "resend": "^4.2.0",
     "stripe": "^18.0.0",
-    "uuid": "^11.1.0",
-    "vercel": "^59.3.0"
+    "uuid": "^11.1.0"
   },
   "jest": {
     "testEnvironment": "node",
