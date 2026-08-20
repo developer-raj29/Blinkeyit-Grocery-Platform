@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-
 const auth = require("../middlewares/auth.middleware.js");
+const admin = require("../middlewares/admin.middleware.js");
 
 const {
   AddCategoryController,
@@ -10,9 +10,15 @@ const {
   updateCategoryController,
 } = require("../controllers/category.controller.js");
 
-router.post("/add-category", auth, AddCategoryController);
+
+// Public / User Access Routes
 router.get("/get", getCategoryController);
-router.put("/update", auth, updateCategoryController);
-router.delete("/delete", auth, deleteCategoryController);
+
+router.use(auth);
+
+// Admin Access Routes
+router.post("/add-category", admin, AddCategoryController);
+router.put("/update", admin, updateCategoryController);
+router.delete("/delete", admin, deleteCategoryController);
 
 module.exports = router;

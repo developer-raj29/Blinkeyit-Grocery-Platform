@@ -32,7 +32,6 @@ const App = () => {
     } else {
       console.warn("No user data returned");
     }
-    console.log("userData: ", userData);
   };
 
   const fetchCategory = async () => {
@@ -46,8 +45,8 @@ const App = () => {
       if (responseData.success) {
         dispatch(
           setAllCategory(
-            responseData.data.sort((a, b) => a.name.localeCompare(b.name))
-          )
+            responseData.data.sort((a, b) => a.name.localeCompare(b.name)),
+          ),
         );
       }
     } catch (error) {
@@ -68,8 +67,8 @@ const App = () => {
       if (responseData.success) {
         dispatch(
           setAllSubCategory(
-            responseData.data.sort((a, b) => a.name.localeCompare(b.name))
-          )
+            responseData.data.sort((a, b) => a.name.localeCompare(b.name)),
+          ),
         );
       }
     } catch (error) {
@@ -81,7 +80,6 @@ const App = () => {
   };
 
   const token = sessionStorage.getItem("accesstoken");
-  console.log("token: ", token);
 
   const fetchData = async () => {
     setLoading(true);

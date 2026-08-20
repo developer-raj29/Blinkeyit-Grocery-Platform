@@ -9,9 +9,12 @@ const {
   updateAddressController,
 } = require("../controllers/address.controller.js");
 
-router.post("/create", auth, addAddressController);
-router.get("/get", auth, getAddressController);
-router.put("/update", auth, updateAddressController);
-router.delete("/disable", auth, deleteAddresscontroller);
+router.use(auth);
+
+// User Access Routes
+router.post("/create", addAddressController);
+router.get("/get", getAddressController);
+router.put("/update", updateAddressController);
+router.delete("/disable", deleteAddresscontroller);
 
 module.exports = router;

@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { FaRegEye } from "react-icons/fa6";
+import { GoogleLogin } from "@react-oauth/google";
 import { toast } from "react-toastify";
 import Axios from "../utils/Axios";
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import { Link, useNavigate } from "react-router-dom";
 import fetchUserDetails from "../utils/fetchUserDetails";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUserDetails } from "../store/userSlice";
 
 const Login = () => {
@@ -19,6 +20,13 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
+  const user = useSelector((state) => state.user);
+
+  useEffect(() => {
+    if (user?._id) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,19 +47,12 @@ const Login = () => {
     try {
       const response = await Axios({ ...SummaryApi.login, data: data });
 
-      console.log("login response: ", response);
-
       if (response.data.error) {
         toast.error(response.data.message);
       }
 
       if (response.data.success) {
         toast.success(response.data.message);
-        console.log("accesstoken: ", response.data.data.accesstoken);
-        console.log("accesstoken: ", response.data.data.refreshToken);
-
-        // localStorage.setItem("accesstoken", response.data.data.accesstoken);
-        // localStorage.setItem("refreshToken", response.data.data.refreshToken);
 
         sessionStorage.setItem("accesstoken", response.data.data.accesstoken);
         sessionStorage.setItem("refreshToken", response.data.data.refreshToken);
@@ -68,71 +69,42 @@ const Login = () => {
       setLoading(false);
     }
   };
-  // return (
-  //   <section className="w-full container mx-auto px-2">
-  //     <div className="bg-white my-4 w-full max-w-lg mx-auto rounded p-7">
-  //       <form className="grid gap-4 py-4" onSubmit={handleSubmit}>
-  //         <div className="grid gap-1">
-  //           <label htmlFor="email">Email :</label>
-  //           <input
-  //             type="email"
-  //             id="email"
-  //             className="bg-blue-50 p-2 border rounded outline-none focus:border-primary-200"
-  //             name="email"
-  //             value={data.email}
-  //             onChange={handleChange}
-  //             placeholder="Enter your email"
-  //           />
-  //         </div>
-  //         <div className="grid gap-1">
-  //           <label htmlFor="password">Password :</label>
-  //           <div className="bg-blue-50 p-2 border rounded flex items-center focus-within:border-primary-200">
-  //             <input
-  //               type={showPassword ? "text" : "password"}
-  //               id="password"
-  //               className="w-full outline-none"
-  //               name="password"
-  //               value={data.password}
-  //               onChange={handleChange}
-  //               placeholder="Enter your password"
-  //             />
-  //             <div
-  //               onClick={() => setShowPassword((preve) => !preve)}
-  //               className="cursor-pointer"
-  //             >
-  //               {showPassword ? <FaRegEye /> : <FaRegEyeSlash />}
-  //             </div>
-  //           </div>
-  //           <Link
-  //             to={"/forgot-password"}
-  //             className="block ml-auto hover:text-primary-200"
-  //           >
-  //             Forgot password ?
-  //           </Link>
-  //         </div>
 
-  //         <button
-  //           disabled={!valideValue}
-  //           className={` ${
-  //             valideValue ? "bg-green-800 hover:bg-green-700" : "bg-gray-500"
-  //           }    text-white py-2 rounded font-semibold my-3 tracking-wide`}
-  //         >
-  //           Login
-  //         </button>
-  //       </form>
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      setLoading(true);
+      const response = await Axios({
+        ...SummaryApi.googleLogin,
+        data: {
+          idToken: credentialResponse.credential,
+        },
+      });
 
-  //       <p>
-  //         Don't have account?{" "}
-  //         <Link
-  //           to={"/register"}
-  //           className="font-semibold text-green-700 hover:text-green-800"
-  //         >
-  //           Register
-  //         </Link>
-  //       </p>
-  //     </div>
-  //   </section>
-  // );
+      if (response.data.error) {
+        toast.error(response.data.message);
+      }
+
+      if (response.data.success) {
+        toast.success(response.data.message);
+
+        sessionStorage.setItem("accesstoken", response.data.data.accesstoken);
+        sessionStorage.setItem("refreshToken", response.data.data.refreshToken);
+
+        const userDetails = await fetchUserDetails();
+        dispatch(setUserDetails(userDetails.data));
+
+        navigate("/");
+      }
+    } catch (error) {
+      AxiosToastError(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleError = () => {
+    toast.error("Google Login Failed");
+  };
 
   return (
     <section className="min-h-screen flex justify-center bg-gradient-to-tr from-green-100 via-white to-green-100 px-4">
@@ -233,6 +205,22 @@ const Login = () => {
             )}
           </button>
         </form>
+
+        {/* Divider */}
+        <div className="relative flex items-center justify-center w-full">
+          <div className="absolute inset-0 border-t border-gray-300 top-1/2"></div>
+          <span className="relative px-3 bg-white text-sm text-gray-500">
+            Or continue with
+          </span>
+        </div>
+
+        {/* Google Login Button */}
+        <div className="w-full flex justify-center mt-4">
+          <GoogleLogin
+            onSuccess={handleGoogleSuccess}
+            onError={handleGoogleError}
+          />
+        </div>
 
         {/* Register Redirect */}
         <p className="text-center text-sm text-gray-700">

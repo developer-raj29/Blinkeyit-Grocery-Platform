@@ -57,7 +57,6 @@ const SubCategoryPage = () => {
     columnHelper.accessor("image", {
       header: "Image",
       cell: ({ row }) => {
-        console.log("row");
         return (
           <div className="flex justify-center items-center">
             <img
@@ -74,19 +73,6 @@ const SubCategoryPage = () => {
     }),
     columnHelper.accessor("category", {
       header: "Category",
-      //  cell : ({row})=>{
-      //   return(
-      //     <>
-      //       {
-      //         row.original.category.map((c,index)=>{
-      //           return(
-      //             <p key={c._id+"table"} className='shadow-md px-1 inline-block'>{c.name}</p>
-      //           )
-      //         })
-      //       }
-      //     </>
-      //   )
-      //  }
       cell: ({ row }) => {
         const category = Array.isArray(row.original.category)
           ? row.original.category
@@ -149,7 +135,6 @@ const SubCategoryPage = () => {
     }
   };
 
-  console.log("data: ", data);
   return (
     <section className="">
       <div className="p-2   bg-white shadow-md flex items-center justify-between">

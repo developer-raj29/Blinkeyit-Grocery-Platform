@@ -18,22 +18,15 @@ const orderSchema = new mongoose.Schema(
       required: [true, "Provide orderId"],
       unique: true,
     },
-    products: [
-      {
-        productId: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Product",
-        },
-        quantity: {
-          type: Number,
-          default: 1,
-        },
-        product_details: {
-          name: String,
-          image: [String],
-        },
-      },
-    ],
+    productId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Product",
+    },
+    product_details: {
+      name: String,
+      image: [String],
+      price: Number,
+    },
     paymentId: {
       type: String,
       default: "",

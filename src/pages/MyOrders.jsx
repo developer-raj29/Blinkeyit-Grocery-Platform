@@ -1,11 +1,15 @@
-import React from "react";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 import NoData from "../components/NoData";
+import { useGlobalContext } from "../provider/GlobalProvider";
 
 const MyOrders = () => {
   const orders = useSelector((state) => state.orders.order);
+  const { fetchOrder } = useGlobalContext();
 
-  console.log("order Items", orders);
+  useEffect(() => {
+    fetchOrder();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -25,11 +29,11 @@ const MyOrders = () => {
       <div className="max-w-4xl mx-auto px-4 py-6 space-y-4">
         {Array.isArray(orders) &&
           orders.map((order, index) => {
-            const imageUrl = order?.product_details?.image[0] || "";
+            const imageUrl = order?.product_details?.image?.[0];
             const productName =
               order?.product_details?.name || "No product name";
             const price = order?.product_details?.price || 0;
-            const status = order?.status || "Processing";
+            const status = order?.order_status || "Processing";
 
             return (
               <div
@@ -38,11 +42,17 @@ const MyOrders = () => {
               >
                 {/* Product Details */}
                 <div className="flex gap-4 items-center">
-                  <img
-                    src={imageUrl}
-                    alt={productName}
-                    className="w-20 h-20 object-cover rounded-lg border"
-                  />
+                  {imageUrl ? (
+                    <img
+                      src={imageUrl}
+                      alt={productName}
+                      className="w-20 h-20 object-cover rounded-lg border"
+                    />
+                  ) : (
+                    <div className="w-20 h-20 bg-gray-200 flex items-center justify-center rounded-lg border text-xs text-gray-500 text-center">
+                      No Image
+                    </div>
+                  )}
                   <div>
                     <p className="font-semibold text-gray-800">{productName}</p>
                     <p className="text-gray-500 text-sm">
@@ -59,8 +69,8 @@ const MyOrders = () => {
                       status === "Delivered"
                         ? "bg-green-100 text-green-700"
                         : status === "Shipped"
-                        ? "bg-blue-100 text-blue-700"
-                        : "bg-yellow-100 text-yellow-700"
+                          ? "bg-blue-100 text-blue-700"
+                          : "bg-yellow-100 text-yellow-700"
                     }`}
                   >
                     {status}

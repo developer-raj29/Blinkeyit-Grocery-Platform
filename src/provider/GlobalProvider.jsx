@@ -30,7 +30,6 @@ const GlobalProvider = ({ children }) => {
 
       if (responseData.success) {
         dispatch(handleAddItemCart(responseData.data));
-        console.log(responseData);
       }
     } catch (error) {
       console.log(error);
@@ -87,7 +86,7 @@ const GlobalProvider = ({ children }) => {
     const tPrice = cartItem.reduce((preve, curr) => {
       const priceAfterDiscount = pricewithDiscount(
         curr?.productId?.price,
-        curr?.productId?.discount
+        curr?.productId?.discount,
       );
 
       return preve + priceAfterDiscount * curr.quantity;
@@ -136,7 +135,6 @@ const GlobalProvider = ({ children }) => {
   };
 
   const token = sessionStorage.getItem("accesstoken");
-  // console.log("token: ", token);
 
   useEffect(() => {
     if (token) {

@@ -98,8 +98,9 @@ const CheckoutPage = () => {
             {addressList.map((address, index) => {
               return (
                 <label
+                  key={address._id || index}
                   htmlFor={"address" + index}
-                  className={!address.status && "hidden"}
+                  className={!address.status ? "hidden" : ""}
                 >
                   <div className="border rounded p-3 flex gap-3 hover:bg-blue-50">
                     <div>

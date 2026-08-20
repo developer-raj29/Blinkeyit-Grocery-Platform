@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import AxiosToastError from "../utils/AxiosToastError";
 import Axios from "../utils/Axios";
@@ -64,7 +64,7 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
     if (!subcategory) return "#";
 
     const url = `/${valideURLConvert(name)}-${id}/${valideURLConvert(
-      subcategory.name
+      subcategory.name,
     )}-${subcategory._id}`;
 
     return url;

@@ -49,26 +49,6 @@ const UploadCategoryModel = ({ close, fetchData }) => {
     }
   };
 
-  //   const handleUploadCategoryImage = async (e) => {
-  //     const file = e.target.files[0];
-
-  //     if (!file) {
-  //       return;
-  //     }
-
-  //     const response = await uploadImage(file);
-  //     const { data: ImageResponse } = response;
-
-  //     console.log("response: ", response);
-
-  //     setData((preve) => {
-  //       return {
-  //         ...preve,
-  //         image: ImageResponse.data.url,
-  //       };
-  //     });
-  //   };
-
   const handleUploadCategoryImage = async (e) => {
     const file = e.target.files[0];
 

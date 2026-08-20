@@ -2,31 +2,35 @@ export const baseURL = import.meta.env.VITE_API_URL;
 
 const SummaryApi = {
   register: {
-    url: "/api/user/register",
+    url: "/api/auth/register",
     method: "post",
   },
   login: {
-    url: "/api/user/login",
+    url: "/api/auth/login",
+    method: "post",
+  },
+  googleLogin: {
+    url: "/api/auth/google",
     method: "post",
   },
   verifyEmail: {
-    url: "/api/user/verify-email",
+    url: "/api/auth/verify-email",
     method: "post",
   },
   forgot_password: {
-    url: "/api/user/forgot-password",
+    url: "/api/auth/forgot-password",
     method: "put",
   },
   forgot_password_otp_verification: {
-    url: "api/user/verify-forgot-password-otp",
+    url: "api/auth/verify-forgot-password-otp",
     method: "put",
   },
   resetPassword: {
-    url: "/api/user/reset-password",
+    url: "/api/auth/reset-password",
     method: "put",
   },
   refreshToken: {
-    url: "api/user/refresh-token",
+    url: "api/auth/refresh-token",
     method: "post",
   },
   userDetails: {
@@ -34,7 +38,7 @@ const SummaryApi = {
     method: "get",
   },
   logout: {
-    url: "/api/user/logout",
+    url: "/api/auth/logout",
     method: "get",
   },
   uploadAvatar: {
@@ -111,7 +115,7 @@ const SummaryApi = {
   },
   searchProduct: {
     url: "/api/product/search-product",
-    method: "post",
+    method: "get",
   },
   addTocart: {
     url: "/api/cart/create",
@@ -156,6 +160,14 @@ const SummaryApi = {
   getOrderItems: {
     url: "/api/order/order-list",
     method: "get",
+  },
+  adminAllOrders: {
+    url: "/api/order/admin/all-orders",
+    method: "get",
+  },
+  adminUpdateOrderStatus: {
+    url: "/api/order/admin/update-status",
+    method: "patch",
   },
 };
 

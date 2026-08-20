@@ -110,8 +110,6 @@ const UploadProduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("data", data);
-
     try {
       const response = await Axios({
         ...SummaryApi.createProduct,
@@ -292,7 +290,7 @@ const UploadProduct = () => {
                 onChange={(e) => {
                   const value = e.target.value;
                   const subCategory = allSubCategory.find(
-                    (el) => el._id === value
+                    (el) => el._id === value,
                   );
 
                   setData((preve) => {

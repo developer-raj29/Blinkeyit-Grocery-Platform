@@ -12,9 +12,6 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleRedirectProductListpage = (id, cat) => {
-    console.log(id, cat);
-    console.log("subCategoryData: ", subCategoryData);
-
     const subcategory = subCategoryData.find((sub) => {
       const subCat = sub.category;
 
@@ -35,11 +32,10 @@ const Home = () => {
     }
 
     const url = `/${valideURLConvert(cat)}-${id}/${valideURLConvert(
-      subcategory.name
+      subcategory.name,
     )}-${subcategory._id}`;
 
     navigate(url);
-    console.log("Redirecting to:", url);
   };
 
   return (

@@ -1,6 +1,10 @@
 const CartProductModel = require("../models/cartProduct.model.js");
 const UserModel = require("../models/user.model.js");
 
+/**
+ * @description Add To Cart Item
+ * @route POST /api/cart/create
+ */
 const addToCartItemController = async (request, response) => {
   try {
     const userId = request.userId;
@@ -56,6 +60,10 @@ const addToCartItemController = async (request, response) => {
   }
 };
 
+/**
+ * @description Get Cart Item
+ * @route GET /api/cart/get
+ */
 const getCartItemController = async (request, response) => {
   try {
     const userId = request.userId;
@@ -78,6 +86,10 @@ const getCartItemController = async (request, response) => {
   }
 };
 
+/**
+ * @description Update Cart Item Qty
+ * @route PUT /api/cart/update-qty
+ */
 const updateCartItemQtyController = async (request, response) => {
   try {
     const userId = request.userId;
@@ -114,6 +126,10 @@ const updateCartItemQtyController = async (request, response) => {
   }
 };
 
+/**
+ * @description Delete Cart Item Qty
+ * @route DELETE /api/cart/delete-cart-item
+ */
 const deleteCartItemQtyController = async (request, response) => {
   try {
     const userId = request.userId; // middleware

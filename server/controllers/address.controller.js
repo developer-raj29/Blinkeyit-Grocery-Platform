@@ -1,6 +1,10 @@
 const AddressModel = require("../models/address.model");
 const UserModel = require("../models/user.model");
 
+/**
+ * @description Add Address
+ * @route POST /api/address/create
+ */
 const addAddressController = async (request, response) => {
   try {
     const userId = request.userId; // middleware
@@ -39,6 +43,10 @@ const addAddressController = async (request, response) => {
   }
 };
 
+/**
+ * @description Get Address
+ * @route GET /api/address/get
+ */
 const getAddressController = async (request, response) => {
   try {
     const userId = request.userId; // middleware auth
@@ -62,6 +70,10 @@ const getAddressController = async (request, response) => {
   }
 };
 
+/**
+ * @description Update Address
+ * @route PUT /api/address/update
+ */
 const updateAddressController = async (request, response) => {
   try {
     const userId = request.userId; // middleware auth
@@ -95,6 +107,10 @@ const updateAddressController = async (request, response) => {
   }
 };
 
+/**
+ * @description Delete Address
+ * @route DELETE /api/address/disable
+ */
 const deleteAddresscontroller = async (request, response) => {
   try {
     const userId = request.userId; // auth middleware

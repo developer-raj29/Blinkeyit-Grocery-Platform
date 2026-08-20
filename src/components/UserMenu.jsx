@@ -20,7 +20,6 @@ const UserMenu = ({ close }) => {
       const response = await Axios({
         ...SummaryApi.logout,
       });
-      console.log("logout", response);
       if (response.data.success) {
         if (close) {
           close();
@@ -100,6 +99,16 @@ const UserMenu = ({ close }) => {
             className="px-2 hover:bg-orange-200 py-1"
           >
             Product
+          </Link>
+        )}
+
+        {isAdmin(user.role) && (
+          <Link
+            onClick={handleClose}
+            to={"/dashboard/admin-orders"}
+            className="px-2 hover:bg-orange-200 py-1"
+          >
+            All Orders
           </Link>
         )}
 

@@ -1,5 +1,9 @@
 const uploadImageCloudinary = require("../utils/uploadImageCloudinary");
 
+/**
+ * @description Upload Image
+ * @route [Route]
+ */
 const uploadImageController = async (request, response) => {
   try {
     const file = request.file;

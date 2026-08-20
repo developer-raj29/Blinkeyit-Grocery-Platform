@@ -59,8 +59,6 @@ const refreshAccessToken = async (refreshToken) => {
       },
     });
 
-    console.log("response refreshToken: ", response);
-
     const accessToken = response.data.data.accessToken;
     sessionStorage.setItem("accesstoken", accessToken);
     return accessToken;

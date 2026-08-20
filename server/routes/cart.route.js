@@ -9,9 +9,12 @@ const {
   updateCartItemQtyController,
 } = require("../controllers/cart.controller.js");
 
-router.post("/create", auth, addToCartItemController);
-router.get("/get", auth, getCartItemController);
-router.put("/update-qty", auth, updateCartItemQtyController);
-router.delete("/delete-cart-item", auth, deleteCartItemQtyController);
+router.use(auth);
+
+// User Access Routes
+router.post("/create", addToCartItemController);
+router.get("/get", getCartItemController);
+router.put("/update-qty", updateCartItemQtyController);
+router.delete("/delete-cart-item", deleteCartItemQtyController);
 
 module.exports = router;

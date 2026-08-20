@@ -84,7 +84,7 @@ const ProductListPage = () => {
     <section className="sticky top-24 lg:top-20">
       <div className="container sticky top-24  mx-auto grid grid-cols-[90px,1fr]  md:grid-cols-[200px,1fr] lg:grid-cols-[280px,1fr]">
         {/**sub category **/}
-        <div className=" min-h-[88vh] max-h-[88vh] overflow-y-scroll grid gap-1 shadow-md scrollbarCustom bg-white py-2">
+        <div className=" min-h-[88vh] max-h-[88vh] overflow-y-scroll flex flex-col gap-1 shadow-md scrollbarCustom bg-white py-2">
           {DisplaySubCatory.map((s, index) => {
             const category = Array.isArray(s.category)
               ? s.category[0]

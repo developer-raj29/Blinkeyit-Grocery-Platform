@@ -55,8 +55,6 @@ const ProductDisplayPage = () => {
     imageContainer.current.scrollLeft -= 100;
   };
 
-  console.log("product data", data);
-
   return (
     <section className="container mx-auto p-4 grid lg:grid-cols-2 ">
       <div className="">

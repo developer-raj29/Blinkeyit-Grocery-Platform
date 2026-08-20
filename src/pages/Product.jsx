@@ -17,8 +17,6 @@ const Product = () => {
       });
 
       const { data: responseData } = response;
-
-      console.log("product page ", responseData);
       if (responseData.success) {
         setProductData(responseData.data);
       }
@@ -27,7 +25,6 @@ const Product = () => {
     }
   };
 
-  console.log("product page");
   useEffect(() => {
     fetchProductData();
   }, []);

@@ -1,35 +1,20 @@
 const express = require("express");
 const router = express.Router();
 const {
-  forgotPasswordController,
-  loginController,
-  logoutController,
-  refreshToken,
-  registerUserController,
-  resetpassword,
   updateUserDetails,
   uploadAvatar,
   userDetails,
-  verifyEmailController,
-  verifyForgotPasswordOtp,
 } = require("../controllers/user.controller.js");
+
 const auth = require("../middlewares/auth.middleware.js");
 const upload = require("../middlewares/multer.js");
 
-/*========================================Authentication================================*/
-router.post("/register", registerUserController);
-router.post("/verify-email", verifyEmailController);
-router.post("/login", loginController);
-router.get("/logout", auth, logoutController);
+router.use(auth);
 
+// User Access Routes
 /*========================================After Registration Details Update================================*/
-router.put("/upload-avatar", auth, upload.single("avatar"), uploadAvatar);
-router.put("/update-user", auth, updateUserDetails);
-
-router.put("/forgot-password", forgotPasswordController);
-router.put("/verify-forgot-password-otp", verifyForgotPasswordOtp);
-router.put("/reset-password", resetpassword);
-router.post("/refresh-token", refreshToken);
-router.get("/user-details", auth, userDetails);
+router.put("/upload-avatar", upload.single("avatar"), uploadAvatar);
+router.put("/update-user", updateUserDetails);
+router.get("/user-details", userDetails);
 
 module.exports = router;

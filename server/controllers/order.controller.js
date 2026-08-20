@@ -4,54 +4,10 @@ const CartProductModel = require("../models/cartProduct.model.js");
 const OrderModel = require("../models/order.model.js");
 const UserModel = require("../models/user.model.js");
 
-// const CashOnDeliveryOrderController = async (request, response) => {
-//   try {
-//     const userId = request.userId; // auth middleware
-//     const { list_items, totalAmt, addressId, subTotalAmt } = request.body;
-
-//     const payload = list_items.map((el) => {
-//       return {
-//         userId: userId,
-//         orderId: `ORD-${new mongoose.Types.ObjectId()}`,
-//         productId: el.productId._id,
-//         product_details: {
-//           name: el.productId.name,
-//           image: el.productId.image,
-//         },
-//         paymentId: "",
-//         payment_status: "CASH ON DELIVERY",
-//         delivery_address: addressId,
-//         subTotalAmt: subTotalAmt,
-//         totalAmt: totalAmt,
-//       };
-//     });
-
-//     const generatedOrder = await OrderModel.insertMany(payload);
-
-//     ///remove from the cart
-//     const removeCartItems = await CartProductModel.deleteMany({
-//       userId: userId,
-//     });
-//     const updateInUser = await UserModel.updateOne(
-//       { _id: userId },
-//       { shopping_cart: [] }
-//     );
-
-//     return response.json({
-//       message: "Order successfully",
-//       error: false,
-//       success: true,
-//       data: generatedOrder,
-//     });
-//   } catch (error) {
-//     return response.status(500).json({
-//       message: error.message || error,
-//       error: true,
-//       success: false,
-//     });
-//   }
-// };
-
+/**
+ * @description Cash On Delivery Order
+ * @route POST /api/order/cash-on-delivery
+ */
 const CashOnDeliveryOrderController = async (request, response) => {
   try {
     const userId = request.userId; // From auth middleware
@@ -92,19 +48,31 @@ const CashOnDeliveryOrderController = async (request, response) => {
       createdAt: new Date(),
     }));
 
-    // Save orders in bulk
-    const generatedOrders = await OrderModel.insertMany(payload);
+    const session = await mongoose.startSession();
 
-    // Remove ordered items from cart
-    await CartProductModel.deleteMany({ userId });
-    await UserModel.updateOne({ _id: userId }, { shopping_cart: [] });
+    try {
+      let generatedOrders;
+      await session.withTransaction(async () => {
+        // Save orders in bulk
+        generatedOrders = await OrderModel.insertMany(payload, { session });
 
-    return response.status(201).json({
-      message: "Order placed successfully with Cash on Delivery",
-      error: false,
-      success: true,
-      data: generatedOrders,
-    });
+        // Remove ordered items from cart
+        await CartProductModel.deleteMany({ userId }, { session });
+        await UserModel.updateOne({ _id: userId }, { shopping_cart: [] }, { session });
+      });
+
+      session.endSession();
+
+      return response.status(201).json({
+        message: "Order placed successfully with Cash on Delivery",
+        error: false,
+        success: true,
+        data: generatedOrders,
+      });
+    } catch (dbError) {
+      session.endSession();
+      throw dbError;
+    }
   } catch (error) {
     return response.status(500).json({
       message: error.message || "Internal Server Error",
@@ -120,6 +88,10 @@ const pricewithDiscount = (price, dis = 1) => {
   return actualPrice;
 };
 
+/**
+ * @description Payment
+ * @route POST /api/order/checkout
+ */
 const paymentController = async (request, response) => {
   try {
     const userId = request.userId; // auth middleware
@@ -197,6 +169,7 @@ const getOrderProductItems = async ({
         product_details: {
           name: product.name,
           image: product.images,
+          price: Number(item.price.unit_amount / 100)
         },
         paymentId: paymentId,
         payment_status: payment_status,
@@ -212,7 +185,10 @@ const getOrderProductItems = async ({
   return productList;
 };
 
-//http://localhost:8080/api/order/webhook
+/**
+ * @description Webhook Stripe
+ * @route POST /api/order/webhook
+ */
 const webhookStripe = async (request, response) => {
   const event = request.body;
   const endPointSecret = process.env.STRIPE_ENPOINT_WEBHOOK_SECRET_KEY;
@@ -222,34 +198,41 @@ const webhookStripe = async (request, response) => {
   // Handle the event
   switch (event.type) {
     case "checkout.session.completed":
-      const session = event.data.object;
+      const stripeSession = event.data.object;
       const lineItems = await Stripe.checkout.sessions.listLineItems(
-        session.id
+        stripeSession.id
       );
 
       console.log("lineItems: ", lineItems);
 
-      const userId = session.metadata.userId;
+      const userId = stripeSession.metadata.userId;
       const orderProduct = await getOrderProductItems({
         lineItems: lineItems,
         userId: userId,
-        addressId: session.metadata.addressId,
-        paymentId: session.payment_intent,
-        payment_status: session.payment_status,
+        addressId: stripeSession.metadata.addressId,
+        paymentId: stripeSession.payment_intent,
+        payment_status: stripeSession.payment_status,
       });
 
       console.log("orderProduct: ", orderProduct);
 
-      const order = await OrderModel.insertMany(orderProduct);
+      const dbSession = await mongoose.startSession();
+      try {
+        await dbSession.withTransaction(async () => {
+          const order = await OrderModel.insertMany(orderProduct, { session: dbSession });
 
-      console.log("order: ", order);
-      if (Boolean(order[0])) {
-        const removeCartItems = await UserModel.findByIdAndUpdate(userId, {
-          shopping_cart: [],
+          console.log("order: ", order);
+          if (Boolean(order[0])) {
+            await UserModel.findByIdAndUpdate(userId, {
+              shopping_cart: [],
+            }, { session: dbSession });
+            await CartProductModel.deleteMany({
+              userId: userId,
+            }, { session: dbSession });
+          }
         });
-        const removeCartProductDB = await CartProductModel.deleteMany({
-          userId: userId,
-        });
+      } finally {
+        dbSession.endSession();
       }
       break;
     default:
@@ -260,6 +243,10 @@ const webhookStripe = async (request, response) => {
   response.json({ received: true });
 };
 
+/**
+ * @description Get Order Details
+ * @route GET /api/order/order-list
+ */
 const getOrderDetailsController = async (request, response) => {
   try {
     const userId = request.userId; // order id
@@ -282,10 +269,74 @@ const getOrderDetailsController = async (request, response) => {
     });
   }
 };
+/**
+ * @description Get All Orders (Admin)
+ * @route GET /api/order/admin/all-orders
+ */
+const getAllOrdersController = async (request, response) => {
+  try {
+    const orderlist = await OrderModel.find()
+      .sort({ createdAt: -1 })
+      .populate("delivery_address")
+      .populate("userId", "name email");
+
+    return response.json({
+      message: "all order list",
+      data: orderlist,
+      error: false,
+      success: true,
+    });
+  } catch (error) {
+    return response.status(500).json({
+      message: error.message || error,
+      error: true,
+      success: false,
+    });
+  }
+};
+
+/**
+ * @description Update Order Status (Admin)
+ * @route PATCH /api/order/admin/update-status
+ */
+const updateOrderStatusController = async (request, response) => {
+  try {
+    const { _id, order_status } = request.body;
+    
+    if (!_id || !order_status) {
+      return response.status(400).json({
+        message: "Order ID and Status are required",
+        error: true,
+        success: false,
+      });
+    }
+
+    const updateOrder = await OrderModel.findByIdAndUpdate(
+      _id,
+      { order_status: order_status },
+      { new: true }
+    );
+
+    return response.json({
+      message: "Order status updated successfully",
+      data: updateOrder,
+      error: false,
+      success: true,
+    });
+  } catch (error) {
+    return response.status(500).json({
+      message: error.message || error,
+      error: true,
+      success: false,
+    });
+  }
+};
 
 module.exports = {
   CashOnDeliveryOrderController,
   paymentController,
   webhookStripe,
   getOrderDetailsController,
+  getAllOrdersController,
+  updateOrderStatusController,
 };

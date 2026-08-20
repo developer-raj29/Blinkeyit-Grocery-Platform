@@ -1,5 +1,10 @@
 const ProductModel = require("../models/product.model.js");
+const { redisClient } = require("../config/redis.js");
 
+/**
+ * @description Create Product
+ * @route [Route]
+ */
 const createProductController = async (request, response) => {
   try {
     const {
@@ -25,9 +30,9 @@ const createProductController = async (request, response) => {
       !description
     ) {
       return response.status(400).json({
-        message: "Enter required fields",
-        error: true,
         success: false,
+        error: true,
+        message: "Enter required fields",
       });
     }
 
@@ -43,71 +48,33 @@ const createProductController = async (request, response) => {
       description,
       more_details,
     });
+
     const saveProduct = await product.save();
 
+    if (redisClient.isReady && category && category.length > 0) {
+      const keys = category.map((id) => `products:cat:${id.toString()}`);
+      await redisClient.del(keys);
+    }
+
     return response.status(201).json({
+      success: true,
+      error: false,
       message: "Product Created Successfully",
       data: saveProduct,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
 
-// const getProductController = async (request, response) => {
-//   try {
-//     let { page = 1, limit = 12, search = "" } = request.query;
-
-//     if (!page) {
-//       page = 1;
-//     }
-
-//     if (!limit) {
-//       limit = 10;
-//     }
-
-//     const query = search
-//       ? {
-//           $text: {
-//             $search: search,
-//           },
-//         }
-//       : {};
-
-//     const skip = (page - 1) * limit;
-
-//     const [data, totalCount] = await Promise.all([
-//       ProductModel.find(query)
-//         .sort({ createdAt: -1 })
-//         .skip(skip)
-//         .limit(limit)
-//         .populate("category subCategory"),
-//       ProductModel.countDocuments(query),
-//     ]);
-
-//     return response.json({
-//       message: "Product data",
-//       error: false,
-//       success: true,
-//       totalCount: totalCount,
-//       totalNoPage: Math.ceil(totalCount / limit),
-//       data: data,
-//     });
-//   } catch (error) {
-//     return response.status(500).json({
-//       message: error.message || error,
-//       error: true,
-//       success: false,
-//     });
-//   }
-// };
-
+/**
+ * @description Get Product
+ * @route [Route]
+ */
 const getProductController = async (request, response) => {
   try {
     let { page = 1, limit = 12, search = "" } = request.query;
@@ -120,10 +87,9 @@ const getProductController = async (request, response) => {
 
     const query = search
       ? {
-          $or: [
-            { name: { $regex: search, $options: "i" } },
-            { description: { $regex: search, $options: "i" } },
-          ],
+          $text: {
+            $search: search,
+          },
         }
       : {};
 
@@ -139,47 +105,73 @@ const getProductController = async (request, response) => {
     ]);
 
     return response.status(200).json({
-      message: "Product data",
-      error: false,
       success: true,
-      totalCount,
-      totalNoPage: Math.ceil(totalCount / limit),
+      error: false,
       currentPage: page,
+      totalNoPage: Math.ceil(totalCount / limit),
+      totalCount,
+      message: "Product data",
       data,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
       error: true,
       success: false,
+      message: error.message || error,
     });
   }
 };
 
+/**
+ * @description Get Product By Category
+ * @route [Route]
+ */
 const getProductByCategory = async (request, response) => {
   try {
     const { id } = request.query;
 
     if (!id) {
       return response.status(400).json({
-        message: "Please provide a category ID.",
-        error: true,
         success: false,
+        error: true,
+        message: "Please provide a category ID.",
       });
     }
 
     // Ensure `id` is used with $in properly if it's not an array
     const query = Array.isArray(id) ? { $in: id } : id;
+    const cacheKey = `products:cat:${Array.isArray(id) ? id.join(",") : id}`;
+
+    if (redisClient.isReady) {
+      const cached = await redisClient.get(cacheKey);
+      if (cached) {
+        console.log("[CACHE HIT] Products by Category");
+        return response.status(200).json({
+          success: true,
+          error: false,
+          caching: true,
+          message: "Category product list fetched successfully.",
+          data: JSON.parse(cached),
+        });
+      }
+    }
+
+    console.log("[CACHE MISS] Products by Category");
 
     const products = await ProductModel.find({
       category: query,
     }).limit(15);
 
+    if (redisClient.isReady && products && products.length > 0) {
+      await redisClient.set(cacheKey, JSON.stringify(products), { EX: 3600 });
+    }
+
     return response.status(200).json({
+      success: true,
+      error: false,
+      caching: false,
       message: "Category product list fetched successfully.",
       data: products,
-      error: false,
-      success: true,
     });
   } catch (error) {
     console.error("getProductByCategory Error:", error);
@@ -191,21 +183,31 @@ const getProductByCategory = async (request, response) => {
   }
 };
 
+/**
+ * @description Get Product By Category And Sub Category
+ * @route [Route]
+ */
 const getProductByCategoryAndSubCategory = async (request, response) => {
   try {
     let { categoryId, subCategoryId, page, limit } = request.query;
 
     if (!categoryId || !subCategoryId) {
       return response.status(400).json({
-        message: "Provide categoryId and subCategoryId",
-        error: true,
         success: false,
+        error: true,
+        message: "Provide categoryId and subCategoryId",
       });
     }
 
-    // Ensure both are arrays
+    // Ensure both are arrays and trim whitespace
+    if (typeof categoryId === "string") categoryId = categoryId.split(",");
+    if (typeof subCategoryId === "string") subCategoryId = subCategoryId.split(",");
+
     if (!Array.isArray(categoryId)) categoryId = [categoryId];
     if (!Array.isArray(subCategoryId)) subCategoryId = [subCategoryId];
+
+    categoryId = categoryId.map((id) => id.trim());
+    subCategoryId = subCategoryId.map((id) => id.trim());
 
     page = Number(page) || 1;
     limit = Number(limit) || 10;
@@ -223,34 +225,60 @@ const getProductByCategoryAndSubCategory = async (request, response) => {
     ]);
 
     return response.status(200).json({
-      message: "Product list",
-      data: data,
-      totalCount: dataCount,
-      page: page,
-      limit: limit,
       success: true,
       error: false,
+      page: page,
+      limit: limit,
+      totalCount: dataCount,
+      message: "Product list",
+      data: data,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
 
+/**
+ * @description Get Product Details
+ * @route [Route]
+ */
 const getProductDetails = async (request, response) => {
   try {
     const { productId } = request.query;
+    const cacheKey = `product:details:${productId}`;
+
+    if (redisClient.isReady) {
+      const cached = await redisClient.get(cacheKey);
+      if (cached) {
+        console.log("[CACHE HIT] Product Details");
+        return response.status(200).json({
+          success: true,
+          error: false,
+          caching: true,
+          message: "product details",
+          data: JSON.parse(cached),
+        });
+      }
+    }
+
+    console.log("[CACHE MISS] Product Details");
 
     const product = await ProductModel.findOne({ _id: productId });
 
+    if (redisClient.isReady && product) {
+      await redisClient.set(cacheKey, JSON.stringify(product), { EX: 3600 });
+    }
+
     return response.status(200).json({
-      message: "product details",
-      data: product,
-      error: false,
       success: true,
+      error: false,
+      caching: false,
+      data: product,
+      message: "product details",
     });
   } catch (error) {
     return response.status(500).json({
@@ -261,18 +289,23 @@ const getProductDetails = async (request, response) => {
   }
 };
 
-//update product
+/**
+ * @description Update Product Details
+ * @route [Route]
+ */
 const updateProductDetails = async (request, response) => {
   try {
     const { _id } = request.body;
 
     if (!_id) {
       return response.status(400).json({
-        message: "provide product _id",
-        error: true,
         success: false,
+        error: true,
+        message: "provide product _id",
       });
     }
+
+    const oldProduct = await ProductModel.findById(_id);
 
     const updateProduct = await ProductModel.updateOne(
       { _id: _id },
@@ -281,68 +314,89 @@ const updateProductDetails = async (request, response) => {
       }
     );
 
-    return response.json({
+    if (redisClient.isReady && oldProduct) {
+      const keys = oldProduct.category.map((c) => `products:cat:${c.toString()}`);
+      if (request.body.category) {
+        const newCats = Array.isArray(request.body.category) ? request.body.category : [request.body.category];
+        newCats.forEach((c) => keys.push(`products:cat:${c.toString()}`));
+      }
+      keys.push(`product:details:${_id}`);
+      await redisClient.del([...new Set(keys)]);
+    }
+
+    return response.status(200).json({
+      success: true,
+      error: false,
       message: "updated successfully",
       data: updateProduct,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
 
-//delete product
+/**
+ * @description Delete Product Details
+ * @route [Route]
+ */
 const deleteProductDetails = async (request, response) => {
   try {
     const { _id } = request.body;
 
     if (!_id) {
       return response.status(400).json({
-        message: "provide _id ",
-        error: true,
         success: false,
+        error: true,
+        message: "provide _id ",
       });
     }
 
+    const oldProduct = await ProductModel.findById(_id);
+
     const deleteProduct = await ProductModel.deleteOne({ _id: _id });
 
-    return response.json({
-      message: "Delete successfully",
-      error: false,
+    if (redisClient.isReady && oldProduct) {
+      const keys = oldProduct.category.map((c) => `products:cat:${c.toString()}`);
+      keys.push(`product:details:${_id}`);
+      await redisClient.del(keys);
+    }
+
+    return response.status(200).json({
       success: true,
+      error: false,
+      message: "Delete successfully",
       data: deleteProduct,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
 
-//search product
+/**
+ * @description Search Product
+ * @route [Route]
+ */
 const searchProduct = async (request, response) => {
   try {
-    let { search, page, limit } = request.body;
+    let { search, page, limit } = request.query;
 
-    if (!page) {
-      page = 1;
-    }
-    if (!limit) {
-      limit = 10;
-    }
+    page = Number(page) || 1;
+    limit = Number(limit) || 10;
 
     const query = search
       ? {
-          $text: {
-            $search: search,
-          },
+          $or: [
+            { name: { $regex: search, $options: "i" } },
+            { description: { $regex: search, $options: "i" } }
+          ]
         }
       : {};
 
@@ -357,21 +411,21 @@ const searchProduct = async (request, response) => {
       ProductModel.countDocuments(query),
     ]);
 
-    return response.json({
-      message: "Product data",
-      error: false,
+    return response.status(200).json({
       success: true,
-      data: data,
-      totalCount: dataCount,
-      totalPage: Math.ceil(dataCount / limit),
+      error: false,
       page: page,
       limit: limit,
+      totalPage: Math.ceil(dataCount / limit),
+      totalCount: dataCount,
+      message: "Product data",
+      data: data,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
