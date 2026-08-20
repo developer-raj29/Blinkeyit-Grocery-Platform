@@ -11,7 +11,6 @@ import Axios from "../utils/Axios";
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import successAlert from "../utils/SuccessAlert";
-import { useEffect } from "react";
 import { ClipLoader } from "react-spinners";
 
 const UploadProduct = () => {

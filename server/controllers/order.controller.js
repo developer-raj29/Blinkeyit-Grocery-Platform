@@ -95,7 +95,7 @@ const pricewithDiscount = (price, dis = 1) => {
 const paymentController = async (request, response) => {
   try {
     const userId = request.userId; // auth middleware
-    const { list_items, addressId, totalAmt, subTotalAmt } = request.body;
+    const { list_items, addressId } = request.body;
 
     const user = await UserModel.findById(userId);
 

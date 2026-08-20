@@ -102,7 +102,7 @@ const googleAuthController = async (request, response) => {
         },
       },
     });
-  } catch (error) {
+  } catch (_error) {
     return response.status(500).json({
       success: false,
       error: true,

@@ -96,7 +96,7 @@ const userDetails = async (request, response) => {
       message: "user details",
       data: user,
     });
-  } catch (error) {
+  } catch (_error) {
     return response.status(500).json({
       success: false,
       error: true,

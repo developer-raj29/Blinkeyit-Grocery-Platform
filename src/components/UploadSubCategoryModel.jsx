@@ -6,7 +6,6 @@ import Axios from "../utils/Axios";
 import SummaryApi from "../common/SummaryApi";
 import { toast } from "react-toastify";
 import AxiosToastError from "../utils/AxiosToastError";
-import { useEffect } from "react";
 import { ClipLoader } from "react-spinners";
 
 const UploadSubCategoryModel = ({ close, fetchData }) => {

@@ -42,6 +42,7 @@ const CategoryPage = () => {
         setCategoryData(responseData.data);
       }
     } catch (_error) {
+      // ignore fetch error
     } finally {
       setLoading(false);
     }

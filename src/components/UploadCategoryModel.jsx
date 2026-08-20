@@ -42,7 +42,7 @@ const UploadCategoryModel = ({ close, fetchData }) => {
         close();
         fetchData();
       }
-    } catch (_error) {
+    } catch (error) {
       AxiosToastError(error);
     } finally {
       setLoading(false);

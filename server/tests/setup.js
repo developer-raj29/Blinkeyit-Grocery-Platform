@@ -42,6 +42,11 @@ jest.mock("../middlewares/rateLimit.js", () => {
   };
 });
 
+// Mock sendEmail to prevent external network calls during tests
+jest.mock("../config/sendEmail.js", () => {
+  return jest.fn().mockResolvedValue({ success: true, messageId: "mock-test-id" });
+});
+
 beforeAll(async () => {
   mongoServer = await MongoMemoryServer.create();
   const mongoUri = mongoServer.getUri();
