@@ -19,7 +19,7 @@ const GlobalProvider = ({ children }) => {
   const [notDiscountTotalPrice, setNotDiscountTotalPrice] = useState(0);
   const [totalQty, setTotalQty] = useState(0);
   const cartItem = useSelector((state) => state.cartItem.cart);
-  const user = useSelector((state) => state?.user);
+  const _user = useSelector((state) => state?.user);
 
   const fetchCartItem = async () => {
     try {
@@ -99,7 +99,7 @@ const GlobalProvider = ({ children }) => {
     setNotDiscountTotalPrice(notDiscountPrice);
   }, [cartItem]);
 
-  const handleLogoutOut = () => {
+  const _handleLogoutOut = () => {
     sessionStorage.clear();
     dispatch(handleAddItemCart([]));
   };
@@ -114,7 +114,7 @@ const GlobalProvider = ({ children }) => {
       if (responseData.success) {
         dispatch(handleAddAddress(responseData.data));
       }
-    } catch (error) {
+    } catch (_error) {
       // AxiosToastError(error)
     }
   };
@@ -163,3 +163,7 @@ const GlobalProvider = ({ children }) => {
 };
 
 export default GlobalProvider;
+
+
+
+

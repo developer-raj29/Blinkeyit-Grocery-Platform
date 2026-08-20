@@ -4,8 +4,8 @@ import AxiosToastError from "../utils/AxiosToastError";
 import Axios from "../utils/Axios";
 
 const Product = () => {
-  const [productData, setProductData] = useState([]);
-  const [page, setPage] = useState(1);
+  const [_productData, setProductData] = useState([]);
+  const [page, _setPage] = useState(1);
 
   const fetchProductData = async () => {
     try {
@@ -33,3 +33,4 @@ const Product = () => {
 };
 
 export default Product;
+

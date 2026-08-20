@@ -8,7 +8,6 @@ import EditCategory from "../components/EditCategory";
 import CofirmBox from "../components/CofirmBox";
 import { toast } from "react-toastify";
 import AxiosToastError from "../utils/AxiosToastError";
-import { useSelector } from "react-redux";
 import { FiEdit } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 
@@ -42,7 +41,7 @@ const CategoryPage = () => {
       if (responseData.success) {
         setCategoryData(responseData.data);
       }
-    } catch (error) {
+    } catch (_error) {
     } finally {
       setLoading(false);
     }
@@ -213,3 +212,6 @@ const CategoryPage = () => {
 };
 
 export default CategoryPage;
+
+
+

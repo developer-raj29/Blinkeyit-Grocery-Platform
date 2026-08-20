@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  createColumnHelper,
   flexRender,
   getCoreRowModel,
   useReactTable,
@@ -55,3 +54,5 @@ const DisplayTable = ({ data, column }) => {
 };
 
 export default DisplayTable;
+
+

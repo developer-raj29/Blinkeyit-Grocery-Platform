@@ -16,7 +16,7 @@ import { toast } from "react-toastify";
 const SubCategoryPage = () => {
   const [openAddSubCategory, setOpenAddSubCategory] = useState(false);
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [_loading, setLoading] = useState(false);
   const columnHelper = createColumnHelper();
   const [ImageURL, setImageURL] = useState("");
   const [openEdit, setOpenEdit] = useState(false);
@@ -180,3 +180,4 @@ const SubCategoryPage = () => {
 };
 
 export default SubCategoryPage;
+

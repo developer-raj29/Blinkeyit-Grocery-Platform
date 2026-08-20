@@ -25,7 +25,7 @@ const auth = async (request, response, next) => {
     request.userId = decode.id;
 
     next();
-  } catch (error) {
+  } catch (_error) {
     return response.status(500).json({
       message: "You have not login", ///error.message || error,
       error: true,
@@ -35,3 +35,4 @@ const auth = async (request, response, next) => {
 };
 
 module.exports = auth;
+

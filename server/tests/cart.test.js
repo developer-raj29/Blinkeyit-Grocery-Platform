@@ -4,7 +4,6 @@ const UserModel = require("../models/user.model");
 const ProductModel = require("../models/product.model");
 const CartProductModel = require("../models/cartProduct.model");
 const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
 
 describe("Cart API Integration Tests", () => {
   let userToken;
@@ -77,3 +76,5 @@ describe("Cart API Integration Tests", () => {
     });
   });
 });
+
+

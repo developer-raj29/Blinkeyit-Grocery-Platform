@@ -10,9 +10,9 @@ import SkeletonCard from "../common/SkeletonCard";
 
 const ProductListPage = () => {
   const [data, setData] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, _setPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [totalPage, setTotalPage] = useState(1);
+  const [_totalPage, setTotalPage] = useState(1);
   const params = useParams();
   const AllSubCategory = useSelector((state) => state.product.allSubCategory);
   const [DisplaySubCatory, setDisplaySubCategory] = useState([]);
@@ -85,7 +85,7 @@ const ProductListPage = () => {
       <div className="container sticky top-24  mx-auto grid grid-cols-[90px,1fr]  md:grid-cols-[200px,1fr] lg:grid-cols-[280px,1fr]">
         {/**sub category **/}
         <div className=" min-h-[88vh] max-h-[88vh] overflow-y-scroll flex flex-col gap-1 shadow-md scrollbarCustom bg-white py-2">
-          {DisplaySubCatory.map((s, index) => {
+          {DisplaySubCatory.map((s, _index) => {
             const category = Array.isArray(s.category)
               ? s.category[0]
               : s.category;
@@ -125,7 +125,7 @@ const ProductListPage = () => {
             <div className="min-h-[80vh] max-h-[80vh] overflow-y-auto relative">
               {/* {loading && <ClipLoader size={30} color="#3b82f6" />}
               <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 gap-4 ">
-                {data.map((p, index) => {
+                {data.map((p, _index) => {
                   return (
                     <CardProduct
                       data={p}
@@ -143,7 +143,7 @@ const ProductListPage = () => {
                 </div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 gap-4">
-                  {data.map((p, index) => (
+                  {data.map((p, _index) => (
                     <CardProduct data={p} key={p._id + "productSubCategory"} />
                   ))}
                 </div>
@@ -157,3 +157,6 @@ const ProductListPage = () => {
 };
 
 export default ProductListPage;
+
+
+

@@ -51,7 +51,7 @@ const DisplayCartItem = ({ close }) => {
               </div>
               <div className="bg-white rounded-lg p-4 grid gap-5 overflow-auto">
                 {cartItem[0] &&
-                  cartItem.map((item, index) => {
+                  cartItem.map((item) => {
                     return (
                       <div
                         key={item?._id + "cartItemDisplay"}
@@ -150,3 +150,5 @@ const DisplayCartItem = ({ close }) => {
 };
 
 export default DisplayCartItem;
+
+

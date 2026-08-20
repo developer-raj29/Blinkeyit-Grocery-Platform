@@ -30,7 +30,7 @@ const connectRedis = async () => {
     if (!redisClient.isOpen) {
       await redisClient.connect();
     }
-  } catch (error) {
+  } catch (_error) {
     console.error("❌ Failed to connect to Redis during startup");
   }
 };

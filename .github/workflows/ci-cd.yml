@@ -67,7 +67,7 @@ jobs:
           NODE_ENV: test
           SECRET_KEY_ACCESS_TOKEN: test-secret-access
           SECRET_KEY_REFRESH_TOKEN: test-secret-refresh
-          FRONTEND_URL: http://localhost:3000
+          FRONTEND_URL: http://localhost:5173
           STRIPE_SECRET_KEY: ${{ secrets.STRIPE_TEST_SECRET_KEY }}
 
   # 3. BACKEND CD (RENDER DEPLOY HOOK)

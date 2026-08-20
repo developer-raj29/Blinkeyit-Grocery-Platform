@@ -3,10 +3,19 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
+const unusedVarsRule = ['error', {
+  varsIgnorePattern: '^[A-Z_]|^_',
+  argsIgnorePattern: '^_|^index$',
+  caughtErrorsIgnorePattern: '^_',
+}]
+
 export default [
-  { ignores: ['dist'] },
+  // Ignore built artifacts and dependency folders
+  { ignores: ['dist', 'server/node_modules', 'node_modules'] },
+
+  // ─── Frontend (React / Vite) ────────────────────────────────────────────────
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['src/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -23,11 +32,49 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': unusedVarsRule,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
+    },
+  },
+
+  // ─── Backend (Node.js / CommonJS) ───────────────────────────────────────────
+  {
+    files: ['server/**/*.js'],
+    ignores: ['server/tests/**/*.js', 'server/**/*.test.js'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.node,
+        ...globals.commonjs,
+      },
+      sourceType: 'commonjs',
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      'no-unused-vars': unusedVarsRule,
+      'no-case-declarations': 'error',
+      'no-extra-boolean-cast': 'error',
+    },
+  },
+
+  // ─── Backend Tests (Jest) ────────────────────────────────────────────────────
+  {
+    files: ['server/tests/**/*.js', 'server/**/*.test.js'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.node,
+        ...globals.commonjs,
+        ...globals.jest,
+      },
+      sourceType: 'commonjs',
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      'no-unused-vars': unusedVarsRule,
     },
   },
 ]

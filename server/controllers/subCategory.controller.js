@@ -11,9 +11,9 @@ const AddSubCategoryController = async (request, response) => {
 
     if (!name || !image || !category) {
       return response.status(400).json({
-        message: "Provide name, image, and category ID",
-        error: true,
         success: false,
+        error: true,
+        message: "Provide name, image, and category ID",
       });
     }
 
@@ -37,16 +37,16 @@ const AddSubCategoryController = async (request, response) => {
     }
 
     return response.json({
+      success: true,
+      error: false,
       message: "Sub Category Created",
       data: save,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -62,11 +62,11 @@ const AddSubCategoryController = async (request, response) => {
     if (cachedData) {
       console.log("[CACHE HIT] SubCategories");
       return res.status(200).json({
+        success: true,
+        error: false,
+        caching: true,
         message: "Sorted Sub Category Data",
         data: JSON.parse(cachedData),
-        error: false,
-        success: true,
-        caching: true,
       });
     }
 
@@ -106,17 +106,17 @@ const AddSubCategoryController = async (request, response) => {
     }
 
     return res.status(200).json({
+      success: true,
+      error: false,
+      caching: false,
       message: "Sorted Sub Category Data",
       data: data,
-      error: false,
-      success: true,
-      caching: false,
     });
   } catch (error) {
     return res.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -133,9 +133,9 @@ const updateSubCategoryController = async (request, response) => {
 
     if (!checkSub) {
       return response.status(400).json({
-        message: "Check your _id",
-        error: true,
         success: false,
+        error: true,
+        message: "Check your _id",
       });
     }
 
@@ -151,16 +151,16 @@ const updateSubCategoryController = async (request, response) => {
     }
 
     return response.json({
+      success: true,
+      error: false,
       message: "Updated Successfully",
       data: updateSubCategory,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -181,16 +181,16 @@ const deleteSubCategoryController = async (request, response) => {
     }
 
     return response.json({
+      success: true,
+      error: false,
       message: "Delete successfully",
       data: deleteSub,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };

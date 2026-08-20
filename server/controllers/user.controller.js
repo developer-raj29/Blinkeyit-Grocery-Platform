@@ -13,14 +13,14 @@ const uploadAvatar = async (request, response) => {
 
     const upload = await uploadImageCloudinary(image);
 
-    const updateUser = await UserModel.findByIdAndUpdate(userId, {
+    await UserModel.findByIdAndUpdate(userId, {
       avatar: upload.url,
     });
 
     return response.json({
-      message: "upload profile",
-      success: true,
       error: false,
+      success: true,
+      message: "upload profile",
       data: {
         _id: userId,
         avatar: upload.url,
@@ -28,9 +28,9 @@ const uploadAvatar = async (request, response) => {
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -62,16 +62,16 @@ const updateUserDetails = async (request, response) => {
     );
 
     return response.json({
-      message: "Updated successfully",
-      error: false,
       success: true,
+      error: false,
+      message: "Updated successfully",
       data: updateUser,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -91,16 +91,16 @@ const userDetails = async (request, response) => {
     );
 
     return response.json({
+      success: true,
+      error: false,
       message: "user details",
       data: user,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: "Something is wrong",
-      error: true,
       success: false,
+      error: true,
+      message: "Something is wrong",
     });
   }
 };
@@ -110,3 +110,5 @@ module.exports = {
   updateUserDetails,
   userDetails,
 };
+
+

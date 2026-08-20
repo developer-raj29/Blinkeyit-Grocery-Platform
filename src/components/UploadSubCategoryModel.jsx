@@ -46,7 +46,7 @@ const UploadSubCategoryModel = ({ close, fetchData }) => {
           image: ImageResponse.data.url,
         };
       });
-    } catch (error) {
+    } catch (_error) {
       toast.error("Image upload failed");
     } finally {
       setImageUploading(false); // stop loader
@@ -225,3 +225,6 @@ const UploadSubCategoryModel = ({ close, fetchData }) => {
 };
 
 export default UploadSubCategoryModel;
+
+
+

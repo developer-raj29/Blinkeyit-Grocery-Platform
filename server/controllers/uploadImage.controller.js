@@ -11,16 +11,16 @@ const uploadImageController = async (request, response) => {
     const uploadImage = await uploadImageCloudinary(file);
 
     return response.status(201).json({
+      error: false,
+      success: true,
       message: "Upload Successfully",
       data: uploadImage,
-      success: true,
-      error: false,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };

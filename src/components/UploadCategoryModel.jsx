@@ -12,7 +12,7 @@ const UploadCategoryModel = ({ close, fetchData }) => {
     name: "",
     image: "",
   });
-  const [loading, setLoading] = useState(false);
+  const [_loading, setLoading] = useState(false);
   const [imageUploading, setImageUploading] = useState(false);
 
   const handleOnChange = (e) => {
@@ -42,7 +42,7 @@ const UploadCategoryModel = ({ close, fetchData }) => {
         close();
         fetchData();
       }
-    } catch (error) {
+    } catch (_error) {
       AxiosToastError(error);
     } finally {
       setLoading(false);
@@ -63,7 +63,7 @@ const UploadCategoryModel = ({ close, fetchData }) => {
         ...preve,
         image: ImageResponse.data.url,
       }));
-    } catch (error) {
+    } catch (_error) {
       toast.error("Image upload failed");
     } finally {
       setImageUploading(false); // stop loader
@@ -163,3 +163,4 @@ const UploadCategoryModel = ({ close, fetchData }) => {
 };
 
 export default UploadCategoryModel;
+

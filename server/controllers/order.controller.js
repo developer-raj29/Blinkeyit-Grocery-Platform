@@ -11,7 +11,7 @@ const UserModel = require("../models/user.model.js");
 const CashOnDeliveryOrderController = async (request, response) => {
   try {
     const userId = request.userId; // From auth middleware
-    const { list_items, totalAmt, addressId, subTotalAmt } = request.body;
+    const { list_items, addressId, totalAmt, subTotalAmt } = request.body;
 
     if (!list_items?.length) {
       return response.status(400).json({
@@ -23,9 +23,9 @@ const CashOnDeliveryOrderController = async (request, response) => {
 
     if (!addressId) {
       return response.status(400).json({
-        message: "Delivery address is required",
-        error: true,
         success: false,
+        error: true,
+        message: "Delivery address is required",
       });
     }
 
@@ -64,9 +64,9 @@ const CashOnDeliveryOrderController = async (request, response) => {
       session.endSession();
 
       return response.status(201).json({
-        message: "Order placed successfully with Cash on Delivery",
-        error: false,
         success: true,
+        error: false,
+        message: "Order placed successfully with Cash on Delivery",
         data: generatedOrders,
       });
     } catch (dbError) {
@@ -75,9 +75,9 @@ const CashOnDeliveryOrderController = async (request, response) => {
     }
   } catch (error) {
     return response.status(500).json({
-      message: error.message || "Internal Server Error",
-      error: true,
       success: false,
+      error: true,
+      message: error.message || "Internal Server Error",
     });
   }
 };
@@ -95,7 +95,7 @@ const pricewithDiscount = (price, dis = 1) => {
 const paymentController = async (request, response) => {
   try {
     const userId = request.userId; // auth middleware
-    const { list_items, totalAmt, addressId, subTotalAmt } = request.body;
+    const { list_items, addressId, totalAmt, subTotalAmt } = request.body;
 
     const user = await UserModel.findById(userId);
 
@@ -142,9 +142,9 @@ const paymentController = async (request, response) => {
     return response.status(202).json(session);
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -205,7 +205,7 @@ const webhookStripe = async (request, response) => {
 
   // Handle the event
   switch (event.type) {
-    case "checkout.session.completed":
+    case "checkout.session.completed": {
       const stripeSession = event.data.object;
       const lineItems = await Stripe.checkout.sessions.listLineItems(
         stripeSession.id
@@ -230,7 +230,7 @@ const webhookStripe = async (request, response) => {
           const order = await OrderModel.insertMany(orderProduct, { session: dbSession });
 
           console.log("order: ", order);
-          if (Boolean(order[0])) {
+          if (order[0]) {
             await UserModel.findByIdAndUpdate(userId, {
               shopping_cart: [],
             }, { session: dbSession });
@@ -243,6 +243,7 @@ const webhookStripe = async (request, response) => {
         dbSession.endSession();
       }
       break;
+    }
     default:
       console.log(`Unhandled event type ${event.type}`);
   }
@@ -271,9 +272,9 @@ const getOrderDetailsController = async (request, response) => {
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -289,16 +290,16 @@ const getAllOrdersController = async (request, response) => {
       .populate("userId", "name email");
 
     return response.json({
+      success: true,
+      error: false,
       message: "all order list",
       data: orderlist,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -313,9 +314,9 @@ const updateOrderStatusController = async (request, response) => {
     
     if (!_id || !order_status) {
       return response.status(400).json({
-        message: "Order ID and Status are required",
-        error: true,
         success: false,
+        error: true,
+        message: "Order ID and Status are required",
       });
     }
 
@@ -326,16 +327,16 @@ const updateOrderStatusController = async (request, response) => {
     );
 
     return response.json({
+      success: true,
+      error: false,
       message: "Order status updated successfully",
       data: updateOrder,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -348,3 +349,5 @@ module.exports = {
   getAllOrdersController,
   updateOrderStatusController,
 };
+
+

@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 app.use("/api", routes);
 
 // 404 Route Not Found Middleware
-app.use((req, res, next) => {
+app.use((req, res, _next) => {
   return res.status(404).json({
     message: "Route not found",
     error: true,
@@ -47,7 +47,7 @@ app.use((req, res, next) => {
 });
 
 // Global Error Handler Middleware
-app.use((error, req, res, next) => {
+app.use((error, req, res, _next) => {
   console.error(error.stack);
   const statusCode = error.statusCode || 500;
   

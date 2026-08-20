@@ -36,7 +36,7 @@ const addToCartItemController = async (request, response) => {
     });
     const save = await cartItem.save();
 
-    const updateCartUser = await UserModel.updateOne(
+    await UserModel.updateOne(
       { _id: userId },
       {
         $push: {
@@ -46,16 +46,16 @@ const addToCartItemController = async (request, response) => {
     );
 
     return response.status(201).json({
-      data: save,
-      message: "Item add successfully",
-      error: false,
       success: true,
+      error: false,
+      message: "Item add successfully",
+      data: save,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -73,15 +73,15 @@ const getCartItemController = async (request, response) => {
     }).populate("productId");
 
     return response.json({
-      data: cartItem,
-      error: false,
       success: true,
+      error: false,
+      data: cartItem,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -112,16 +112,16 @@ const updateCartItemQtyController = async (request, response) => {
     );
 
     return response.json({
-      message: "Update cart",
       success: true,
       error: false,
+      message: "Update cart",
       data: updateCartitem,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -137,9 +137,9 @@ const deleteCartItemQtyController = async (request, response) => {
 
     if (!_id) {
       return response.status(400).json({
-        message: "Provide _id",
-        error: true,
         success: false,
+        error: true,
+        message: "Provide _id",
       });
     }
 
@@ -149,16 +149,16 @@ const deleteCartItemQtyController = async (request, response) => {
     });
 
     return response.json({
-      message: "Item remove",
-      error: false,
       success: true,
+      error: false,
+      message: "Item remove",
       data: deleteCartItem,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -169,3 +169,4 @@ module.exports = {
   updateCartItemQtyController,
   deleteCartItemQtyController,
 };
+

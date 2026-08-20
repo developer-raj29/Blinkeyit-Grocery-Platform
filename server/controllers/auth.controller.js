@@ -30,7 +30,7 @@ const googleAuthController = async (request, response) => {
     let payload;
     try {
       payload = await verifyGoogleToken(idToken);
-    } catch (verifyError) {
+    } catch (_verifyError) {
       return response.status(401).json({
         success: false,
         error: true,
@@ -395,7 +395,7 @@ const forgotPasswordController = async (request, response) => {
     const otp = generatedOtp();
     const expireTime = new Date() + 60 * 60 * 1000; // 1hr
 
-    const update = await UserModel.findByIdAndUpdate(user._id, {
+    await UserModel.findByIdAndUpdate(user._id, {
       forgot_password_otp: otp,
       forgot_password_expiry: new Date(expireTime).toISOString(),
     });
@@ -467,7 +467,7 @@ const verifyForgotPasswordOtp = async (request, response) => {
       });
     }
 
-    const updateUser = await UserModel.findByIdAndUpdate(user?._id, {
+    await UserModel.findByIdAndUpdate(user?._id, {
       forgot_password_otp: "",
       forgot_password_expiry: "",
     });
@@ -521,7 +521,7 @@ const resetpassword = async (request, response) => {
     const salt = await bcryptjs.genSalt(10);
     const hashPassword = await bcryptjs.hash(newPassword, salt);
 
-    const update = await UserModel.findOneAndUpdate(user._id, {
+    await UserModel.findOneAndUpdate(user._id, {
       password: hashPassword,
     });
 
@@ -620,3 +620,6 @@ module.exports = {
   refreshToken,
   googleAuthController,
 };
+
+
+

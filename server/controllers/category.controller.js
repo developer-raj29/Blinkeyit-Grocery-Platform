@@ -13,9 +13,9 @@ const AddCategoryController = async (request, response) => {
 
     if (!name || !image) {
       return response.status(400).json({
-        message: "Enter required fields",
-        error: true,
         success: false,
+        error: true,
+        message: "Enter required fields",
       });
     }
 
@@ -28,9 +28,9 @@ const AddCategoryController = async (request, response) => {
 
     if (!saveCategory) {
       return response.status(500).json({
-        message: "Not Created",
-        error: true,
         success: false,
+        error: true,
+        message: "Not Created",
       });
     }
 
@@ -41,16 +41,16 @@ const AddCategoryController = async (request, response) => {
     }
 
     return response.status(201).json({
-      message: "Add Category successfully",
-      data: saveCategory,
       success: true,
       error: false,
+      message: "Add Category successfully",
+      data: saveCategory,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -65,10 +65,10 @@ const getCategoryController = async (request, response) => {
     if (cachedData) {
       console.log("[CACHE HIT] Categories");
       return response.json({
+        success: true,
+        error: false,
         caching: true,
         data: JSON.parse(cachedData),
-        error: false,
-        success: true,
       });
     }
 
@@ -85,16 +85,16 @@ const getCategoryController = async (request, response) => {
     }
 
     return response.json({
+      success: true,
+      error: false,
       caching: false,
       data: data,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -124,16 +124,16 @@ const updateCategoryController = async (request, response) => {
     }
 
     return response.json({
-      message: "Updated Category",
       success: true,
       error: false,
+      message: "Updated Category",
       data: update,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -160,9 +160,9 @@ const deleteCategoryController = async (request, response) => {
 
     if (checkSubCategory > 0 || checkProduct > 0) {
       return response.status(400).json({
-        message: "Category is already use can't delete",
-        error: true,
         success: false,
+        error: true,
+        message: "Category is already use can't delete",
       });
     }
 
@@ -175,16 +175,16 @@ const deleteCategoryController = async (request, response) => {
     }
 
     return response.json({
+      success: true,
+      error: false,
       message: "Delete category successfully",
       data: deleteCategory,
-      error: false,
-      success: true,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
       success: false,
       error: true,
+      message: error.message || error,
     });
   }
 };

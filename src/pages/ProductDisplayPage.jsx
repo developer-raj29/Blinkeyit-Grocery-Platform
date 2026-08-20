@@ -20,7 +20,7 @@ const ProductDisplayPage = () => {
     image: [],
   });
   const [image, setImage] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [_loading, setLoading] = useState(false);
   const imageContainer = useRef();
 
   const fetchProductDetails = async () => {
@@ -234,3 +234,5 @@ const ProductDisplayPage = () => {
 };
 
 export default ProductDisplayPage;
+
+

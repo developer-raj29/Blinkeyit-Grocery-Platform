@@ -22,16 +22,16 @@ const addAddressController = async (request, response) => {
     });
     const saveAddress = await createAddress.save();
 
-    const addUserAddressId = await UserModel.findByIdAndUpdate(userId, {
+    await UserModel.findByIdAndUpdate(userId, {
       $push: {
         address_details: saveAddress._id,
       },
     });
 
     return response.status(201).json({
-      message: "Address Created Successfully",
-      error: false,
       success: true,
+      error: false,
+      message: "Address Created Successfully",
       data: saveAddress,
     });
   } catch (error) {
@@ -56,16 +56,16 @@ const getAddressController = async (request, response) => {
     });
 
     return response.status(200).json({
-      data: data,
-      message: "List of address",
-      error: false,
       success: true,
+      error: false,
+      message: "List of address",
+      data: data,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -93,16 +93,16 @@ const updateAddressController = async (request, response) => {
     );
 
     return response.json({
-      message: "Address Updated",
-      error: false,
       success: true,
+      error: false,
+      message: "Address Updated",
       data: updateAddress,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };
@@ -124,16 +124,16 @@ const deleteAddresscontroller = async (request, response) => {
     );
 
     return response.json({
-      message: "Address remove",
-      error: false,
       success: true,
+      error: false,
+      message: "Address remove",
       data: disableAddress,
     });
   } catch (error) {
     return response.status(500).json({
-      message: error.message || error,
-      error: true,
       success: false,
+      error: true,
+      message: error.message || error,
     });
   }
 };

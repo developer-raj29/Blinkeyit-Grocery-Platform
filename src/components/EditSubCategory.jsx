@@ -212,3 +212,5 @@ const EditSubCategory = ({ close, data, fetchData }) => {
 };
 
 export default EditSubCategory;
+
+

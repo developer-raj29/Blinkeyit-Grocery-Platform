@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {, useState } from "react";
 import logo from "../assets/logo.png";
 import Search from "./Search";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -43,7 +43,7 @@ const Header = () => {
   };
 
   //total item and total price
-  // useEffect(()=>{
+  //(()=>{
   //     const qty = cartItem.reduce((preve,curr)=>{
   //         return preve + curr.quantity
   //     },0)
@@ -186,3 +186,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
