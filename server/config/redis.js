@@ -1,12 +1,18 @@
 const redis = require("redis");
 
+const url = process.env.REDIS_URL || "redis://localhost:6379";
+
+if (url.startsWith("https://") || url.startsWith("http://")) {
+  console.error("❌ CRITICAL ERROR: You provided an HTTP REST URL for Redis.");
+  console.error("Please go to Upstash, scroll down to the 'Node.js' tab or 'Redis Connect' section, and copy the URL that starts with 'rediss://'.");
+  process.exit(1);
+}
+
 const redisClient = redis.createClient({
-  url: process.env.UPSTASH_REDIS_URL || process.env.REDIS_URL || "redis://localhost:6379",
+  url: url,
   socket: {
     reconnectStrategy: false, // Fails immediately if Redis is unavailable
-    tls: (process.env.UPSTASH_REDIS_URL || process.env.REDIS_URL)?.startsWith("rediss://") 
-      ? true 
-      : undefined
+    tls: url.startsWith("rediss://") ? true : undefined
   }
 });
 
