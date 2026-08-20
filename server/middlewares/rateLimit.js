@@ -1,5 +1,5 @@
 const rateLimit = require('express-rate-limit');
-const RedisStore = require('rate-limit-redis');
+const { RedisStore } = require('rate-limit-redis');
 const { redisClient } = require('../config/redis');
 
 // Limiter for authentication routes (login, register, forgot-password)

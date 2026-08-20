@@ -1,0 +1,82 @@
+name: Blinkeyit CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  # 1. FRONTEND CI
+  frontend-ci:
+    name: Test & Build Frontend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ 
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Linter
+        run: npm run lint --if-present
+
+      - name: Test Production Build
+        run: npm run build
+        env:
+          VITE_API_URL: https://api.placeholder.com
+          VITE_STRIPE_PUBLIC_KEY: ${{ secrets.STRIPE_TEST_PUBLIC_KEY }}
+
+  # 2. BACKEND CI
+  backend-ci:
+    name: Test & Validate Backend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./server
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './server/package-lock.json'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Security Audit
+        run: npm audit --audit-level=high
+
+      - name: Run Server Tests
+        run: npm test --if-present
+        env:
+          NODE_ENV: test
+          SECRET_KEY_ACCESS_TOKEN: test-secret-access
+          SECRET_KEY_REFRESH_TOKEN: test-secret-refresh
+          FRONTEND_URL: http://localhost:3000
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_TEST_SECRET_KEY }}
+
+  # 3. BACKEND CD (RENDER DEPLOY HOOK)
+  deploy-backend:
+    name: Trigger Render Deployment
+    needs: [frontend-ci, backend-ci]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Render Deploy Hook
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
