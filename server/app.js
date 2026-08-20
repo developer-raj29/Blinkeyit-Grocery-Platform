@@ -14,7 +14,14 @@ app.use(
   })
 );
 
-app.use(express.json());
+// Stripe webhook requires raw body, so we skip express.json() for that specific route
+app.use((req, res, next) => {
+  if (req.originalUrl === "/api/order/webhook") {
+    next();
+  } else {
+    express.json()(req, res, next);
+  }
+});
 app.use(cookieParser());
 app.use(
   helmet({

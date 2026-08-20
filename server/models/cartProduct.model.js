@@ -24,6 +24,8 @@ const cartProductSchema = new mongoose.Schema(
   }
 );
 
+cartProductSchema.index({ userId: 1 });
+
 const CartProduct = mongoose.model("CartProduct", cartProductSchema);
 
 module.exports = CartProduct;

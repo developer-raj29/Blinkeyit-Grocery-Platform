@@ -1,4 +1,6 @@
 const rateLimit = require('express-rate-limit');
+const RedisStore = require('rate-limit-redis');
+const { redisClient } = require('../config/redis');
 
 // Limiter for authentication routes (login, register, forgot-password)
 // Protects against brute-force and dictionary attacks
@@ -12,6 +14,9 @@ const authRateLimiter = rateLimit({
     },
     standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+    store: new RedisStore({
+        sendCommand: (...args) => redisClient.sendCommand(args),
+    }),
 });
 
 module.exports = {

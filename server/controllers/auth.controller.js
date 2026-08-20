@@ -1,6 +1,3 @@
-const { OAuth2Client } = require("google-auth-library");
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
-
 const sendEmail = require("../config/sendEmail.js");
 const UserModel = require("../models/user.model.js");
 const bcryptjs = require("bcryptjs");
@@ -11,6 +8,108 @@ const generatedOtp = require("../utils/generatedOTP.js");
 const forgotPasswordTemplate = require("../utils/forgotPasswordTemplate.js");
 const jwt = require("jsonwebtoken");
 const mailSender = require("../config/sendEmail.js");
+const { verifyGoogleToken } = require("../services/googleAuth.service.js");
+const { redisClient } = require("../config/redis.js");
+
+/**
+ * @description Google Auth
+ * @route POST /api/user/auth/google
+ */
+const googleAuthController = async (request, response) => {
+  try {
+    const { idToken } = request.body;
+    if (!idToken) {
+      return response.status(400).json({
+        success: false,
+        error: true,
+        message: "idToken is required",
+      });
+    }
+
+    // 1. Verify Google Token using Service
+    let payload;
+    try {
+      payload = await verifyGoogleToken(idToken);
+    } catch (verifyError) {
+      return response.status(401).json({
+        success: false,
+        error: true,
+        message: "Invalid or expired Google Token",
+      });
+    }
+
+    const { email, name, sub: googleId, picture, email_verified } = payload;
+
+    if (!email_verified) {
+      return response.status(400).json({
+        success: false,
+        error: true,
+        message: "Google email is not verified",
+      });
+    }
+
+    // 2. Atomic Upsert & Update last login in ONE query
+    const user = await UserModel.findOneAndUpdate(
+      { email },
+      {
+        $setOnInsert: {
+          name,
+          email,
+          avatar: picture,
+          status: "Active",
+          verify_email: true,
+        },
+        $set: {
+          googleId,
+          provider: "google",
+          last_login_date: new Date(),
+        },
+      },
+      { upsert: true, new: true, runValidators: true }
+    );
+
+    // 3. Issue Tokens
+    const accessToken = await generatedAccessToken(user._id);
+    const refreshToken = await generatedRefreshToken(user._id);
+
+    // 4. Secure Cookie Settings
+    const isProduction = process.env.NODE_ENV === "production";
+    
+    response.cookie("accessToken", accessToken, {
+      httpOnly: true,
+      secure: isProduction,
+      sameSite: isProduction ? "Strict" : "Lax",
+      maxAge: 15 * 60 * 1000, // 15 mins
+    });
+
+    response.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      secure: isProduction,
+      sameSite: isProduction ? "Strict" : "Lax",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    });
+
+    return response.status(200).json({
+      success: true,
+      error: false,
+      message: "Login successful",
+      data: {
+        user: {
+          id: user._id,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+        },
+      },
+    });
+  } catch (error) {
+    return response.status(500).json({
+      success: false,
+      error: true,
+      message: "Internal server error during authentication",
+    });
+  }
+};
 
 /**
  * @description Register User
@@ -258,9 +357,8 @@ const logoutController = async (request, response) => {
     response.clearCookie("accessToken", cookiesOption);
     response.clearCookie("refreshToken", cookiesOption);
 
-    const removeRefreshToken = await UserModel.findByIdAndUpdate(userid, {
-      refresh_token: "",
-    });
+    // Remove token from Redis
+    await redisClient.del(`refresh_token:${userid}`);
 
     return response.json({
       success: true,
@@ -472,14 +570,24 @@ const refreshToken = async (request, response) => {
       });
     }
 
-    const userId = verifyToken?._id;
+    const userId = verifyToken?.id;
+
+    // Verify token exists and matches in Redis
+    const storedToken = await redisClient.get(`refresh_token:${userId}`);
+    if (storedToken !== refreshToken) {
+      return response.status(401).json({
+        success: false,
+        error: true,
+        message: "Session is invalid or revoked",
+      });
+    }
 
     const newAccessToken = await generatedAccessToken(userId);
 
     const cookiesOption = {
       httpOnly: true,
-      secure: true,
-      sameSite: "None",
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "Strict" : "Lax",
     };
 
     response.cookie("accessToken", newAccessToken, cookiesOption);
@@ -490,90 +598,6 @@ const refreshToken = async (request, response) => {
       message: "New Access token generated",
       data: {
         accessToken: newAccessToken,
-      },
-    });
-  } catch (error) {
-    return response.status(500).json({
-      success: false,
-      error: true,
-      message: error.message || error,
-    });
-  }
-};
-
-/**
- * @description Google Auth
- * @route POST /api/user/auth/google
- */
-const googleAuthController = async (request, response) => {
-  try {
-    const { idToken } = request.body;
-    if (!idToken) {
-      return response.status(400).json({
-        success: false,
-        error: true,
-        message: "Provide idToken",
-      });
-    }
-
-    const ticket = await client.verifyIdToken({
-      idToken: idToken,
-      audience: process.env.GOOGLE_CLIENT_ID,
-    });
-    const payload = ticket.getPayload();
-    const { email, name, sub: googleId, picture } = payload;
-
-    let user = await UserModel.findOne({ email });
-
-    if (user) {
-      if (!user.googleId) {
-        user.googleId = googleId;
-        user.provider = "google";
-        await user.save();
-      }
-    } else {
-      user = new UserModel({
-        name,
-        email,
-        googleId,
-        provider: "google",
-        avatar: picture,
-        status: "Active",
-        verify_email: true,
-      });
-      await user.save();
-    }
-
-    const accesstoken = await generatedAccessToken(user._id);
-    const refreshToken = await generatedRefreshToken(user._id);
-
-    await UserModel.findByIdAndUpdate(user._id, {
-      last_login_date: new Date(),
-    });
-
-    const cookiesOption = {
-      httpOnly: true,
-      secure: true,
-      sameSite: "None",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    };
-
-    response.cookie("accessToken", accesstoken, cookiesOption);
-    response.cookie("refreshToken", refreshToken, cookiesOption);
-
-    return response.json({
-      error: false,
-      success: true,
-      message: "Login successfully with Google",
-      data: {
-        accesstoken,
-        refreshToken,
-        user: {
-          id: user._id,
-          name: user.name,
-          email: user.email,
-          role: user.role,
-        },
       },
     });
   } catch (error) {

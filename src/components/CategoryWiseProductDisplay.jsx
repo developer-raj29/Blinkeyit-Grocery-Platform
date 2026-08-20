@@ -12,7 +12,9 @@ import { valideURLConvert } from "../utils/valideURLConvert";
 const CategoryWiseProductDisplay = ({ id, name }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef();
+  const wrapperRef = useRef();
   const subCategoryData = useSelector((state) => state.product.allSubCategory);
   const loadingCardNumber = new Array(10).fill(null);
 
@@ -21,9 +23,6 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
       setLoading(true);
       const response = await Axios({
         ...SummaryApi.getProductByCategory,
-        // body: {
-        //   id: id,
-        // },
         params: { id },
       });
 
@@ -40,8 +39,28 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
   };
 
   useEffect(() => {
-    fetchCategoryWiseProduct();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Only need to load once
+        }
+      },
+      { threshold: 0.1, rootMargin: "100px" }
+    );
+
+    if (wrapperRef.current) {
+      observer.observe(wrapperRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      fetchCategoryWiseProduct();
+    }
+  }, [isVisible]);
 
   const handleScrollRight = () => {
     containerRef.current.scrollLeft += 200;
@@ -72,7 +91,7 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
 
   const redirectURL = handleRedirectProductListpage();
   return (
-    <div>
+    <div ref={wrapperRef}>
       <div className="container mx-auto p-4 flex items-center justify-between gap-4">
         <h3 className="font-semibold text-lg md:text-xl">{name}</h3>
         <Link to={redirectURL} className="text-green-600 hover:text-green-400">

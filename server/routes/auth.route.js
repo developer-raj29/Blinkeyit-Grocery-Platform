@@ -18,13 +18,13 @@ const { authRateLimiter } = require("../middlewares/rateLimit.js");
 // Public Access Routes
 /*========================================Authentication================================*/
 router.post("/register", authRateLimiter, registerUserController);
-router.post("/verify-email", verifyEmailController);
+router.post("/verify-email", authRateLimiter, verifyEmailController);
 router.post("/login", authRateLimiter, loginController);
 router.post("/google", authRateLimiter, googleAuthController);
 
 router.post("/forgot-password", authRateLimiter, forgotPasswordController);
-router.post("/verify-forgot-password-otp", verifyForgotPasswordOtp);
-router.post("/reset-password", resetpassword);
+router.post("/verify-forgot-password-otp", authRateLimiter, verifyForgotPasswordOtp);
+router.post("/reset-password", authRateLimiter, resetpassword);
 router.post("/refresh-token", refreshToken);
 
 router.use(auth);

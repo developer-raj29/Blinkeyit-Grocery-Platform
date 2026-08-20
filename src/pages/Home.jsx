@@ -4,22 +4,23 @@ import { useSelector } from "react-redux";
 import { valideURLConvert } from "../utils/valideURLConvert";
 import { useNavigate } from "react-router-dom";
 import CategoryWiseProductDisplay from "../components/CategoryWiseProductDisplay";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Home = () => {
   const loadingCategory = useSelector((state) => state.product.loadingCategory);
   const categoryData = useSelector((state) => state.product.allCategory);
   const subCategoryData = useSelector((state) => state.product.allSubCategory);
   const navigate = useNavigate();
+  const [bannerLoaded, setBannerLoaded] = useState(false);
 
   const handleRedirectProductListpage = (id, cat) => {
     const subcategory = subCategoryData.find((sub) => {
       const subCat = sub.category;
 
       if (Array.isArray(subCat)) {
-        // If it's an array of categories
         return subCat.some((c) => String(c?._id || c) === String(id));
       } else if (typeof subCat === "object" && subCat !== null) {
-        // If it's a single category object
         return String(subCat._id) === String(id);
       }
 
@@ -27,7 +28,9 @@ const Home = () => {
     });
 
     if (!subcategory) {
-      console.warn("No subcategory found for category:", id);
+      // Fallback route: Search for the category name if no specific subcategories are found
+      toast.info(`Showing all products for ${cat}`);
+      navigate(`/search?q=${valideURLConvert(cat)}`);
       return;
     }
 
@@ -42,19 +45,21 @@ const Home = () => {
     <section className="bg-white">
       <div className="container mx-auto">
         <div
-          className={`w-full h-full min-h-48 bg-blue-100 rounded ${
-            !banner && "animate-pulse my-2"
-          } `}
+          className={`w-full h-full min-h-48 bg-blue-100 rounded relative ${
+            !bannerLoaded ? "animate-pulse my-2" : ""
+          }`}
         >
           <img
             src={banner}
-            className="w-full h-full hidden lg:block"
-            alt="banner"
+            className={`w-full h-full hidden lg:block ${!bannerLoaded ? "opacity-0" : "opacity-100 transition-opacity duration-300"}`}
+            alt="Blinkeyit Promotional Banner"
+            onLoad={() => setBannerLoaded(true)}
           />
           <img
             src={bannerMobile}
-            className="w-full h-full lg:hidden"
-            alt="banner"
+            className={`w-full h-full lg:hidden ${!bannerLoaded ? "opacity-0" : "opacity-100 transition-opacity duration-300"}`}
+            alt="Blinkeyit Promotional Banner Mobile"
+            onLoad={() => setBannerLoaded(true)}
           />
         </div>
       </div>
@@ -77,32 +82,21 @@ const Home = () => {
               return (
                 <div
                   key={cat._id + "displayCategory"}
-                  className="w-full h-full cursor-pointer"
+                  className="w-full h-full cursor-pointer group"
                   onClick={() =>
                     handleRedirectProductListpage(cat._id, cat.name)
                   }
                 >
-                  <div>
+                  <div className="overflow-hidden rounded transition-transform duration-300 group-hover:scale-105">
                     <img
                       src={cat.image}
+                      alt={cat.name}
                       className="w-full h-full object-scale-down"
                     />
                   </div>
                 </div>
               );
             })}
-
-        {/* {new Array(20).fill(null).map((c, index) => {
-          return (
-            <div
-              key={index + "loadingcategory"}
-              className="bg-white rounded p-4 min-h-36 grid gap-2 shadow animate-pulse"
-            >
-              <div className="bg-blue-100 min-h-24 rounded"></div>
-              <div className="bg-blue-100 h-8 rounded"></div>
-            </div>
-          );
-        })} */}
       </div>
 
       {/***display category product */}

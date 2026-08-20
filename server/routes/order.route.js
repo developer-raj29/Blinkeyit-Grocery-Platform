@@ -13,7 +13,7 @@ const {
 } = require("../controllers/order.controller.js");
 
 // Public Routes (Stripe needs access without a token)
-router.post("/webhook", webhookStripe);
+router.post("/webhook", express.raw({ type: 'application/json' }), webhookStripe);
 
 router.use(auth);
 

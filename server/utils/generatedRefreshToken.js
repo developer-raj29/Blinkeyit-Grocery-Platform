@@ -1,19 +1,15 @@
-const UserModel = require("../models/user.model.js");
 const jwt = require("jsonwebtoken");
+const { redisClient } = require("../config/redis.js");
 
 const generatedRefreshToken = async (userId) => {
-  const token = await jwt.sign(
+  const token = jwt.sign(
     { id: userId },
     process.env.SECRET_KEY_REFRESH_TOKEN,
     { expiresIn: "7d" }
   );
 
-  const updateRefreshTokenUser = await UserModel.updateOne(
-    { _id: userId },
-    {
-      refresh_token: token,
-    }
-  );
+  // Store in Redis with 7 days expiration (in seconds: 7 * 24 * 60 * 60 = 604800)
+  await redisClient.setEx(`refresh_token:${userId}`, 604800, token);
 
   return token;
 };

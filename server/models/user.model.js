@@ -96,5 +96,9 @@ const userSchema = new mongoose.Schema(
   }
 );
 
+// Explicit indexes to prevent collection scans during upsert
+userSchema.index({ email: 1 }, { unique: true });
+userSchema.index({ googleId: 1 }, { unique: true, sparse: true });
+
 const User = mongoose.model("User", userSchema);
 module.exports = User;

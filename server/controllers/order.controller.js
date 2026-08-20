@@ -190,10 +190,18 @@ const getOrderProductItems = async ({
  * @route POST /api/order/webhook
  */
 const webhookStripe = async (request, response) => {
-  const event = request.body;
+  const sig = request.headers['stripe-signature'];
   const endPointSecret = process.env.STRIPE_ENPOINT_WEBHOOK_SECRET_KEY;
+  let event;
 
-  console.log("event", event);
+  try {
+    event = Stripe.webhooks.constructEvent(request.body, sig, endPointSecret);
+  } catch (err) {
+    console.error(`❌ Webhook Error: ${err.message}`);
+    return response.status(400).send(`Webhook Error: ${err.message}`);
+  }
+
+  console.log("✅ Webhook event verified:", event.type);
 
   // Handle the event
   switch (event.type) {
