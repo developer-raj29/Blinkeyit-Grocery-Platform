@@ -25,6 +25,13 @@ import CheckoutPage from "../pages/CheckoutPage";
 import Success from "../pages/Success";
 import Cancel from "../pages/Cancel";
 import VerifyEmail from "../pages/VerifyEmail";
+import About from "../pages/About";
+import Offers from "../pages/Offers";
+import Contact from "../pages/Contact";
+import Faq from "../pages/Faq";
+import TermsAndConditions from "../pages/TermsAndConditions";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import ReturnPolicy from "../pages/ReturnPolicy";
 
 const router = createBrowserRouter([
   {
@@ -124,6 +131,34 @@ const router = createBrowserRouter([
             ),
           },
         ],
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "offers",
+        element: <Offers />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "faq",
+        element: <Faq />,
+      },
+      {
+        path: "terms",
+        element: <TermsAndConditions />,
+      },
+      {
+        path: "privacy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "returns",
+        element: <ReturnPolicy />,
       },
       {
         path: ":category",

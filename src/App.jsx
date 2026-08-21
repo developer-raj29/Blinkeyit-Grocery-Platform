@@ -16,10 +16,12 @@ import Axios from "./utils/Axios";
 import SummaryApi from "./common/SummaryApi";
 import GlobalProvider from "./provider/GlobalProvider";
 import CartMobileLink from "./components/CartMobile";
+import useScrollToTop from "./hooks/useScrollToTop";
 
 import loader from "./assets/preloader.gif";
 
 const App = () => {
+  useScrollToTop();
   const dispatch = useDispatch();
   const location = useLocation();
   const [loading, setLoading] = useState(true);

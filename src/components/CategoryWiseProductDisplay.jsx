@@ -46,7 +46,7 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
           observer.disconnect(); // Only need to load once
         }
       },
-      { threshold: 0.1, rootMargin: "100px" }
+      { threshold: 0.1, rootMargin: "100px" },
     );
 
     if (wrapperRef.current) {
@@ -72,15 +72,25 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
 
   const handleRedirectProductListpage = () => {
     const subcategory = subCategoryData.find((sub) => {
-      if (!Array.isArray(sub.category)) return false;
+      const subCat = sub?.category;
 
-      return sub.category.some((c) => {
-        const cid = typeof c === "string" ? c : c?._id;
-        return String(cid) === String(id);
-      });
+      if (Array.isArray(subCat)) {
+        return subCat.some((c) => {
+          const cid = typeof c === "string" ? c : c?._id;
+          return String(cid) === String(id);
+        });
+      } else if (typeof subCat === "object" && subCat !== null) {
+        return String(subCat._id) === String(id);
+      } else if (typeof subCat === "string") {
+        return String(subCat) === String(id);
+      }
+
+      return false;
     });
 
-    if (!subcategory) return "#";
+    if (!subcategory) {
+      return `/search?q=${valideURLConvert(name)}`;
+    }
 
     const url = `/${valideURLConvert(name)}-${id}/${valideURLConvert(
       subcategory.name,
@@ -90,6 +100,7 @@ const CategoryWiseProductDisplay = ({ id, name }) => {
   };
 
   const redirectURL = handleRedirectProductListpage();
+
   return (
     <div ref={wrapperRef}>
       <div className="container mx-auto p-4 flex items-center justify-between gap-4">

@@ -108,7 +108,7 @@ const Login = () => {
 
   return (
     <section className="min-h-screen flex justify-center bg-gradient-to-tr from-green-100 via-white to-green-100 px-4">
-      <div className="w-full max-h-min max-w-md mt-10 bg-white rounded-xl shadow-lg shadow-stone-500 p-8 space-y-6">
+      <div className="w-full max-h-min max-w-md mt-10 bg-white rounded-xl shadow-sm shadow-stone-400 p-8 space-y-6">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-green-800">Welcome Back</h2>
           <p className="text-sm text-gray-600">Please log in to your account</p>

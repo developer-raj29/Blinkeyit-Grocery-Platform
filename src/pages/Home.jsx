@@ -78,7 +78,7 @@ const Home = () => {
                 </div>
               );
             })
-          : categoryData.map((cat, index) => {
+          : categoryData.map((cat) => {
               return (
                 <div
                   key={cat._id + "displayCategory"}
@@ -114,5 +114,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
