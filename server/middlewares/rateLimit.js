@@ -1,3 +1,4 @@
+// middlewares/rateLimit.js
 const rateLimit = require('express-rate-limit');
 const { RedisStore } = require('rate-limit-redis');
 const { redisClient } = require('../config/redis');
@@ -19,6 +20,4 @@ const authRateLimiter = rateLimit({
     }),
 });
 
-module.exports = {
-    authRateLimiter
-};
+module.exports = { authRateLimiter };

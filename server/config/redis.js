@@ -11,7 +11,10 @@ if (url.startsWith("https://") || url.startsWith("http://")) {
 const redisClient = redis.createClient({
   url: url,
   socket: {
-    reconnectStrategy: false, // Fails immediately if Redis is unavailable
+    reconnectStrategy: (retries) => {
+      if (retries > 10) return new Error("Max Redis reconnection retries reached");
+      return Math.min(retries * 100, 3000);
+    },
     tls: url.startsWith("rediss://") ? true : undefined
   }
 });
@@ -25,14 +28,15 @@ redisClient.on("connect", () => {
   console.log("✅ Redis Connected Successfully");
 });
 
-const connectRedis = async () => {
+// Auto-connect as soon as module is loaded
+(async () => {
   try {
     if (!redisClient.isOpen) {
       await redisClient.connect();
     }
-  } catch (_error) {
-    console.error("❌ Failed to connect to Redis during startup");
+  } catch (err) {
+    console.error("❌ Redis connection error:", err.message);
   }
-};
+})();
 
-module.exports = { redisClient, connectRedis };
+module.exports = { redisClient };
